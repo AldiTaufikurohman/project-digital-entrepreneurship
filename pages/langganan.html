@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promo & Paket Bundle Kelas — Belajaryuk</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <!-- NAVBAR -->
+      <header class="navbar">
+        <div class="navbar-container">
+          <a href="index.html" class="logo"> <span class="logo-accent">BELAJAR</span>YUK </a>
+
+          <div class="nav-actions" id="navActions">
+            <a href="../proses/masuk.php" class="btn-login">Masuk</a>
+            <a href="../proses/daftar.php" class="btn-register" style="background: #4338ca">Daftar Gratis</a>
+
+            <button class="hamburger" id="hamburgerBtn" onclick="toggleSidebar()" aria-label="Menu Navigasi">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- OVERLAY -->
+      <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-head">
+          <span class="sidebar-tag">NAVIGASI</span>
+          <h3>Menu Utama</h3>
+        </div>
+
+        <nav class="sidebar-nav">
+          <a href="index.html">
+            <span>Beranda</span>
+          </a>
+          <a href="elearning.html">
+            <span>E-Learning</span>
+          </a>
+          <a href="langganan.html" class="active">
+            <span>Langganan & Promo</span>
+          </a>
+          <a href="komunitas.html">
+            <span>Grup Komunitas</span>
+          </a>
+          <a href="bootcamp.html">
+            <span>Bootcamp</span>
+          </a>
+        </nav>
+      </aside>
+
+      <!-- MAIN KONTEN LANGGANAN & PROMO -->
+      <main class="main-content">
+        <!-- HERO BANNER PROMO -->
+        <section
+          style="
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: #ffffff;
+            border-radius: 24px;
+            padding: 40px 30px;
+            margin: 20px auto;
+            max-width: 1100px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+          "
+        >
+          <div style="max-width: 600px">
+            <span style="background: #ef4444; color: #fff; font-size: 12px; font-weight: 800; padding: 6px 14px; border-radius: 20px; letter-spacing: 0.5px; text-transform: uppercase">🔥 FLASH SALE GAJIAN</span>
+            <h1 style="font-size: 32px; font-weight: 800; margin-top: 14px; line-height: 1.2">Beli 1 Kelas, Gratis 1 Kelas Pilihanmu!</h1>
+            <p style="color: #94a3b8; font-size: 15px; margin-top: 10px">Mulai tingkatkan skill spesifik tanpa perlu langganan mahal. Pilih bundle kelas sesuai kebutuhan karirmu sekarang.</p>
+          </div>
+
+          <!-- COUNTDOWN TIMER -->
+          <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 16px; text-align: center; min-width: 260px">
+            <span style="font-size: 12px; color: #cbd5e1; font-weight: 600; text-transform: uppercase; letter-spacing: 1px">Berakhir Dalam</span>
+            <div style="display: flex; gap: 10px; justify-content: center; margin-top: 10px">
+              <div style="background: #2563eb; padding: 8px 12px; border-radius: 8px; font-size: 18px; font-weight: 800; min-width: 45px" id="hours">08</div>
+              <span style="font-size: 20px; font-weight: 700; align-self: center">:</span>
+              <div style="background: #2563eb; padding: 8px 12px; border-radius: 8px; font-size: 18px; font-weight: 800; min-width: 45px" id="minutes">42</div>
+              <span style="font-size: 20px; font-weight: 700; align-self: center">:</span>
+              <div style="background: #2563eb; padding: 8px 12px; border-radius: 8px; font-size: 18px; font-weight: 800; min-width: 45px" id="seconds">15</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 1: PAKET BUNDLE HEMAT PER-KELAS -->
+        <section style="max-width: 1100px; margin: 50px auto 20px; padding: 0 20px">
+          <div style="text-align: center; margin-bottom: 36px">
+            <span style="color: #2563eb; font-weight: 700; font-size: 13px; letter-spacing: 1px">PAKET HEMAT SPESIFIK</span>
+            <h2 style="font-size: 26px; color: #0f172a; margin-top: 6px">Bundle Kelas Paling Populer</h2>
+            <p style="color: #64748b; font-size: 14.5px; margin-top: 6px">Kombinasi kelas yang dirancang agar kamu siap kerja lebih cepat dengan harga hemat hingga 60%.</p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px">
+            <!-- BUNDLE 1: FRONTEND + UI/UX -->
+            <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; position: relative">
+              <span style="position: absolute; top: 18px; right: 18px; background: #fee2e2; color: #dc2626; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 20px">Hemat 55%</span>
+              <div>
+                <span style="background: #eff6ff; color: #2563eb; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px">DESIGN & DEV</span>
+                <h3 style="font-size: 20px; margin-top: 14px; color: #0f172a">UI/UX + Frontend Starter Pack</h3>
+                <p style="color: #64748b; font-size: 13px; margin-top: 4px">Kuasai desain antarmuka sekaligus kodenya untuk jadi Product Designer utuh.</p>
+
+                <div style="background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 12px; padding: 14px; margin: 18px 0">
+                  <div style="font-size: 12.5px; font-weight: 700; color: #475569; margin-bottom: 8px">2 KELAS TERMASUK:</div>
+                  <div style="font-size: 13px; color: #1e293b; display: flex; align-items: center; gap: 8px; margin-bottom: 6px"><span style="color: #10b981; font-weight: bold">+</span> Web Design & Prototyping Figma</div>
+                  <div style="font-size: 13px; color: #1e293b; display: flex; align-items: center; gap: 8px"><span style="color: #10b981; font-weight: bold">+</span> Frontend Web Dev (HTML, CSS, React)</div>
+                </div>
+
+                <div style="display: flex; align-items: baseline; gap: 10px; margin-bottom: 16px">
+                  <span style="font-size: 26px; font-weight: 800; color: #0f172a">Rp 149.000</span>
+                  <span style="font-size: 14px; color: #94a3b8; text-decoration: line-through">Rp 350.000</span>
+                </div>
+              </div>
+
+              <button onclick="openModal('Bundle UI/UX + Frontend Starter')" style="width: 100%; border-radius: 12px; padding: 12px; background: #2563eb; border: none; color: #fff; font-weight: 700; cursor: pointer">Beli Paket Ini</button>
+            </div>
+
+            <!-- BUNDLE 2: FULLSTACK BACKEND + DATABASE -->
+            <div
+              style="
+                background: #ffffff;
+                border: 2px solid #2563eb;
+                border-radius: 20px;
+                padding: 28px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                position: relative;
+                box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.15);
+              "
+            >
+              <span style="position: absolute; top: -12px; left: 24px; background: #2563eb; color: #fff; font-size: 11px; font-weight: 800; padding: 4px 12px; border-radius: 20px; text-transform: uppercase">PALING LARIS</span>
+              <span style="position: absolute; top: 18px; right: 18px; background: #fee2e2; color: #dc2626; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 20px">Hemat 60%</span>
+
+              <div>
+                <span style="background: #f0fdf4; color: #166534; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px">BACKEND MASTER</span>
+                <h3 style="font-size: 20px; margin-top: 14px; color: #0f172a">Laravel + API & Database Mastery</h3>
+                <p style="color: #64748b; font-size: 13px; margin-top: 4px">Bangun arsitektur server kokoh, Restful API, dan optimasi query database SQL.</p>
+
+                <div style="background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 12px; padding: 14px; margin: 18px 0">
+                  <div style="font-size: 12.5px; font-weight: 700; color: #475569; margin-bottom: 8px">2 KELAS TERMASUK:</div>
+                  <div style="font-size: 13px; color: #1e293b; display: flex; align-items: center; gap: 8px; margin-bottom: 6px"><span style="color: #10b981; font-weight: bold">+</span> Laravel Framework & RESTful API</div>
+                  <div style="font-size: 13px; color: #1e293b; display: flex; align-items: center; gap: 8px"><span style="color: #10b981; font-weight: bold">+</span> Database Design & SQL Optimization</div>
+                </div>
+
+                <div style="display: flex; align-items: baseline; gap: 10px; margin-bottom: 16px">
+                  <span style="font-size: 26px; font-weight: 800; color: #2563eb">Rp 179.000</span>
+                  <span style="font-size: 14px; color: #94a3b8; text-decoration: line-through">Rp 450.000</span>
+                </div>
+              </div>
+
+              <button onclick="openModal('Bundle Laravel + Database Mastery')" style="width: 100%; border-radius: 12px; padding: 12px; background: #2563eb; border: none; color: #fff; font-weight: 700; cursor: pointer">
+                Beli Paket Ini
+              </button>
+            </div>
+
+            <!-- BUNDLE 3: AI & DATA SCIENCE -->
+            <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; position: relative">
+              <span style="position: absolute; top: 18px; right: 18px; background: #fee2e2; color: #dc2626; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 20px">Hemat 50%</span>
+
+              <div>
+                <span style="background: #fef3c7; color: #92400e; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px">ARTIFICIAL INTELLIGENCE</span>
+                <h3 style="font-size: 20px; margin-top: 14px; color: #0f172a">Python Data & AI Engineering</h3>
+                <p style="color: #64748b; font-size: 13px; margin-top: 4px">Kuasai analisis data Python dasar hingga pembuatan model Machine Learning.</p>
+
+                <div style="background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 12px; padding: 14px; margin: 18px 0">
+                  <div style="font-size: 12.5px; font-weight: 700; color: #475569; margin-bottom: 8px">2 KELAS TERMASUK:</div>
+                  <div style="font-size: 13px; color: #1e293b; display: flex; align-items: center; gap: 8px; margin-bottom: 6px"><span style="color: #10b981; font-weight: bold">+</span> Data Analysis & Cleaning with Python</div>
+                  <div style="font-size: 13px; color: #1e293b; display: flex; align-items: center; gap: 8px"><span style="color: #10b981; font-weight: bold">+</span> Machine Learning Fundamentals</div>
+                </div>
+
+                <div style="display: flex; align-items: baseline; gap: 10px; margin-bottom: 16px">
+                  <span style="font-size: 26px; font-weight: 800; color: #0f172a">Rp 199.000</span>
+                  <span style="font-size: 14px; color: #94a3b8; text-decoration: line-through">Rp 400.000</span>
+                </div>
+              </div>
+
+              <button onclick="openModal('Bundle Python Data & AI')" style="width: 100%; border-radius: 12px; padding: 12px; background: #2563eb; border: none; color: #fff; font-weight: 700; cursor: pointer">Beli Paket Ini</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 2: PROMO TAMBAH KELAS (ADD-ON BUNDLE DEALS) -->
+        <section style="max-width: 1100px; margin: 50px auto; padding: 0 20px">
+          <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 20px; padding: 32px 24px">
+            <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 24px">
+              <div>
+                <span style="background: #dcfce7; color: #15803d; font-size: 11px; font-weight: 800; padding: 4px 10px; border-radius: 12px">PROMO ADD-ON</span>
+                <h3 style="font-size: 22px; color: #0f172a; margin-top: 6px">Beli Kelas Utama, Tambah Kelas Pendukung Cuma Rp 39.000!</h3>
+                <p style="color: #64748b; font-size: 13.5px; margin-top: 4px">Pilih 1 kelas mana saja yang kamu miliki, tambahkan skill pendukung ini saat checkout.</p>
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px">
+              <!-- ADDON 1 -->
+              <div style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 14px; padding: 18px; display: flex; justify-content: space-between; align-items: center">
+                <div>
+                  <span style="font-size: 11px; color: #2563eb; font-weight: 700">ADD-ON #1</span>
+                  <h4 style="font-size: 14.5px; color: #0f172a; margin-top: 2px">Git & GitHub Version Control</h4>
+                  <div style="margin-top: 6px">
+                    <span style="font-weight: 800; font-size: 15px; color: #166534">+ Rp 39.000</span>
+                    <span style="font-size: 12px; color: #94a3b8; text-decoration: line-through">Rp 120.000</span>
+                  </div>
+                </div>
+                <button onclick="openModal('Add-on Git & GitHub')" style="background: #f1f5f9; border: none; padding: 8px 14px; border-radius: 8px; font-weight: 700; color: #0f172a; cursor: pointer">+ Tambah</button>
+              </div>
+
+              <!-- ADDON 2 -->
+              <div style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 14px; padding: 18px; display: flex; justify-content: space-between; align-items: center">
+                <div>
+                  <span style="font-size: 11px; color: #2563eb; font-weight: 700">ADD-ON #2</span>
+                  <h4 style="font-size: 14.5px; color: #0f172a; margin-top: 2px">Prompt Engineering AI</h4>
+                  <div style="margin-top: 6px">
+                    <span style="font-weight: 800; font-size: 15px; color: #166534">+ Rp 39.000</span>
+                    <span style="font-size: 12px; color: #94a3b8; text-decoration: line-through">Rp 150.000</span>
+                  </div>
+                </div>
+                <button onclick="openModal('Add-on Prompt Engineering AI')" style="background: #f1f5f9; border: none; padding: 8px 14px; border-radius: 8px; font-weight: 700; color: #0f172a; cursor: pointer">+ Tambah</button>
+              </div>
+
+              <!-- ADDON 3 -->
+              <div style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 14px; padding: 18px; display: flex; justify-content: space-between; align-items: center">
+                <div>
+                  <span style="font-size: 11px; color: #2563eb; font-weight: 700">ADD-ON #3</span>
+                  <h4 style="font-size: 14.5px; color: #0f172a; margin-top: 2px">Persiapan Interview Tech & CV</h4>
+                  <div style="margin-top: 6px">
+                    <span style="font-weight: 800; font-size: 15px; color: #166534">+ Rp 49.000</span>
+                    <span style="font-size: 12px; color: #94a3b8; text-decoration: line-through">Rp 200.000</span>
+                  </div>
+                </div>
+                <button onclick="openModal('Add-on Interview Tech')" style="background: #f1f5f9; border: none; padding: 8px 14px; border-radius: 8px; font-weight: 700; color: #0f172a; cursor: pointer">+ Tambah</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 3: KUPON DISKON TAMBAHAN -->
+        <section style="max-width: 1100px; margin: 50px auto; padding: 0 20px">
+          <div style="text-align: center; margin-bottom: 28px">
+            <span style="color: #2563eb; font-weight: 700; font-size: 13px; letter-spacing: 1px">KODE VOUCHER</span>
+            <h2 style="font-size: 24px; color: #0f172a; margin-top: 4px">Gunakan Kupon Promo Spesial</h2>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px">
+            <!-- VOUCHER 1 -->
+            <div style="background: #fff; border: 2px dashed #3b82f6; border-radius: 16px; padding: 20px; display: flex; justify-content: space-between; align-items: center">
+              <div>
+                <span style="background: #dbeafe; color: #1e40af; font-size: 11px; font-weight: 800; padding: 3px 8px; border-radius: 6px">DISKON 30%</span>
+                <h4 style="font-size: 16px; font-weight: 800; color: #0f172a; margin-top: 6px; letter-spacing: 0.5px">BELAJARBARU</h4>
+                <p style="font-size: 12px; color: #64748b; margin-top: 2px">Khusus pembelian kelas pertama</p>
+              </div>
+              <button onclick="copyCoupon('BELAJARBARU')" style="background: #2563eb; color: #fff; border: none; padding: 8px 14px; border-radius: 8px; font-size: 12px; font-weight: 700; cursor: pointer">Kopi Kode</button>
+            </div>
+
+            <!-- VOUCHER 2 -->
+            <div style="background: #fff; border: 2px dashed #10b981; border-radius: 16px; padding: 20px; display: flex; justify-content: space-between; align-items: center">
+              <div>
+                <span style="background: #d1fae5; color: #065f46; font-size: 11px; font-weight: 800; padding: 3px 8px; border-radius: 6px">POTONGAN Rp 50.000</span>
+                <h4 style="font-size: 16px; font-weight: 800; color: #0f172a; margin-top: 6px; letter-spacing: 0.5px">BUNDLEHEMAT</h4>
+                <p style="font-size: 12px; color: #64748b; margin-top: 2px">Minimal pembelian Rp 150.000</p>
+              </div>
+              <button onclick="copyCoupon('BUNDLEHEMAT')" style="background: #10b981; color: #fff; border: none; padding: 8px 14px; border-radius: 8px; font-size: 12px; font-weight: 700; cursor: pointer">Kopi Kode</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 4: OPSIONAL AKSES MEMBERSHIP UNLIMITED ALL-ACCESS -->
+        <section style="max-width: 1100px; margin: 60px auto 30px; padding: 0 20px">
+          <div style="background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%); border: 1px solid #e2e8f0; border-radius: 24px; padding: 40px 24px; text-align: center">
+            <span style="background: #fef3c7; color: #92400e; font-size: 12px; font-weight: 800; padding: 6px 16px; border-radius: 20px">AKSES TANPA LIMIT</span>
+            <h2 style="font-size: 26px; color: #0f172a; margin-top: 12px">Ingin Akses Bebas Seluruh Kelas?</h2>
+            <p style="color: #64748b; font-size: 14.5px; margin-top: 8px; max-width: 580px; margin-left: auto; margin-right: auto">
+              Jika kamu tipe pembelajar aktif yang ingin mempelajari semua bidang IT sekaligus, gunakan paket All-Access Membership.
+            </p>
+
+            <!-- TOGGLE BULANAN / TAHUNAN -->
+            <div style="display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 24px">
+              <span style="font-size: 14px; font-weight: 600; color: #334155">Bulanan</span>
+              <label style="position: relative; display: inline-block; width: 50px; height: 26px; cursor: pointer">
+                <input type="checkbox" id="pricingToggle" onclick="togglePricing()" style="opacity: 0; width: 0; height: 0" />
+                <span id="toggleTrack" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: #cbd5e1; transition: 0.3s; border-radius: 34px">
+                  <span id="toggleKnob" style="position: absolute; height: 18px; width: 18px; left: 4px; bottom: 4px; background-color: white; transition: 0.3s; border-radius: 50%"></span>
+                </span>
+              </label>
+              <span style="font-size: 14px; font-weight: 600; color: #334155">Tahunan</span>
+              <span style="background: #dcfce7; color: #166534; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 20px">Hemat 20%</span>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 36px; text-align: left">
+              <!-- ALL ACCESS BASIC -->
+              <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between">
+                <div>
+                  <h3 style="font-size: 18px; color: #0f172a">All-Access Pass</h3>
+                  <p style="font-size: 13px; color: #64748b; margin-top: 4px">Akses seluruh 100+ modul kelas Belajaryuk tanpa batas waktu.</p>
+                  <div style="margin: 16px 0">
+                    <span class="price-val" style="font-size: 28px; font-weight: 800; color: #0f172a">Rp 199.000</span>
+                    <span class="price-period" style="font-size: 13px; color: #64748b">/ bulan</span>
+                  </div>
+                </div>
+                <button onclick="openModal('All-Access Pass')" style="width: 100%; border-radius: 10px; padding: 10px; background: #0f172a; border: none; color: #fff; font-weight: 600; cursor: pointer">Langganan All-Access</button>
+              </div>
+
+              <!-- ALL ACCESS VIP -->
+              <div style="background: #ffffff; border: 2px solid #2563eb; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between">
+                <div>
+                  <h3 style="font-size: 18px; color: #2563eb">VIP Mentorship Pass</h3>
+                  <p style="font-size: 13px; color: #64748b; margin-top: 4px">Seluruh modul kelas + Bimbingan private 1-on-1 dengan mentor.</p>
+                  <div style="margin: 16px 0">
+                    <span class="price-val" style="font-size: 28px; font-weight: 800; color: #2563eb">Rp 399.000</span>
+                    <span class="price-period" style="font-size: 13px; color: #64748b">/ bulan</span>
+                  </div>
+                </div>
+                <button onclick="openModal('VIP Mentorship Pass')" style="width: 100%; border-radius: 10px; padding: 10px; background: #2563eb; border: none; color: #fff; font-weight: 600; cursor: pointer">Pilih VIP Mentorship</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FAQ SECTION -->
+        <section style="background: #f8fafc; border-top: 1px solid #e2e8f0; padding: 50px 20px; margin-top: 40px">
+          <div style="max-width: 800px; margin: 0 auto">
+            <h3 style="text-align: center; font-size: 22px; color: #0f172a; margin-bottom: 30px">Pertanyaan Sering Diajukan</h3>
+
+            <div style="display: flex; flex-direction: column; gap: 16px">
+              <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px">
+                <h4 style="font-size: 15px; color: #0f172a; margin-bottom: 8px">Apakah pembelian paket bundle kelas berlakunya selamanya?</h4>
+                <p style="font-size: 13.5px; color: #64748b; margin: 0">Ya! Untuk pembelian Paket Bundle per-kelas, kamu mendapatkan **Akses Selamanya (Lifetime Access)** beserta pembaruan materi dan sertifikatnya tanpa biaya bulanan.</p>
+              </div>
+
+              <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px">
+                <h4 style="font-size: 15px; color: #0f172a; margin-bottom: 8px">Bagaimana cara menggunakan voucher promo?</h4>
+                <p style="font-size: 13.5px; color: #64748b; margin: 0">Klik tombol "Kopi Kode" pada voucher yang kamu inginkan, lalu masukkan kode tersebut di kolom promo saat checkout pembayaran kelas.</p>
+              </div>
+
+              <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px">
+                <h4 style="font-size: 15px; color: #0f172a; margin-bottom: 8px">Metode pembayaran apa saja yang bisa digunakan?</h4>
+                <p style="font-size: 13.5px; color: #64748b; margin: 0">Kami menerima pembayaran instan via Virtual Account Bank (BCA, Mandiri, BRI, BNI), QRIS, Gopay, OVO, ShopeePay, dan Kartu Kredit.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal" id="modal">
+      <div class="modal-box">
+        <button class="modal-close" onclick="closeModal()">×</button>
+        <h2 id="modalTitle">Konfirmasi Pembelian</h2>
+        <p>Silakan isi informasi kamu untuk melanjutkan checkout paket pilihanmu.</p>
+        <button class="modal-action" onclick="closeModal()">Tutup</button>
+      </div>
+    </div>
+
+    <!-- SCRIPT TOGGLE HARGA & UTILITIES -->
+    <script>
+      // TOGGLE BULANAN / TAHUNAN MEMBERSHIP
+      function togglePricing() {
+        const isChecked = document.getElementById('pricingToggle').checked;
+        const track = document.getElementById('toggleTrack');
+        const knob = document.getElementById('toggleKnob');
+        const prices = document.querySelectorAll('.price-val');
+        const periods = document.querySelectorAll('.price-period');
+
+        const monthlyPrices = ['Rp 199.000', 'Rp 399.000'];
+        const yearlyPrices = ['Rp 1.890.000', 'Rp 3.790.000'];
+
+        if (isChecked) {
+          track.style.backgroundColor = '#2563eb';
+          knob.style.transform = 'translateX(24px)';
+        } else {
+          track.style.backgroundColor = '#cbd5e1';
+          knob.style.transform = 'translateX(0)';
+        }
+
+        prices.forEach((price, index) => {
+          if (isChecked) {
+            price.textContent = yearlyPrices[index];
+            periods[index].textContent = ' / tahun';
+          } else {
+            price.textContent = monthlyPrices[index];
+            periods[index].textContent = ' / bulan';
+          }
+        });
+      }
+
+      // COPY VOUCHER FUNCTION
+      function copyCoupon(code) {
+        navigator.clipboard.writeText(code);
+        alert('Kode kupon "' + code + '" berhasil disalin!');
+      }
+
+      // SIMPLE COUNTDOWN TIMER
+      let h = 8,
+        m = 42,
+        s = 15;
+      setInterval(() => {
+        s--;
+        if (s < 0) {
+          s = 59;
+          m--;
+        }
+        if (m < 0) {
+          m = 59;
+          h--;
+        }
+        if (h < 0) {
+          h = 24;
+        }
+        document.getElementById('hours').textContent = h < 10 ? '0' + h : h;
+        document.getElementById('minutes').textContent = m < 10 ? '0' + m : m;
+        document.getElementById('seconds').textContent = s < 10 ? '0' + s : s;
+      }, 1000);
+    </script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

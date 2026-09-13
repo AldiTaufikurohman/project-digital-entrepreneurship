@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Pelatihan - BELAJARYUK</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <!-- NAVBAR -->
+      <header class="navbar">
+        <div class="navbar-container">
+          <!-- LOGO PERSIS SAMA DENGAN ELEARNING.HTML -->
+          <a href="index.html" class="logo"> <span class="logo-accent">BELAJAR</span>YUK </a>
+
+          <div class="nav-actions" id="navActions">
+            <a href="../proses/masuk.php" class="btn-login">Masuk</a>
+            <a href="../proses/daftar.php" class="btn-register" style="background: #4338ca">Daftar Gratis</a>
+
+            <button class="hamburger" id="hamburgerBtn" onclick="toggleSidebar()" aria-label="Menu Navigasi">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- OVERLAY (DITAMBAHKAN UNTUK SIDEBAR) -->
+      <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+      <!-- SIDEBAR (DITAMBAHKAN UNTUK HAMBURGER MENU) -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-head">
+          <span class="sidebar-tag">NAVIGASI</span>
+          <h3>Menu Utama</h3>
+        </div>
+
+        <nav class="sidebar-nav">
+          <a href="index.html">
+            <span>Beranda</span>
+          </a>
+          <a href="elearning.html">
+            <span>E-Learning</span>
+          </a>
+          <a href="langganan.html">
+            <span>Langganan</span>
+          </a>
+          <a href="komunitas.html">
+            <span>Grup Komunitas</span>
+          </a>
+          <a href="bootcamp.html">
+            <span>Bootcamp</span>
+          </a>
+        </nav>
+      </aside>
+
+      <!-- HERO SECTION -->
+      <section class="hero" style="padding-bottom: 0">
+        <div class="hero-slider" style="height: 320px">
+          <div class="hero-slide">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=80" alt="Pelatihan Web Development" class="hero-img" />
+            <div class="hero-overlay">
+              <div style="display: flex; gap: 8px; margin-bottom: 8px">
+                <span class="hero-badge" style="background: #eab308; color: #0f172a; font-weight: 700">BEST SELLER</span>
+                <span class="hero-badge" style="background: #2563eb; color: #ffffff">CERTIFIED</span>
+              </div>
+              <h1>PELATIHAN WEB DEVELOPMENT</h1>
+              <p>Tingkatkan keahlianmu bersama para profesional di bidangnya.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MAIN CONTENT -->
+      <main class="program" style="padding-top: 30px">
+        <div class="program-row reverse" style="background: transparent; padding: 0">
+          <!-- KOLOM KIRI -->
+          <div class="program-content">
+            <h3 style="color: #2563eb; font-size: 18px">| Tentang Program</h3>
+            <p style="margin-bottom: 24px">Belajar HTML, CSS, JavaScript, React sampai siap kerja.</p>
+
+            <span class="sub-title" style="display: block; margin-bottom: 12px">BENEFIT PESERTA:</span>
+
+            <!-- BENEFIT GRID 2 KOLOM -->
+            <div class="benefit-grid" style="grid-template-columns: repeat(2, 1fr); gap: 12px">
+              <div class="benefit-card" style="padding: 12px 16px; text-align: left; display: flex; align-items: center; gap: 8px; background: #f8fafc">
+                <span style="color: #10b981; font-weight: bold">✓</span>
+                <span style="font-size: 12.5px; font-weight: 600; color: #334155">Sertifikat Kelulusan</span>
+              </div>
+              <div class="benefit-card" style="padding: 12px 16px; text-align: left; display: flex; align-items: center; gap: 8px; background: #f8fafc">
+                <span style="color: #10b981; font-weight: bold">✓</span>
+                <span style="font-size: 12.5px; font-weight: 600; color: #334155">Materi & Rekaman</span>
+              </div>
+              <div class="benefit-card" style="padding: 12px 16px; text-align: left; display: flex; align-items: center; gap: 8px; background: #f8fafc">
+                <span style="color: #10b981; font-weight: bold">✓</span>
+                <span style="font-size: 12.5px; font-weight: 600; color: #334155">Networking</span>
+              </div>
+              <div class="benefit-card" style="padding: 12px 16px; text-align: left; display: flex; align-items: center; gap: 8px; background: #f8fafc">
+                <span style="color: #10b981; font-weight: bold">✓</span>
+                <span style="font-size: 12.5px; font-weight: 600; color: #334155">Bimbingan Karir</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- KOLOM KANAN -->
+          <div class="program-image-wrapper">
+            <div class="mentor-card" style="width: 100%; background: #f8fafc; border: 1px solid #f1f5f9; border-radius: 16px; padding: 24px">
+              <div style="text-align: center; margin-bottom: 20px">
+                <span class="sidebar-tag" style="letter-spacing: 1px">RINGKASAN INFO</span>
+              </div>
+
+              <div style="display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 13px; color: #64748b">
+                <span>Durasi</span>
+                <strong style="color: #0f172a">3 Bulan</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 13px; color: #64748b">
+                <span>Jadwal</span>
+                <strong style="color: #0f172a">Weekend</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 20px; font-size: 13px; color: #64748b">
+                <span>Investasi</span>
+                <strong style="color: #2563eb; font-size: 15px">Rp 499.000</strong>
+              </div>
+
+              <button class="btn-register" onclick="openModal('Pendaftaran Program Web Development')" style="width: 100%; border-radius: 20px; margin-bottom: 12px">Daftar Sekarang</button>
+              <a href="elearning.html" style="display: block; text-align: center; font-size: 12.5px; color: #64748b; font-weight: 600; text-decoration: none">← Kembali ke Katalog</a>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Learning — Belajaryuk</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <style>
+      body {
+        background-color: #f8fafc;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+      }
+
+      /* HERO FULL GAMBAR / BACKGROUND IMAGE */
+      .elearning-hero-fullimg {
+        position: relative;
+        border-radius: 20px;
+        padding: 60px 40px;
+        color: #ffffff;
+        margin-top: 20px;
+        margin-bottom: 32px;
+        overflow: hidden;
+        background:
+          linear-gradient(180deg, rgba(15, 23, 42, 0.4) 0%, rgba(15, 23, 42, 0.85) 100%),
+          url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+        box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.25);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        min-height: 280px;
+      }
+
+      .hero-badge-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        padding: 6px 14px;
+        border-radius: 30px;
+        font-size: 12px;
+        font-weight: 600;
+        color: #ffffff;
+        margin-bottom: 16px;
+        width: fit-content;
+      }
+
+      /* SEARCH & FILTER HARMONIS */
+      .search-container-custom {
+        position: relative;
+        margin-bottom: 20px;
+      }
+
+      .search-input-custom {
+        width: 100%;
+        padding: 14px 20px 14px 48px;
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
+        background: #ffffff;
+        font-size: 14px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+        outline: none;
+        transition: all 0.2s;
+      }
+
+      .search-input-custom:focus {
+        border-color: #4338ca;
+        box-shadow: 0 0 0 3px rgba(67, 56, 202, 0.1);
+      }
+
+      .search-icon-custom {
+        position: absolute;
+        left: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #94a3b8;
+      }
+
+      /* PILLS WARNA NETRAL/INDIGO */
+      .pills-wrapper {
+        display: flex;
+        gap: 8px;
+        overflow-x: auto;
+        padding-bottom: 8px;
+      }
+
+      .pill-btn {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        color: #475569;
+        padding: 8px 18px;
+        border-radius: 30px;
+        font-weight: 600;
+        font-size: 13px;
+        cursor: pointer;
+        white-space: nowrap;
+        transition: all 0.2s;
+      }
+
+      .pill-btn:hover {
+        background: #f1f5f9;
+        color: #1e293b;
+      }
+
+      .pill-btn.active {
+        background: #4338ca;
+        color: #ffffff;
+        border-color: #4338ca;
+        box-shadow: 0 4px 12px rgba(67, 56, 202, 0.25);
+      }
+
+      /* CARD COURSE MODERN */
+      .course-card-modern {
+        background: #ffffff;
+        border-radius: 16px;
+        border: 1px solid #f1f5f9;
+        overflow: hidden;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .course-card-modern:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.08);
+      }
+
+      .card-img-wrapper {
+        position: relative;
+        height: 160px;
+      }
+
+      .card-img-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .badge-level {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        background: rgba(15, 23, 42, 0.75);
+        backdrop-filter: blur(4px);
+        color: #38bdf8;
+        border: 1px solid rgba(56, 189, 248, 0.3);
+        font-size: 10.5px;
+        font-weight: 700;
+        padding: 4px 10px;
+        border-radius: 20px;
+      }
+
+      .card-body-custom {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+      }
+
+      .cat-tag {
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: #4338ca;
+        margin-bottom: 6px;
+      }
+
+      .card-title-custom {
+        font-size: 16px;
+        font-weight: 700;
+        color: #0f172a;
+        margin-bottom: 8px;
+        line-height: 1.4;
+      }
+
+      /* META TANPA JAM */
+      .course-meta {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        font-size: 12px;
+        color: #64748b;
+        margin-bottom: 16px;
+      }
+
+      .course-meta span {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+
+      /* PROGRESS BAR & STATS */
+      .course-progress-info {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        padding: 10px 12px;
+        border-radius: 8px;
+        margin-top: auto;
+        margin-bottom: 16px;
+      }
+
+      .progress-text {
+        display: flex;
+        justify-content: space-between;
+        font-size: 11.5px;
+        font-weight: 600;
+        color: #475569;
+        margin-bottom: 6px;
+      }
+
+      .progress-bar-bg {
+        height: 6px;
+        background: #e2e8f0;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .progress-bar-fill {
+        height: 100%;
+        background: #4338ca;
+        border-radius: 10px;
+      }
+
+      /* BUTTON FULL WIDTH LINK */
+      .btn-primary-full {
+        width: 100%;
+        background: #4338ca;
+        color: #ffffff;
+        border: none;
+        padding: 12px;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 13px;
+        cursor: pointer;
+        transition: background 0.2s;
+        text-align: center;
+        display: block;
+        text-decoration: none;
+        box-sizing: border-box;
+      }
+
+      .btn-primary-full:hover {
+        background: #3730a3;
+      }
+
+      @media (max-width: 768px) {
+        .elearning-hero-fullimg {
+          padding: 30px 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <!-- NAVBAR -->
+      <header class="navbar">
+        <div class="navbar-container">
+          <a href="index.html" class="logo"> <span class="logo-accent" style="color: #4338ca">BELAJAR</span>YUK </a>
+
+          <div class="nav-actions" id="navActions">
+            <a href="../proses/masuk.php" class="btn-login">Masuk</a>
+            <a href="../proses/daftar.php" class="btn-register" style="background: #4338ca">Daftar Gratis</a>
+            <button class="hamburger" id="hamburgerBtn" onclick="toggleSidebar()" aria-label="Menu Navigasi">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-head">
+          <span class="sidebar-tag">NAVIGASI</span>
+          <h3>Menu Utama</h3>
+        </div>
+        <nav class="sidebar-nav">
+          <a href="index.html"><span>Beranda</span></a>
+          <a href="elearning.html" class="active"><span>E-Learning</span></a>
+          <a href="langganan.html"><span>Langganan</span></a>
+          <a href="komunitas.html"><span>Grup Komunitas</span></a>
+          <a href="bootcamp.html"><span>Bootcamp</span></a>
+        </nav>
+      </aside>
+
+      <!-- MAIN KONTEN -->
+      <main class="main-content" style="max-width: 1200px; margin: 0 auto; padding: 20px">
+        <!-- HERO BANNER FULL GAMBAR -->
+        <section>
+          <div class="elearning-hero-fullimg">
+            <div class="hero-badge-tag">Self-Paced Learning Module</div>
+            <h1 style="font-size: 32px; font-weight: 800; line-height: 1.2; margin-bottom: 8px; color: #ffffff; max-width: 700px">Pelajari Keterampilan Digital Kapan Saja & Di Mana Saja.</h1>
+            <p style="font-size: 15px; color: #e2e8f0; line-height: 1.5; margin: 0; max-width: 650px">Akses puluhan modul praktis terstruktur, kuis interaktif, dan sertifikat kelulusan resmi untuk mendukung perkembangan karirmu.</p>
+          </div>
+        </section>
+
+        <!-- FILTER & SEARCH SECTION -->
+        <section style="margin-bottom: 28px">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px">
+            <h3 style="font-size: 18px; font-weight: 700; color: #0f172a; margin: 0">Katalog Modul Pembelajaran</h3>
+            <span style="font-size: 12px; color: #4338ca; font-weight: 700; background: #e0e7ff; padding: 4px 12px; border-radius: 20px">50+ Modul Tersedia</span>
+          </div>
+
+          <div class="search-container-custom">
+            <svg class="search-icon-custom" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" class="search-input-custom" placeholder="Cari topik pembelajaran, framework, atau bahasa pemrograman..." />
+          </div>
+
+          <div class="pills-wrapper">
+            <button class="pill-btn active">Semua Modul</button>
+            <button class="pill-btn">Front-End</button>
+            <button class="pill-btn">Back-End</button>
+            <button class="pill-btn">UI/UX Design</button>
+            <button class="pill-btn">Data & AI</button>
+            <button class="pill-btn">Mobile Dev</button>
+          </div>
+        </section>
+
+        <!-- COURSES GRID -->
+        <section>
+          <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px">
+            <!-- CARD 1 -->
+            <article class="course-card-modern">
+              <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=500&q=80" alt="React" />
+                <span class="badge-level">Pemula</span>
+              </div>
+              <div class="card-body-custom">
+                <span class="cat-tag">Front-End Web</span>
+                <h4 class="card-title-custom">Fundamental React.js & Modern Web Dev</h4>
+
+                <div class="course-meta">
+                  <span>📹 24 Video</span>
+                  <span>⭐ 4.9</span>
+                </div>
+
+                <div class="course-progress-info">
+                  <div class="progress-text">
+                    <span>Kurikulum Terstruktur</span>
+                    <span>100% Online</span>
+                  </div>
+                  <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" style="width: 100%"></div>
+                  </div>
+                </div>
+
+                <a href="detail.html" class="btn-primary-full">Lihat Detail</a>
+              </div>
+            </article>
+
+            <!-- CARD 2 -->
+            <article class="course-card-modern">
+              <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=500&q=80" alt="Python" />
+                <span class="badge-level">Pemula</span>
+              </div>
+              <div class="card-body-custom">
+                <span class="cat-tag">Data Science</span>
+                <h4 class="card-title-custom">Python Dasar untuk Analisis Data & Mining</h4>
+
+                <div class="course-meta">
+                  <span>📹 18 Video</span>
+                  <span>⭐ 4.8</span>
+                </div>
+
+                <div class="course-progress-info">
+                  <div class="progress-text">
+                    <span>Kurikulum Terstruktur</span>
+                    <span>100% Online</span>
+                  </div>
+                  <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" style="width: 100%"></div>
+                  </div>
+                </div>
+
+                <a href="detail.html" class="btn-primary-full">Lihat Detail</a>
+              </div>
+            </article>
+
+            <!-- CARD 3 -->
+            <article class="course-card-modern">
+              <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1618788372246-79faff0c3742?auto=format&fit=crop&w=500&q=80" alt="Figma" />
+                <span class="badge-level">Menengah</span>
+              </div>
+              <div class="card-body-custom">
+                <span class="cat-tag">UI/UX Design</span>
+                <h4 class="card-title-custom">Figma Mastering: Design System & Auto Layout</h4>
+
+                <div class="course-meta">
+                  <span>📹 30 Video</span>
+                  <span>⭐ 4.9</span>
+                </div>
+
+                <div class="course-progress-info">
+                  <div class="progress-text">
+                    <span>Kurikulum Terstruktur</span>
+                    <span>100% Online</span>
+                  </div>
+                  <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" style="width: 100%"></div>
+                  </div>
+                </div>
+
+                <a href="detail.html" class="btn-primary-full">Lihat Detail</a>
+              </div>
+            </article>
+
+            <!-- CARD 4 -->
+            <article class="course-card-modern">
+              <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=500&q=80" alt="Laravel" />
+                <span class="badge-level">Menengah</span>
+              </div>
+              <div class="card-body-custom">
+                <span class="cat-tag">Back-End Dev</span>
+                <h4 class="card-title-custom">Restful API Kompleks dengan Laravel 11</h4>
+
+                <div class="course-meta">
+                  <span>📹 28 Video</span>
+                  <span>⭐ 4.8</span>
+                </div>
+
+                <div class="course-progress-info">
+                  <div class="progress-text">
+                    <span>Kurikulum Terstruktur</span>
+                    <span>100% Online</span>
+                  </div>
+                  <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" style="width: 100%"></div>
+                  </div>
+                </div>
+
+                <a href="detail.html" class="btn-primary-full">Lihat Detail</a>
+              </div>
+            </article>
+
+            <!-- CARD 5 -->
+            <article class="course-card-modern">
+              <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=500&q=80" alt="Tailwind CSS" />
+                <span class="badge-level">Pemula</span>
+              </div>
+              <div class="card-body-custom">
+                <span class="cat-tag">Front-End Web</span>
+                <h4 class="card-title-custom">Tailwind CSS 3: Responsive UI Layouting</h4>
+
+                <div class="course-meta">
+                  <span>📹 15 Video</span>
+                  <span>⭐ 4.9</span>
+                </div>
+
+                <div class="course-progress-info">
+                  <div class="progress-text">
+                    <span>Kurikulum Terstruktur</span>
+                    <span>100% Online</span>
+                  </div>
+                  <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" style="width: 100%"></div>
+                  </div>
+                </div>
+
+                <a href="detail.html" class="btn-primary-full">Lihat Detail</a>
+              </div>
+            </article>
+
+            <!-- CARD 6 -->
+            <article class="course-card-modern">
+              <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=500&q=80" alt="Flutter" />
+                <span class="badge-level">Menengah</span>
+              </div>
+              <div class="card-body-custom">
+                <span class="cat-tag">Mobile Dev</span>
+                <h4 class="card-title-custom">Flutter & Dart: Dasar Aplikasi Mobile iOS/Android</h4>
+
+                <div class="course-meta">
+                  <span>📹 32 Video</span>
+                  <span>⭐ 4.7</span>
+                </div>
+
+                <div class="course-progress-info">
+                  <div class="progress-text">
+                    <span>Kurikulum Terstruktur</span>
+                    <span>100% Online</span>
+                  </div>
+                  <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" style="width: 100%"></div>
+                  </div>
+                </div>
+
+                <a href="detail.html" class="btn-primary-full">Lihat Detail</a>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal" id="modal">
+      <div class="modal-box">
+        <button class="modal-close" onclick="closeModal()" type="button" aria-label="Tutup Modal">×</button>
+        <h2 id="modalTitle">Akses Modul Pembelajaran</h2>
+        <p>Silakan masuk ke akun Belajaryuk Anda untuk mulai menonton video pembelajaran dan mengunduh materi.</p>
+        <button class="modal-action" style="background: #4338ca" onclick="closeModal()">Mulai Belajar</button>
+      </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Komunitas & Jejaring Profesional — Belajaryuk</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <!-- NAVBAR -->
+      <header class="navbar">
+        <div class="navbar-container">
+          <a href="index.html" class="logo"> <span class="logo-accent">BELAJAR</span>YUK </a>
+
+          <div class="nav-actions" id="navActions">
+            <a href="../proses/masuk.php" class="btn-login">Masuk</a>
+            <a href="../proses/daftar.php" class="btn-register" style="background: #4338ca">Daftar Gratis</a>
+
+            <button class="hamburger" id="hamburgerBtn" onclick="toggleSidebar()" aria-label="Menu Navigasi">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- OVERLAY -->
+      <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-head">
+          <span class="sidebar-tag">NAVIGASI</span>
+          <h3>Menu Utama</h3>
+        </div>
+
+        <nav class="sidebar-nav">
+          <a href="index.html">
+            <span>Beranda</span>
+          </a>
+          <a href="elearning.html">
+            <span>E-Learning</span>
+          </a>
+          <a href="langganan.html">
+            <span>Langganan & Promo</span>
+          </a>
+          <a href="komunitas.html" class="active">
+            <span>Grup Komunitas</span>
+          </a>
+          <a href="bootcamp.html">
+            <span>Bootcamp</span>
+          </a>
+        </nav>
+      </aside>
+
+      <!-- MAIN KONTEN KOMUNITAS FORMAL (GUEST MODE) -->
+      <main class="main-content">
+        <!-- HERO BANNER FORMAL -->
+        <section style="background: #0f172a; color: #ffffff; border-radius: 20px; padding: 48px 36px; margin: 20px auto; max-width: 1100px; border: 1px solid #1e293b; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12)">
+          <div style="max-width: 720px">
+            <span style="background: #1e293b; color: #38bdf8; font-size: 12px; font-weight: 700; padding: 6px 14px; border-radius: 6px; border: 1px solid #334155; letter-spacing: 0.5px">PROGAM JEJARING & KOMUNITAS</span>
+            <h1 style="font-size: 32px; font-weight: 800; margin-top: 16px; line-height: 1.3; letter-spacing: -0.5px">Ekosistem Belajar Kolaboratif & Network Profesional</h1>
+            <p style="color: #94a3b8; font-size: 15px; margin-top: 12px; line-height: 1.6">
+              Wadah resmi bagi para profesional, mahasiswa, dan praktisi teknologi untuk berdiskusi, berbagi proyek, serta membangun relasi industri secara terstruktur.
+            </p>
+          </div>
+
+          <!-- FORMAL ALERT BANNER FOR GUEST -->
+          <div
+            style="margin-top: 32px; background: rgba(255, 255, 255, 0.05); border-left: 4px solid #2563eb; padding: 20px; border-radius: 8px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px"
+          >
+            <div>
+              <h4 style="font-size: 15px; color: #f8fafc; font-weight: 700">Akses Komunitas Memerlukan Akun Belajaryuk</h4>
+              <p style="color: #cbd5e1; font-size: 13.5px; margin-top: 4px">Silakan masuk ke akun Anda atau daftarkan diri untuk bergabung ke dalam channel diskusi dan forum pembinaan.</p>
+            </div>
+            <div style="display: flex; gap: 12px">
+              <button onclick="openModal('Masuk ke Akun')" style="background: #2563eb; color: #fff; border: none; padding: 10px 20px; border-radius: 8px; font-weight: 600; font-size: 14px; cursor: pointer">Masuk Akun</button>
+              <button onclick="openModal('Daftar Akun Gratis')" style="background: transparent; color: #fff; border: 1px solid #475569; padding: 10px 20px; border-radius: 8px; font-weight: 600; font-size: 14px; cursor: pointer">
+                Daftar Akun Baru
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 1: MANFAAT KOMUNITAS / PROGRAM PEMBINAAN -->
+        <section style="max-width: 1100px; margin: 48px auto 20px; padding: 0 20px">
+          <div style="text-align: center; margin-bottom: 36px">
+            <span style="color: #2563eb; font-weight: 700; font-size: 12px; letter-spacing: 1px; text-transform: uppercase">PROGRAM PENGEMBANGAN</span>
+            <h2 style="font-size: 26px; color: #0f172a; margin-top: 6px; font-weight: 800">Manfaat Bergabung di Komunitas</h2>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px">
+            <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px">
+              <div style="width: 40px; height: 40px; background: #eff6ff; color: #2563eb; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 18px; margin-bottom: 16px">01</div>
+              <h3 style="font-size: 18px; color: #0f172a; font-weight: 700">Diskusi & Bimbingan Terstruktur</h3>
+              <p style="color: #64748b; font-size: 14px; margin-top: 8px; line-height: 1.5">Dapatkan bantuan penyelesaian kendala teknis dan ulasan tugas langsung dari mentor dan pengajar berpengalaman.</p>
+            </div>
+
+            <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px">
+              <div style="width: 40px; height: 40px; background: #eff6ff; color: #2563eb; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 18px; margin-bottom: 16px">02</div>
+              <h3 style="font-size: 18px; color: #0f172a; font-weight: 700">Jejaring Profesional & Karir</h3>
+              <p style="color: #64748b; font-size: 14px; margin-top: 8px; line-height: 1.5">Perluas relasi antar praktisi, dapatkan rujukan informasi lowongan kerja eksklusif, serta peluang kemitraan proyek.</p>
+            </div>
+
+            <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px">
+              <div style="width: 40px; height: 40px; background: #eff6ff; color: #2563eb; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 18px; margin-bottom: 16px">03</div>
+              <h3 style="font-size: 18px; color: #0f172a; font-weight: 700">Sesi Sharing & Live Mentoring</h3>
+              <p style="color: #64748b; font-size: 14px; margin-top: 8px; line-height: 1.5">Agenda rutin bedah portofolio, persiapan wawancara kerja, dan webinar perkembangan teknologi terkini.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 2: DIREKTORI GRUP PEMINATAN (LOCKED VIEW) -->
+        <section style="max-width: 1100px; margin: 48px auto; padding: 0 20px">
+          <div style="margin-bottom: 24px">
+            <span style="color: #2563eb; font-weight: 700; font-size: 12px; letter-spacing: 1px; text-transform: uppercase">DIREKTORI CHANNEL</span>
+            <h2 style="font-size: 24px; color: #0f172a; margin-top: 4px; font-weight: 800">Grup Diskusi Spesialisasi</h2>
+            <p style="color: #64748b; font-size: 14px; margin-top: 4px">Grup belajar resmi yang terbagi berdasarkan bidang keahlian.</p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px">
+            <!-- GRUP 1 -->
+            <div style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px">
+                  <span style="font-size: 12px; color: #475569; font-weight: 700">Divisi Development</span>
+                  <span style="background: #f1f5f9; color: #475569; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px">🔒 Terkunci</span>
+                </div>
+                <h3 style="font-size: 18px; color: #0f172a; font-weight: 700">UI/UX & Front-End Engineering</h3>
+                <p style="color: #64748b; font-size: 13.5px; margin-top: 6px">Fokus pembahasan seputar UI Design System, React, Tailwind CSS, dan pengujian performa antarmuka.</p>
+              </div>
+              <button onclick="openModal('Masuk ke Akun')" style="margin-top: 20px; border-radius: 8px; padding: 10px; background: #f8fafc; border: 1px solid #cbd5e1; color: #1e293b; font-weight: 600; font-size: 13.5px; cursor: pointer">
+                Masuk untuk Bergabung
+              </button>
+            </div>
+
+            <!-- GRUP 2 -->
+            <div style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px">
+                  <span style="font-size: 12px; color: #475569; font-weight: 700">Divisi Architecture</span>
+                  <span style="background: #f1f5f9; color: #475569; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px">🔒 Terkunci</span>
+                </div>
+                <h3 style="font-size: 18px; color: #0f172a; font-weight: 700">Back-End & Database Architecture</h3>
+                <p style="color: #64748b; font-size: 13.5px; margin-top: 6px">Pembahasan arsitektur microservices, Laravel API, manajemen basis data, dan optimalisasi sistem.</p>
+              </div>
+              <button onclick="openModal('Masuk ke Akun')" style="margin-top: 20px; border-radius: 8px; padding: 10px; background: #f8fafc; border: 1px solid #cbd5e1; color: #1e293b; font-weight: 600; font-size: 13.5px; cursor: pointer">
+                Masuk untuk Bergabung
+              </button>
+            </div>
+
+            <!-- GRUP 3 -->
+            <div style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px">
+                  <span style="font-size: 12px; color: #475569; font-weight: 700">Divisi Data Science</span>
+                  <span style="background: #f1f5f9; color: #475569; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px">🔒 Terkunci</span>
+                </div>
+                <h3 style="font-size: 18px; color: #0f172a; font-weight: 700">Data Analytics & AI Implementation</h3>
+                <p style="color: #64748b; font-size: 13.5px; margin-top: 6px">Eksplorasi pemrograman Python, pemrosesan data, Machine Learning, dan penerapan solusi berbasis AI.</p>
+              </div>
+              <button onclick="openModal('Masuk ke Akun')" style="margin-top: 20px; border-radius: 8px; padding: 10px; background: #f8fafc; border: 1px solid #cbd5e1; color: #1e293b; font-weight: 600; font-size: 13.5px; cursor: pointer">
+                Masuk untuk Bergabung
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 3: CALL TO ACTION REGISTRASI -->
+        <section style="max-width: 1100px; margin: 60px auto 30px; padding: 0 20px">
+          <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 16px; padding: 40px 24px; text-align: center">
+            <h2 style="font-size: 22px; color: #0f172a; font-weight: 800">Siap Mengembangkan Karir Bersama Komunitas?</h2>
+            <p style="color: #64748b; font-size: 14.5px; margin-top: 8px; max-width: 600px; margin-left: auto; margin-right: auto">
+              Bergabunglah dengan ribuan siswa dan alumni yang aktif bertukar pengetahuan dan berkolaborasi setiap hari.
+            </p>
+
+            <div style="margin-top: 24px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap">
+              <button onclick="openModal('Daftar Akun Gratis')" style="background: #2563eb; color: #ffffff; border: none; padding: 12px 28px; border-radius: 8px; font-weight: 700; font-size: 14px; cursor: pointer">Daftar Sekarang</button>
+              <button onclick="openModal('Masuk ke Akun')" style="background: #ffffff; color: #1e293b; border: 1px solid #cbd5e1; padding: 12px 28px; border-radius: 8px; font-weight: 700; font-size: 14px; cursor: pointer">
+                Masuk ke Akun
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal" id="modal">
+      <div class="modal-box">
+        <button class="modal-close" onclick="closeModal()">×</button>
+        <h2 id="modalTitle">Akses Terbatas</h2>
+        <p>Silakan masuk atau daftarkan akun baru untuk mengakses seluruh fitur komunitas.</p>
+        <button class="modal-action" onclick="closeModal()">Mengerti</button>
+      </div>
+    </div>
+
+    <!-- UTILITY SCRIPT -->
+    <script src="../js/script.js"></script>
+  </body>
+</html>

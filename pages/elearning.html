@@ -1,530 +1,2616 @@
 <!doctype html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>E-Learning — Belajaryuk</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<head>
 
-    <link rel="stylesheet" href="../css/style.css" />
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        E-Learning — Belajaryuk
+    </title>
+
+
+    <!-- =====================================================
+         FONT
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <!-- =====================================================
+         GLOBAL CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css">
+
 
     <style>
-      body {
-        background-color: #f8fafc;
-        font-family: 'Plus Jakarta Sans', sans-serif;
-      }
 
-      /* HERO FULL GAMBAR / BACKGROUND IMAGE */
-      .elearning-hero-fullimg {
-        position: relative;
-        border-radius: 20px;
-        padding: 60px 40px;
-        color: #ffffff;
-        margin-top: 20px;
-        margin-bottom: 32px;
-        overflow: hidden;
-        background:
-          linear-gradient(180deg, rgba(15, 23, 42, 0.4) 0%, rgba(15, 23, 42, 0.85) 100%),
-          url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
-        box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.25);
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        min-height: 280px;
-      }
+        /* =====================================================
+           BODY
+        ===================================================== */
 
-      .hero-badge-tag {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        background: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(8px);
-        border: 1px solid rgba(255, 255, 255, 0.25);
-        padding: 6px 14px;
-        border-radius: 30px;
-        font-size: 12px;
-        font-weight: 600;
-        color: #ffffff;
-        margin-bottom: 16px;
-        width: fit-content;
-      }
+        body {
 
-      /* SEARCH & FILTER HARMONIS */
-      .search-container-custom {
-        position: relative;
-        margin-bottom: 20px;
-      }
+            background:
+                #f8fafc;
 
-      .search-input-custom {
-        width: 100%;
-        padding: 14px 20px 14px 48px;
-        border-radius: 12px;
-        border: 1px solid #e2e8f0;
-        background: #ffffff;
-        font-size: 14px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
-        outline: none;
-        transition: all 0.2s;
-      }
+            font-family:
+                'Plus Jakarta Sans',
+                sans-serif;
 
-      .search-input-custom:focus {
-        border-color: #4338ca;
-        box-shadow: 0 0 0 3px rgba(67, 56, 202, 0.1);
-      }
-
-      .search-icon-custom {
-        position: absolute;
-        left: 16px;
-        top: 50%;
-        transform: translateY(-50%);
-        color: #94a3b8;
-      }
-
-      /* PILLS WARNA NETRAL/INDIGO */
-      .pills-wrapper {
-        display: flex;
-        gap: 8px;
-        overflow-x: auto;
-        padding-bottom: 8px;
-      }
-
-      .pill-btn {
-        background: #ffffff;
-        border: 1px solid #e2e8f0;
-        color: #475569;
-        padding: 8px 18px;
-        border-radius: 30px;
-        font-weight: 600;
-        font-size: 13px;
-        cursor: pointer;
-        white-space: nowrap;
-        transition: all 0.2s;
-      }
-
-      .pill-btn:hover {
-        background: #f1f5f9;
-        color: #1e293b;
-      }
-
-      .pill-btn.active {
-        background: #4338ca;
-        color: #ffffff;
-        border-color: #4338ca;
-        box-shadow: 0 4px 12px rgba(67, 56, 202, 0.25);
-      }
-
-      /* CARD COURSE MODERN */
-      .course-card-modern {
-        background: #ffffff;
-        border-radius: 16px;
-        border: 1px solid #f1f5f9;
-        overflow: hidden;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-        transition:
-          transform 0.2s,
-          box-shadow 0.2s;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .course-card-modern:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.08);
-      }
-
-      .card-img-wrapper {
-        position: relative;
-        height: 160px;
-      }
-
-      .card-img-wrapper img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      .badge-level {
-        position: absolute;
-        top: 12px;
-        right: 12px;
-        background: rgba(15, 23, 42, 0.75);
-        backdrop-filter: blur(4px);
-        color: #38bdf8;
-        border: 1px solid rgba(56, 189, 248, 0.3);
-        font-size: 10.5px;
-        font-weight: 700;
-        padding: 4px 10px;
-        border-radius: 20px;
-      }
-
-      .card-body-custom {
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-      }
-
-      .cat-tag {
-        font-size: 11px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        color: #4338ca;
-        margin-bottom: 6px;
-      }
-
-      .card-title-custom {
-        font-size: 16px;
-        font-weight: 700;
-        color: #0f172a;
-        margin-bottom: 8px;
-        line-height: 1.4;
-      }
-
-      /* META TANPA JAM */
-      .course-meta {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        font-size: 12px;
-        color: #64748b;
-        margin-bottom: 16px;
-      }
-
-      .course-meta span {
-        display: flex;
-        align-items: center;
-        gap: 4px;
-      }
-
-      /* PROGRESS BAR & STATS */
-      .course-progress-info {
-        background: #f8fafc;
-        border: 1px solid #e2e8f0;
-        padding: 10px 12px;
-        border-radius: 8px;
-        margin-top: auto;
-        margin-bottom: 16px;
-      }
-
-      .progress-text {
-        display: flex;
-        justify-content: space-between;
-        font-size: 11.5px;
-        font-weight: 600;
-        color: #475569;
-        margin-bottom: 6px;
-      }
-
-      .progress-bar-bg {
-        height: 6px;
-        background: #e2e8f0;
-        border-radius: 10px;
-        overflow: hidden;
-      }
-
-      .progress-bar-fill {
-        height: 100%;
-        background: #4338ca;
-        border-radius: 10px;
-      }
-
-      /* BUTTON FULL WIDTH LINK */
-      .btn-primary-full {
-        width: 100%;
-        background: #4338ca;
-        color: #ffffff;
-        border: none;
-        padding: 12px;
-        border-radius: 8px;
-        font-weight: 700;
-        font-size: 13px;
-        cursor: pointer;
-        transition: background 0.2s;
-        text-align: center;
-        display: block;
-        text-decoration: none;
-        box-sizing: border-box;
-      }
-
-      .btn-primary-full:hover {
-        background: #3730a3;
-      }
-
-      @media (max-width: 768px) {
-        .elearning-hero-fullimg {
-          padding: 30px 20px;
         }
-      }
+
+
+        /* =====================================================
+           LOGO
+        ===================================================== */
+
+        .navbar .logo {
+
+            text-decoration:
+                none;
+
+        }
+
+
+        .navbar .logo .logo-accent {
+
+            color:
+                #4338ca !important;
+
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .elearning-hero-fullimg {
+
+            position:
+                relative;
+
+            min-height:
+                330px;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            justify-content:
+                center;
+
+            overflow:
+                hidden;
+
+            border-radius:
+                20px;
+
+            margin-top:
+                20px;
+
+            margin-bottom:
+                32px;
+
+            padding:
+                52px;
+
+            color:
+                #ffffff;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    rgba(15,23,42,.94),
+                    rgba(49,46,129,.90),
+                    rgba(79,70,229,.72)
+                ),
+
+                url(
+                    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=80'
+                )
+
+                center/cover
+                no-repeat;
+
+            box-shadow:
+                0 20px 40px
+                rgba(67,56,202,.18);
+
+            isolation:
+                isolate;
+
+        }
+
+
+        .elearning-hero-fullimg::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                280px;
+
+            height:
+                280px;
+
+            right:
+                -90px;
+
+            bottom:
+                -110px;
+
+            border-radius:
+                50%;
+
+            background:
+                rgba(165,180,252,.18);
+
+            filter:
+                blur(5px);
+
+            animation:
+                elearningHeroFloat
+                6s
+                ease-in-out
+                infinite;
+
+            z-index:
+                -1;
+
+        }
+
+
+        .elearning-hero-fullimg::after {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                180px;
+
+            height:
+                180px;
+
+            right:
+                120px;
+
+            top:
+                -90px;
+
+            border-radius:
+                50%;
+
+            background:
+                rgba(255,255,255,.08);
+
+            animation:
+                elearningHeroFloatReverse
+                8s
+                ease-in-out
+                infinite;
+
+            z-index:
+                -1;
+
+        }
+
+
+        @keyframes elearningHeroFloat {
+
+            0%,
+            100% {
+
+                transform:
+                    translateY(0);
+
+            }
+
+            50% {
+
+                transform:
+                    translateY(-20px);
+
+            }
+
+        }
+
+
+        @keyframes elearningHeroFloatReverse {
+
+            0%,
+            100% {
+
+                transform:
+                    translate(0,0);
+
+            }
+
+            50% {
+
+                transform:
+                    translate(-15px,20px);
+
+            }
+
+        }
+
+
+        .hero-badge-tag {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            width:
+                fit-content;
+
+            padding:
+                7px 14px;
+
+            margin-bottom:
+                16px;
+
+            border:
+                1px solid
+                rgba(255,255,255,.18);
+
+            border-radius:
+                999px;
+
+            background:
+                rgba(255,255,255,.10);
+
+            backdrop-filter:
+                blur(8px);
+
+            color:
+                #e0e7ff;
+
+            font-size:
+                11px;
+
+            font-weight:
+                600;
+
+        }
+
+
+        .elearning-hero-fullimg h1 {
+
+            position:
+                relative;
+
+            z-index:
+                2;
+
+            margin:
+                0 0 14px;
+
+            max-width:
+                720px;
+
+            color:
+                #ffffff;
+
+            font-size:
+                34px;
+
+            line-height:
+                1.25;
+
+            font-weight:
+                800;
+
+            letter-spacing:
+                -1px;
+
+        }
+
+
+        .elearning-hero-fullimg .hero-description {
+
+            position:
+                relative;
+
+            z-index:
+                2;
+
+            margin:
+                0;
+
+            max-width:
+                650px;
+
+            color:
+                #e0e7ff;
+
+            font-size:
+                14px;
+
+            line-height:
+                1.7;
+
+        }
+
+
+        /* =====================================================
+           SEARCH
+        ===================================================== */
+
+        .search-container-custom {
+
+            position:
+                relative;
+
+            margin-bottom:
+                20px;
+
+        }
+
+
+        .search-input-custom {
+
+            width:
+                100%;
+
+            min-height:
+                48px;
+
+            padding:
+                0 20px 0 48px;
+
+            border:
+                1px solid
+                #e2e8f0;
+
+            border-radius:
+                12px;
+
+            background:
+                #ffffff;
+
+            color:
+                #334155;
+
+            font-family:
+                inherit;
+
+            font-size:
+                13px;
+
+            outline:
+                none;
+
+            box-sizing:
+                border-box;
+
+            box-shadow:
+                0 2px 4px
+                rgba(15,23,42,.02);
+
+            transition:
+                border-color .2s ease,
+                box-shadow .2s ease;
+
+        }
+
+
+        .search-input-custom:focus {
+
+            border-color:
+                #4338ca;
+
+            box-shadow:
+                0 0 0 3px
+                rgba(67,56,202,.10);
+
+        }
+
+
+        .search-icon-custom {
+
+            position:
+                absolute;
+
+            left:
+                16px;
+
+            top:
+                50%;
+
+            transform:
+                translateY(-50%);
+
+            color:
+                #94a3b8;
+
+            pointer-events:
+                none;
+
+        }
+
+
+        /* =====================================================
+           FILTER
+        ===================================================== */
+
+        .pills-wrapper {
+
+            display:
+                flex;
+
+            gap:
+                8px;
+
+            overflow-x:
+                auto;
+
+            padding-bottom:
+                8px;
+
+        }
+
+
+        .pill-btn {
+
+            flex-shrink:
+                0;
+
+            padding:
+                8px 18px;
+
+            border:
+                1px solid
+                #e2e8f0;
+
+            border-radius:
+                999px;
+
+            background:
+                #ffffff;
+
+            color:
+                #475569;
+
+            font-family:
+                inherit;
+
+            font-size:
+                12px;
+
+            font-weight:
+                600;
+
+            cursor:
+                pointer;
+
+            white-space:
+                nowrap;
+
+            transition:
+                all .2s ease;
+
+        }
+
+
+        .pill-btn:hover {
+
+            background:
+                #f1f5f9;
+
+            border-color:
+                #c7d2fe;
+
+            color:
+                #4338ca;
+
+        }
+
+
+        .pill-btn.active {
+
+            background:
+                #4338ca;
+
+            border-color:
+                #4338ca;
+
+            color:
+                #ffffff;
+
+            box-shadow:
+                0 4px 12px
+                rgba(67,56,202,.20);
+
+        }
+
+
+        /* =====================================================
+           COURSE GRID
+        ===================================================== */
+
+        #courseGridUser {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(
+                    auto-fill,
+                    minmax(320px,1fr)
+                );
+
+            gap:
+                24px;
+
+            align-items:
+                stretch;
+
+        }
+
+
+        /* =====================================================
+           COURSE CARD
+           SAMA SEPERTI BOOTCAMP
+        ===================================================== */
+
+        .course-card-modern {
+
+            background:
+                #ffffff;
+
+            border:
+                1px solid
+                #e2e8f0;
+
+            border-radius:
+                14px;
+
+            overflow:
+                hidden;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            min-height:
+                0;
+
+            box-shadow:
+                none;
+
+            opacity:
+                0;
+
+            transform:
+                translateY(18px);
+
+            animation:
+                courseCardReveal
+                .45s
+                ease
+                forwards;
+
+            transition:
+                transform .2s ease,
+                box-shadow .2s ease,
+                border-color .2s ease;
+
+        }
+
+
+        @keyframes courseCardReveal {
+
+            to {
+
+                opacity:
+                    1;
+
+                transform:
+                    translateY(0);
+
+            }
+
+        }
+
+
+        .course-card-modern:hover {
+
+            transform:
+                translateY(-2px);
+
+            border-color:
+                #dbeafe;
+
+            box-shadow:
+                0 8px 24px
+                rgba(15,23,42,.07);
+
+        }
+
+
+        /* =====================================================
+           IMAGE
+        ===================================================== */
+
+        .course-card-modern .card-img-wrapper {
+
+            position:
+                relative;
+
+            width:
+                100%;
+
+            height:
+                155px;
+
+            overflow:
+                hidden;
+
+            background:
+                #eff6ff;
+
+            flex-shrink:
+                0;
+
+        }
+
+
+        .course-card-modern
+        .card-img-wrapper img {
+
+            width:
+                100%;
+
+            height:
+                100%;
+
+            object-fit:
+                cover;
+
+            display:
+                block;
+
+            transition:
+                transform .3s ease;
+
+        }
+
+
+        .course-card-modern:hover
+        .card-img-wrapper img {
+
+            transform:
+                scale(1.025);
+
+        }
+
+
+        /* =====================================================
+           NO IMAGE
+        ===================================================== */
+
+        .course-no-image {
+
+            width:
+                100%;
+
+            height:
+                100%;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            background:
+                #eff6ff;
+
+            color:
+                #2563eb;
+
+            font-size:
+                12px;
+
+            font-weight:
+                700;
+
+        }
+
+
+        /* =====================================================
+           E-LEARNING BADGE
+        ===================================================== */
+
+        .course-card-modern
+        .badge-level {
+
+            position:
+                absolute;
+
+            top:
+                10px;
+
+            left:
+                10px;
+
+            z-index:
+                3;
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            padding:
+                6px 9px;
+
+            border:
+                1px solid
+                rgba(255,255,255,.75);
+
+            border-radius:
+                999px;
+
+            background:
+                rgba(255,255,255,.95);
+
+            color:
+                #2563eb;
+
+            font-size:
+                9px;
+
+            font-weight:
+                800;
+
+            line-height:
+                1;
+
+            box-shadow:
+                0 2px 8px
+                rgba(15,23,42,.08);
+
+        }
+
+
+        /* =====================================================
+           PROMO BADGE DI GAMBAR
+        ===================================================== */
+
+        .course-card-modern
+        .promo-badge {
+
+            position:
+                absolute;
+
+            top:
+                10px;
+
+            right:
+                10px;
+
+            z-index:
+                3;
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            padding:
+                6px 8px;
+
+            border:
+                none;
+
+            border-radius:
+                999px;
+
+            background:
+                #dc2626;
+
+            color:
+                #ffffff;
+
+            font-size:
+                9px;
+
+            font-weight:
+                800;
+
+            line-height:
+                1;
+
+            box-shadow:
+                0 3px 10px
+                rgba(220,38,38,.16);
+
+        }
+
+
+        /* =====================================================
+           CARD BODY
+        ===================================================== */
+
+        .course-card-modern
+        .card-body-custom {
+
+            padding:
+                15px;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            flex:
+                1;
+
+        }
+
+
+        /* =====================================================
+           CATEGORY
+        ===================================================== */
+
+        .course-category-row {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                6px;
+
+            margin-bottom:
+                8px;
+
+        }
+
+
+        .course-card-modern
+        .cat-tag {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            padding:
+                5px 8px;
+
+            border-radius:
+                6px;
+
+            background:
+                #eff6ff;
+
+            color:
+                #2563eb;
+
+            font-size:
+                10px;
+
+            font-weight:
+                700;
+
+        }
+
+
+        .course-card-modern
+        .subcat-tag {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            padding:
+                5px 8px;
+
+            border-radius:
+                6px;
+
+            background:
+                #f1f5f9;
+
+            color:
+                #64748b;
+
+            font-size:
+                10px;
+
+            font-weight:
+                700;
+
+        }
+
+
+        /* =====================================================
+           TITLE
+        ===================================================== */
+
+        .course-card-modern
+        .card-title-custom {
+
+            margin:
+                0 0 7px;
+
+            color:
+                #0f172a;
+
+            font-size:
+                14px;
+
+            line-height:
+                1.45;
+
+            font-weight:
+                700;
+
+            transition:
+                color .2s ease;
+
+        }
+
+
+        .course-card-modern:hover
+        .card-title-custom {
+
+            color:
+                #2563eb;
+
+        }
+
+
+        /* =====================================================
+           DESCRIPTION
+        ===================================================== */
+
+        .course-card-modern
+        .course-description-user {
+
+            margin:
+                0 0 12px;
+
+            color:
+                #64748b;
+
+            font-size:
+                11px;
+
+            line-height:
+                1.55;
+
+            display:
+                -webkit-box;
+
+            -webkit-line-clamp:
+                2;
+
+            -webkit-box-orient:
+                vertical;
+
+            overflow:
+                hidden;
+
+            min-height:
+                34px;
+
+        }
+
+
+        /* =====================================================
+           META
+           DURASI + JADWAL
+        ===================================================== */
+
+        .course-card-modern
+        .course-meta {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(
+                    2,
+                    minmax(0,1fr)
+                );
+
+            gap:
+                7px;
+
+            margin:
+                0 0 10px;
+
+        }
+
+
+        .course-card-modern
+        .course-meta span {
+
+            min-width:
+                0;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            text-align:
+                center;
+
+            padding:
+                8px 6px;
+
+            border-radius:
+                8px;
+
+            background:
+                #f1f5f9;
+
+            color:
+                #475569;
+
+            font-size:
+                9px;
+
+            font-weight:
+                600;
+
+            line-height:
+                1.25;
+
+            white-space:
+                nowrap;
+
+            overflow:
+                hidden;
+
+            text-overflow:
+                ellipsis;
+
+        }
+
+
+        /* =====================================================
+           BENEFITS
+        ===================================================== */
+
+        .course-card-modern
+        .course-benefits {
+
+            display:
+                flex;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                6px;
+
+            margin:
+                0 0 12px;
+
+            min-height:
+                28px;
+
+        }
+
+
+        .course-card-modern
+        .benefit-chip {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            max-width:
+                100%;
+
+            padding:
+                5px 8px;
+
+            border:
+                1px solid
+                #dbeafe;
+
+            border-radius:
+                999px;
+
+            background:
+                #eff6ff;
+
+            color:
+                #2563eb;
+
+            font-size:
+                9px;
+
+            font-weight:
+                700;
+
+            line-height:
+                1.3;
+
+            white-space:
+                nowrap;
+
+            overflow:
+                hidden;
+
+            text-overflow:
+                ellipsis;
+
+            box-sizing:
+                border-box;
+
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        .course-card-modern
+        .course-footer {
+
+            border-top:
+                1px solid
+                #f1f5f9;
+
+            padding-top:
+                13px;
+
+            margin-top:
+                auto;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            gap:
+                10px;
+
+        }
+
+
+        /* =====================================================
+           PRICE
+        ===================================================== */
+
+        .course-card-modern
+        .course-price-box {
+
+            flex:
+                1;
+
+            min-width:
+                0;
+
+        }
+
+
+        .course-card-modern
+        .course-price-label {
+
+            display:
+                block;
+
+            margin-bottom:
+                3px;
+
+            color:
+                #94a3b8;
+
+            font-size:
+                9px;
+
+            font-weight:
+                600;
+
+            line-height:
+                1.2;
+
+        }
+
+
+        .course-card-modern
+        .course-price-normal {
+
+            display:
+                block;
+
+            color:
+                #2563eb;
+
+            font-size:
+                13px;
+
+            font-weight:
+                800;
+
+            line-height:
+                1.25;
+
+            white-space:
+                nowrap;
+
+        }
+
+
+        /* =====================================================
+           PROMO PRICE
+        ===================================================== */
+
+        .course-card-modern
+        .course-price-promo {
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            gap:
+                2px;
+
+        }
+
+
+        .course-card-modern
+        .course-price-old {
+
+            display:
+                block;
+
+            color:
+                #94a3b8;
+
+            font-size:
+                9px;
+
+            font-weight:
+                600;
+
+            line-height:
+                1.2;
+
+            text-decoration:
+                line-through;
+
+        }
+
+
+        .course-card-modern
+        .course-price-new-row {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                6px;
+
+            flex-wrap:
+                wrap;
+
+        }
+
+
+        .course-card-modern
+        .course-price-new {
+
+            display:
+                inline-block;
+
+            color:
+                #2563eb;
+
+            font-size:
+                13px;
+
+            font-weight:
+                800;
+
+            line-height:
+                1.25;
+
+            white-space:
+                nowrap;
+
+        }
+
+
+        /* =====================================================
+           DISCOUNT
+        ===================================================== */
+
+        .course-card-modern
+        .course-discount {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            padding:
+                4px 6px;
+
+            border:
+                1px solid
+                #fee2e2;
+
+            border-radius:
+                999px;
+
+            background:
+                #fef2f2;
+
+            color:
+                #dc2626;
+
+            font-size:
+                8px;
+
+            font-weight:
+                800;
+
+            line-height:
+                1;
+
+            white-space:
+                nowrap;
+
+        }
+
+
+        /* =====================================================
+           BUTTON
+        ===================================================== */
+
+        .course-card-modern
+        .btn-primary-full {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            height:
+                31px;
+
+            padding:
+                0 10px;
+
+            border:
+                1px solid
+                #dbeafe;
+
+            border-radius:
+                8px;
+
+            background:
+                #eff6ff;
+
+            color:
+                #2563eb !important;
+
+            font-family:
+                'Plus Jakarta Sans',
+                sans-serif;
+
+            font-size:
+                10px;
+
+            font-weight:
+                700;
+
+            text-decoration:
+                none !important;
+
+            cursor:
+                pointer;
+
+            white-space:
+                nowrap;
+
+            box-sizing:
+                border-box;
+
+            flex-shrink:
+                0;
+
+            transition:
+                background .2s ease,
+                color .2s ease,
+                transform .2s ease;
+
+        }
+
+
+        .course-card-modern
+        .btn-primary-full:hover {
+
+            background:
+                #dbeafe;
+
+            color:
+                #1d4ed8 !important;
+
+            transform:
+                translateY(-1px);
+
+            box-shadow:
+                none;
+
+        }
+
+
+        /* =====================================================
+           EMPTY
+        ===================================================== */
+
+        .user-course-empty {
+
+            grid-column:
+                1 / -1;
+
+            padding:
+                60px 20px;
+
+            background:
+                #ffffff;
+
+            border:
+                1px solid
+                #e2e8f0;
+
+            border-radius:
+                16px;
+
+            text-align:
+                center;
+
+            color:
+                #64748b;
+
+            font-size:
+                13px;
+
+        }
+
+
+        .user-course-empty strong {
+
+            display:
+                block;
+
+            margin-bottom:
+                6px;
+
+            color:
+                #0f172a;
+
+            font-size:
+                15px;
+
+        }
+
+
+        /* =====================================================
+           MODAL
+        ===================================================== */
+
+        .modal {
+
+            position:
+                fixed;
+
+            inset:
+                0;
+
+            background:
+                rgba(15,23,42,.40);
+
+            backdrop-filter:
+                blur(5px);
+
+            -webkit-backdrop-filter:
+                blur(5px);
+
+            display:
+                none;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            z-index:
+                3000;
+
+            padding:
+                20px;
+
+            opacity:
+                0;
+
+        }
+
+
+        .modal.show {
+
+            display:
+                flex;
+
+            animation:
+                modalOverlayIn
+                .25s
+                ease
+                forwards;
+
+        }
+
+
+        @keyframes modalOverlayIn {
+
+            from {
+
+                opacity:
+                    0;
+
+            }
+
+            to {
+
+                opacity:
+                    1;
+
+            }
+
+        }
+
+
+        .modal-box {
+
+            width:
+                min(470px,100%);
+
+            background:
+                #ffffff;
+
+            border:
+                1px solid
+                #e2e8f0;
+
+            border-radius:
+                16px;
+
+            padding:
+                30px;
+
+            position:
+                relative;
+
+            text-align:
+                center;
+
+            box-shadow:
+                0 25px 70px
+                rgba(15,23,42,.20);
+
+            opacity:
+                0;
+
+            transform:
+                translateY(20px)
+                scale(.96);
+
+        }
+
+
+        .modal.show .modal-box {
+
+            animation:
+                modalBoxIn
+                .35s
+                cubic-bezier(
+                    .16,
+                    1,
+                    .3,
+                    1
+                )
+                .05s
+                forwards;
+
+        }
+
+
+        @keyframes modalBoxIn {
+
+            0% {
+
+                opacity:
+                    0;
+
+                transform:
+                    translateY(20px)
+                    scale(.96);
+
+            }
+
+            70% {
+
+                opacity:
+                    1;
+
+                transform:
+                    translateY(-3px)
+                    scale(1.01);
+
+            }
+
+            100% {
+
+                opacity:
+                    1;
+
+                transform:
+                    translateY(0)
+                    scale(1);
+
+            }
+
+        }
+
+
+        .modal-box h2 {
+
+            margin:
+                8px 0 9px;
+
+            color:
+                #0f172a;
+
+            font-size:
+                20px;
+
+            font-weight:
+                700;
+
+        }
+
+
+        .modal-box p {
+
+            margin:
+                0 0 20px;
+
+            color:
+                #64748b;
+
+            font-size:
+                13px;
+
+            line-height:
+                1.6;
+
+        }
+
+
+        .modal-close {
+
+            position:
+                absolute;
+
+            top:
+                12px;
+
+            right:
+                12px;
+
+            width:
+                34px;
+
+            height:
+                34px;
+
+            border:
+                none;
+
+            border-radius:
+                8px;
+
+            background:
+                #f8fafc;
+
+            color:
+                #64748b;
+
+            font-size:
+                20px;
+
+            cursor:
+                pointer;
+
+            transition:
+                background .2s ease,
+                color .2s ease,
+                transform .2s ease;
+
+        }
+
+
+        .modal-close:hover {
+
+            background:
+                #eef2ff;
+
+            color:
+                #4338ca;
+
+            transform:
+                rotate(90deg);
+
+        }
+
+
+        .modal-action {
+
+            width:
+                100%;
+
+            min-height:
+                41px;
+
+            border:
+                none;
+
+            border-radius:
+                8px;
+
+            background:
+                #4338ca;
+
+            color:
+                #ffffff;
+
+            font-family:
+                inherit;
+
+            font-size:
+                11px;
+
+            font-weight:
+                700;
+
+            cursor:
+                pointer;
+
+            transition:
+                background .2s ease,
+                transform .2s ease,
+                box-shadow .2s ease;
+
+        }
+
+
+        .modal-action:hover {
+
+            background:
+                #3730a3;
+
+            transform:
+                translateY(-2px);
+
+            box-shadow:
+                0 7px 16px
+                rgba(67,56,202,.20);
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width:900px) {
+
+            #courseGridUser {
+
+                grid-template-columns:
+                    repeat(
+                        2,
+                        minmax(0,1fr)
+                    );
+
+            }
+
+        }
+
+
+        @media (max-width:768px) {
+
+            .elearning-hero-fullimg {
+
+                min-height:
+                    0;
+
+                padding:
+                    32px 22px;
+
+                justify-content:
+                    flex-start;
+
+            }
+
+
+            .elearning-hero-fullimg h1 {
+
+                font-size:
+                    26px;
+
+            }
+
+
+            .elearning-hero-fullimg
+            .hero-description {
+
+                font-size:
+                    12px;
+
+            }
+
+
+            .main-content {
+
+                padding:
+                    16px !important;
+
+            }
+
+        }
+
+
+        @media (max-width:650px) {
+
+            #courseGridUser {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+        }
+
+
+        @media (max-width:600px) {
+
+            .modal {
+
+                padding:
+                    16px;
+
+            }
+
+
+            .modal-box {
+
+                width:
+                    calc(100% - 10px);
+
+                padding:
+                    24px;
+
+                border-radius:
+                    16px;
+
+            }
+
+        }
+
+
+        @media (max-width:480px) {
+
+            .elearning-hero-fullimg {
+
+                padding:
+                    28px 18px;
+
+            }
+
+
+            .elearning-hero-fullimg h1 {
+
+                font-size:
+                    24px;
+
+            }
+
+
+            .course-card-modern
+            .card-img-wrapper {
+
+                height:
+                    190px;
+
+            }
+
+
+            .course-card-modern
+            .course-footer {
+
+                align-items:
+                    stretch;
+
+                flex-direction:
+                    column;
+
+            }
+
+
+            .course-card-modern
+            .course-price-box {
+
+                width:
+                    100%;
+
+            }
+
+
+            .course-card-modern
+            .btn-primary-full {
+
+                width:
+                    100%;
+
+            }
+
+        }
+
+
+        /* =====================================================
+           REDUCED MOTION
+        ===================================================== */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+
+                animation-duration:
+                    .01ms !important;
+
+                animation-iteration-count:
+                    1 !important;
+
+                transition-duration:
+                    .01ms !important;
+
+            }
+
+        }
+
     </style>
-  </head>
 
-  <body>
+</head>
+
+
+<body>
+
+
     <div class="page-wrapper">
-      <!-- NAVBAR -->
-      <header class="navbar">
-        <div class="navbar-container">
-          <a href="index.html" class="logo"> <span class="logo-accent" style="color: #4338ca">BELAJAR</span>YUK </a>
 
-          <div class="nav-actions" id="navActions">
-            <a href="../proses/masuk.php" class="btn-login">Masuk</a>
-            <a href="../proses/daftar.php" class="btn-register" style="background: #4338ca">Daftar Gratis</a>
-            <button class="hamburger" id="hamburgerBtn" onclick="toggleSidebar()" aria-label="Menu Navigasi">
-              <span></span>
-              <span></span>
-              <span></span>
+
+        <!-- =================================================
+             NAVBAR
+        ================================================== -->
+
+        <header class="navbar">
+
+            <div class="navbar-container">
+
+
+                <a
+                    href="index.html"
+                    class="logo"
+                >
+
+                    <span
+                        class="logo-accent"
+                        style="color:#4338ca"
+                    >
+
+                        BELAJAR
+
+                    </span>YUK
+
+                </a>
+
+
+                <div
+                    class="nav-actions"
+                    id="navActions"
+                >
+
+                    <a
+                        href="../proses/masuk.php"
+                        class="btn-login"
+                    >
+
+                        Masuk
+
+                    </a>
+
+
+                    <a
+                        href="../proses/daftar.php"
+                        class="btn-register"
+                        style="background:#4338ca"
+                    >
+
+                        Daftar Gratis
+
+                    </a>
+
+
+                    <button
+                        class="hamburger"
+                        id="hamburgerBtn"
+                        type="button"
+                        onclick="toggleSidebar()"
+                        aria-label="Menu Navigasi"
+                    >
+
+                        <span></span>
+
+                        <span></span>
+
+                        <span></span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             OVERLAY
+        ================================================== -->
+
+        <div
+            class="overlay"
+            id="overlay"
+            onclick="toggleSidebar()"
+        >
+        </div>
+
+
+        <!-- =================================================
+             SIDEBAR
+        ================================================== -->
+
+        <aside
+            class="sidebar"
+            id="sidebar"
+        >
+
+
+            <div class="sidebar-head">
+
+                <span class="sidebar-tag">
+
+                    NAVIGASI
+
+                </span>
+
+
+                <h3>
+
+                    Menu Utama
+
+                </h3>
+
+            </div>
+
+
+            <nav class="sidebar-nav">
+
+
+                <a href="index.html">
+
+                    <span>
+                        Beranda
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="elearning.html"
+                    class="active"
+                >
+
+                    <span>
+                        E-Learning
+                    </span>
+
+                </a>
+
+
+                <a href="komunitas.html">
+
+                    <span>
+                        Grup Komunitas
+                    </span>
+
+                </a>
+
+
+                <a href="bootcamp.html">
+
+                    <span>
+                        Bootcamp
+                    </span>
+
+                </a>
+
+
+                <a href="riwayat.html">
+
+                    <span>
+                        Riwayat
+                    </span>
+
+                </a>
+
+
+                <a href="kelas.html">
+
+                    <span>
+                        Kelas Saya
+                    </span>
+
+                </a>
+
+
+            </nav>
+
+        </aside>
+
+
+        <!-- =================================================
+             MAIN
+        ================================================== -->
+
+        <main
+            class="main-content"
+            style="
+                max-width:1200px;
+                margin:0 auto;
+                padding:20px;
+            "
+        >
+
+
+            <!-- =================================================
+                 HERO
+            ================================================== -->
+
+            <section>
+
+
+                <div
+                    class="elearning-hero-fullimg"
+                >
+
+
+                    <div
+                        class="hero-badge-tag"
+                    >
+
+                        Self-Paced Learning Module
+
+                    </div>
+
+
+                    <h1>
+
+                        Pelajari Keterampilan Digital
+                        Kapan Saja & Di Mana Saja.
+
+                    </h1>
+
+
+                    <p
+                        class="hero-description"
+                    >
+
+                        Akses puluhan modul praktis
+                        terstruktur, kuis interaktif,
+                        dan sertifikat kelulusan resmi
+                        untuk mendukung perkembangan
+                        karirmu.
+
+                    </p>
+
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 SEARCH + FILTER
+            ================================================== -->
+
+            <section
+                style="margin-bottom:28px;"
+            >
+
+
+                <div
+                    style="
+                        display:flex;
+                        justify-content:space-between;
+                        align-items:center;
+                        gap:16px;
+                        margin-bottom:16px;
+                    "
+                >
+
+
+                    <h3
+                        style="
+                            font-size:18px;
+                            font-weight:700;
+                            color:#0f172a;
+                            margin:0;
+                        "
+                    >
+
+                        Katalog Modul Pembelajaran
+
+                    </h3>
+
+
+                    <span
+                        id="courseTotalLabel"
+                        class="bootcamp-count"
+                        style="
+                            padding:5px 11px;
+                            border-radius:999px;
+                            background:#e0e7ff;
+                            color:#4338ca;
+                            font-size:12px;
+                            font-weight:700;
+                            white-space:nowrap;
+                        "
+                    >
+
+                        Memuat...
+
+                    </span>
+
+
+                </div>
+
+
+                <!-- SEARCH -->
+
+                <div
+                    class="search-container-custom"
+                >
+
+                    <svg
+                        class="search-icon-custom"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+
+                        <circle
+                            cx="11"
+                            cy="11"
+                            r="8"
+                        >
+                        </circle>
+
+
+                        <line
+                            x1="21"
+                            y1="21"
+                            x2="16.65"
+                            y2="16.65"
+                        >
+                        </line>
+
+                    </svg>
+
+
+                    <input
+                        type="text"
+                        id="searchCourseUser"
+                        class="search-input-custom"
+                        placeholder="Cari topik pembelajaran, framework, atau bahasa pemrograman..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <!-- FILTER -->
+
+                <div
+                    class="pills-wrapper"
+                    id="courseFilters"
+                >
+
+
+                    <button
+                        type="button"
+                        class="pill-btn active"
+                        data-category="all"
+                    >
+
+                        Semua Modul
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="pill-btn"
+                        data-category="Front-End"
+                    >
+
+                        Front-End
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="pill-btn"
+                        data-category="Back-End"
+                    >
+
+                        Back-End
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="pill-btn"
+                        data-category="UI/UX Design"
+                    >
+
+                        UI/UX Design
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="pill-btn"
+                        data-category="Data & AI"
+                    >
+
+                        Data & AI
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="pill-btn"
+                        data-category="Mobile Dev"
+                    >
+
+                        Mobile Dev
+
+                    </button>
+
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 COURSE GRID
+            ================================================== -->
+
+            <section>
+
+
+                <div
+                    id="courseGridUser"
+                >
+
+                    <div
+                        class="user-course-empty"
+                    >
+
+                        <strong>
+
+                            Memuat course...
+
+                        </strong>
+
+                        Silakan tunggu sebentar.
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+
+    </div>
+
+
+    <!-- =====================================================
+         MODAL PROFIL
+    ====================================================== -->
+
+    <div
+        class="modal"
+        id="modal"
+    >
+
+
+        <div
+            class="modal-box"
+        >
+
+
+            <button
+                class="modal-close"
+                type="button"
+                onclick="closeModal()"
+                aria-label="Tutup Modal"
+            >
+
+                ×
+
             </button>
-          </div>
+
+
+            <h2
+                id="modalTitle"
+            >
+
+                Profil Saya
+
+            </h2>
+
+
+            <p>
+
+                Loading data profil...
+
+            </p>
+
+
+            <button
+                class="modal-action"
+                type="button"
+                style="background:#ef4444;"
+                onclick="logoutUser()"
+            >
+
+                Keluar Akun
+
+            </button>
+
+
         </div>
-      </header>
 
-      <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
-
-      <!-- SIDEBAR -->
-      <aside class="sidebar" id="sidebar">
-        <div class="sidebar-head">
-          <span class="sidebar-tag">NAVIGASI</span>
-          <h3>Menu Utama</h3>
-        </div>
-        <nav class="sidebar-nav">
-          <a href="index.html"><span>Beranda</span></a>
-          <a href="elearning.html" class="active"><span>E-Learning</span></a>
-          <a href="langganan.html"><span>Langganan</span></a>
-          <a href="komunitas.html"><span>Grup Komunitas</span></a>
-          <a href="bootcamp.html"><span>Bootcamp</span></a>
-        </nav>
-      </aside>
-
-      <!-- MAIN KONTEN -->
-      <main class="main-content" style="max-width: 1200px; margin: 0 auto; padding: 20px">
-        <!-- HERO BANNER FULL GAMBAR -->
-        <section>
-          <div class="elearning-hero-fullimg">
-            <div class="hero-badge-tag">Self-Paced Learning Module</div>
-            <h1 style="font-size: 32px; font-weight: 800; line-height: 1.2; margin-bottom: 8px; color: #ffffff; max-width: 700px">Pelajari Keterampilan Digital Kapan Saja & Di Mana Saja.</h1>
-            <p style="font-size: 15px; color: #e2e8f0; line-height: 1.5; margin: 0; max-width: 650px">Akses puluhan modul praktis terstruktur, kuis interaktif, dan sertifikat kelulusan resmi untuk mendukung perkembangan karirmu.</p>
-          </div>
-        </section>
-
-        <!-- FILTER & SEARCH SECTION -->
-        <section style="margin-bottom: 28px">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px">
-            <h3 style="font-size: 18px; font-weight: 700; color: #0f172a; margin: 0">Katalog Modul Pembelajaran</h3>
-            <span style="font-size: 12px; color: #4338ca; font-weight: 700; background: #e0e7ff; padding: 4px 12px; border-radius: 20px">50+ Modul Tersedia</span>
-          </div>
-
-          <div class="search-container-custom">
-            <svg class="search-icon-custom" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="11" cy="11" r="8"></circle>
-              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            </svg>
-            <input type="text" class="search-input-custom" placeholder="Cari topik pembelajaran, framework, atau bahasa pemrograman..." />
-          </div>
-
-          <div class="pills-wrapper">
-            <button class="pill-btn active">Semua Modul</button>
-            <button class="pill-btn">Front-End</button>
-            <button class="pill-btn">Back-End</button>
-            <button class="pill-btn">UI/UX Design</button>
-            <button class="pill-btn">Data & AI</button>
-            <button class="pill-btn">Mobile Dev</button>
-          </div>
-        </section>
-
-        <!-- COURSES GRID -->
-        <section>
-          <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px">
-            <!-- CARD 1 -->
-            <article class="course-card-modern">
-              <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=500&q=80" alt="React" />
-                <span class="badge-level">Pemula</span>
-              </div>
-              <div class="card-body-custom">
-                <span class="cat-tag">Front-End Web</span>
-                <h4 class="card-title-custom">Fundamental React.js & Modern Web Dev</h4>
-
-                <div class="course-meta">
-                  <span>📹 24 Video</span>
-                  <span>⭐ 4.9</span>
-                </div>
-
-                <div class="course-progress-info">
-                  <div class="progress-text">
-                    <span>Kurikulum Terstruktur</span>
-                    <span>100% Online</span>
-                  </div>
-                  <div class="progress-bar-bg">
-                    <div class="progress-bar-fill" style="width: 100%"></div>
-                  </div>
-                </div>
-
-                <a href="detail.html" class="btn-primary-full">Lihat Detail</a>
-              </div>
-            </article>
-
-            <!-- CARD 2 -->
-            <article class="course-card-modern">
-              <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=500&q=80" alt="Python" />
-                <span class="badge-level">Pemula</span>
-              </div>
-              <div class="card-body-custom">
-                <span class="cat-tag">Data Science</span>
-                <h4 class="card-title-custom">Python Dasar untuk Analisis Data & Mining</h4>
-
-                <div class="course-meta">
-                  <span>📹 18 Video</span>
-                  <span>⭐ 4.8</span>
-                </div>
-
-                <div class="course-progress-info">
-                  <div class="progress-text">
-                    <span>Kurikulum Terstruktur</span>
-                    <span>100% Online</span>
-                  </div>
-                  <div class="progress-bar-bg">
-                    <div class="progress-bar-fill" style="width: 100%"></div>
-                  </div>
-                </div>
-
-                <a href="detail.html" class="btn-primary-full">Lihat Detail</a>
-              </div>
-            </article>
-
-            <!-- CARD 3 -->
-            <article class="course-card-modern">
-              <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1618788372246-79faff0c3742?auto=format&fit=crop&w=500&q=80" alt="Figma" />
-                <span class="badge-level">Menengah</span>
-              </div>
-              <div class="card-body-custom">
-                <span class="cat-tag">UI/UX Design</span>
-                <h4 class="card-title-custom">Figma Mastering: Design System & Auto Layout</h4>
-
-                <div class="course-meta">
-                  <span>📹 30 Video</span>
-                  <span>⭐ 4.9</span>
-                </div>
-
-                <div class="course-progress-info">
-                  <div class="progress-text">
-                    <span>Kurikulum Terstruktur</span>
-                    <span>100% Online</span>
-                  </div>
-                  <div class="progress-bar-bg">
-                    <div class="progress-bar-fill" style="width: 100%"></div>
-                  </div>
-                </div>
-
-                <a href="detail.html" class="btn-primary-full">Lihat Detail</a>
-              </div>
-            </article>
-
-            <!-- CARD 4 -->
-            <article class="course-card-modern">
-              <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=500&q=80" alt="Laravel" />
-                <span class="badge-level">Menengah</span>
-              </div>
-              <div class="card-body-custom">
-                <span class="cat-tag">Back-End Dev</span>
-                <h4 class="card-title-custom">Restful API Kompleks dengan Laravel 11</h4>
-
-                <div class="course-meta">
-                  <span>📹 28 Video</span>
-                  <span>⭐ 4.8</span>
-                </div>
-
-                <div class="course-progress-info">
-                  <div class="progress-text">
-                    <span>Kurikulum Terstruktur</span>
-                    <span>100% Online</span>
-                  </div>
-                  <div class="progress-bar-bg">
-                    <div class="progress-bar-fill" style="width: 100%"></div>
-                  </div>
-                </div>
-
-                <a href="detail.html" class="btn-primary-full">Lihat Detail</a>
-              </div>
-            </article>
-
-            <!-- CARD 5 -->
-            <article class="course-card-modern">
-              <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=500&q=80" alt="Tailwind CSS" />
-                <span class="badge-level">Pemula</span>
-              </div>
-              <div class="card-body-custom">
-                <span class="cat-tag">Front-End Web</span>
-                <h4 class="card-title-custom">Tailwind CSS 3: Responsive UI Layouting</h4>
-
-                <div class="course-meta">
-                  <span>📹 15 Video</span>
-                  <span>⭐ 4.9</span>
-                </div>
-
-                <div class="course-progress-info">
-                  <div class="progress-text">
-                    <span>Kurikulum Terstruktur</span>
-                    <span>100% Online</span>
-                  </div>
-                  <div class="progress-bar-bg">
-                    <div class="progress-bar-fill" style="width: 100%"></div>
-                  </div>
-                </div>
-
-                <a href="detail.html" class="btn-primary-full">Lihat Detail</a>
-              </div>
-            </article>
-
-            <!-- CARD 6 -->
-            <article class="course-card-modern">
-              <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=500&q=80" alt="Flutter" />
-                <span class="badge-level">Menengah</span>
-              </div>
-              <div class="card-body-custom">
-                <span class="cat-tag">Mobile Dev</span>
-                <h4 class="card-title-custom">Flutter & Dart: Dasar Aplikasi Mobile iOS/Android</h4>
-
-                <div class="course-meta">
-                  <span>📹 32 Video</span>
-                  <span>⭐ 4.7</span>
-                </div>
-
-                <div class="course-progress-info">
-                  <div class="progress-text">
-                    <span>Kurikulum Terstruktur</span>
-                    <span>100% Online</span>
-                  </div>
-                  <div class="progress-bar-bg">
-                    <div class="progress-bar-fill" style="width: 100%"></div>
-                  </div>
-                </div>
-
-                <a href="detail.html" class="btn-primary-full">Lihat Detail</a>
-              </div>
-            </article>
-          </div>
-        </section>
-      </main>
     </div>
 
-    <!-- MODAL -->
-    <div class="modal" id="modal">
-      <div class="modal-box">
-        <button class="modal-close" onclick="closeModal()" type="button" aria-label="Tutup Modal">×</button>
-        <h2 id="modalTitle">Akses Modul Pembelajaran</h2>
-        <p>Silakan masuk ke akun Belajaryuk Anda untuk mulai menonton video pembelajaran dan mengunduh materi.</p>
-        <button class="modal-action" style="background: #4338ca" onclick="closeModal()">Mulai Belajar</button>
-      </div>
-    </div>
 
-    <script src="../js/script.js"></script>
-  </body>
+    <!-- =====================================================
+         SCRIPT
+    ====================================================== -->
+
+    <script
+        src="../js/script.js"
+    ></script>
+
+
+    <script
+        src="../js/elearning.js"
+    ></script>
+
+
+</body>
+
 </html>

@@ -1,487 +1,3111 @@
 <!doctype html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bootcamp Intensif — Belajaryuk</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<head>
 
-    <link rel="stylesheet" href="../css/style.css" />
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Bootcamp Intensif — Belajaryuk
+    </title>
+
+
+    <!-- =====================================================
+         FONT
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <!-- =====================================================
+         CSS GLOBAL
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css">
+
 
     <style>
-      body {
-        background-color: #f8fafc;
-        font-family: 'Plus Jakarta Sans', sans-serif;
-      }
 
-      /* HERO FULL BACKGROUND IMAGE */
-      .bootcamp-hero-card {
-        position: relative;
-        background:
-          linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(30, 27, 75, 0.88) 50%, rgba(67, 56, 202, 0.75) 100%),
-          url('https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
-        border-radius: 20px;
-        padding: 48px;
-        color: #ffffff;
-        box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.25);
-        margin-top: 20px;
-        overflow: hidden;
-      }
+        /* =====================================================
+           BODY
+        ===================================================== */
 
-      .hero-content-inner {
-        max-width: 650px;
-      }
+        body {
 
-      .hero-badge-tag {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        background: rgba(255, 255, 255, 0.12);
-        backdrop-filter: blur(8px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        padding: 6px 14px;
-        border-radius: 30px;
-        font-size: 12px;
-        font-weight: 600;
-        color: #e0e7ff;
-        margin-bottom: 16px;
-      }
+            background:
+                #f8fafc;
 
-      .hero-stats-group {
-        display: flex;
-        gap: 28px;
-        margin-top: 28px;
-        padding-top: 20px;
-        border-top: 1px solid rgba(255, 255, 255, 0.15);
-      }
+            font-family:
+                'Plus Jakarta Sans',
+                sans-serif;
 
-      .hero-stat-item strong {
-        display: block;
-        font-size: 22px;
-        font-weight: 800;
-        color: #a5b4fc;
-      }
-
-      .hero-stat-item span {
-        font-size: 12px;
-        color: #c7d2fe;
-      }
-
-      /* SEARCH & FILTER HARMONIS */
-      .search-container-custom {
-        position: relative;
-        margin-bottom: 20px;
-      }
-
-      .search-input-custom {
-        width: 100%;
-        padding: 14px 20px 14px 48px;
-        border-radius: 12px;
-        border: 1px solid #e2e8f0;
-        background: #ffffff;
-        font-size: 14px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
-        outline: none;
-        transition: all 0.2s;
-      }
-
-      .search-input-custom:focus {
-        border-color: #4338ca;
-        box-shadow: 0 0 0 3px rgba(67, 56, 202, 0.1);
-      }
-
-      .search-icon-custom {
-        position: absolute;
-        left: 16px;
-        top: 50%;
-        transform: translateY(-50%);
-        color: #94a3b8;
-      }
-
-      /* PILLS WARNA NETRAL/INDIGO */
-      .pills-wrapper {
-        display: flex;
-        gap: 8px;
-        overflow-x: auto;
-        padding-bottom: 8px;
-      }
-
-      .pill-btn {
-        background: #ffffff;
-        border: 1px solid #e2e8f0;
-        color: #475569;
-        padding: 8px 18px;
-        border-radius: 30px;
-        font-weight: 600;
-        font-size: 13px;
-        cursor: pointer;
-        white-space: nowrap;
-        transition: all 0.2s;
-      }
-
-      .pill-btn:hover {
-        background: #f1f5f9;
-        color: #1e293b;
-      }
-
-      .pill-btn.active {
-        background: #4338ca;
-        color: #ffffff;
-        border-color: #4338ca;
-        box-shadow: 0 4px 12px rgba(67, 56, 202, 0.25);
-      }
-
-      /* CARD BOOTCAMP MODERN */
-      .bootcamp-card-modern {
-        background: #ffffff;
-        border-radius: 16px;
-        border: 1px solid #f1f5f9;
-        overflow: hidden;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-        transition:
-          transform 0.2s,
-          box-shadow 0.2s;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .bootcamp-card-modern:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.08);
-      }
-
-      .card-img-wrapper {
-        position: relative;
-        height: 160px;
-      }
-
-      .card-img-wrapper img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      .badge-status {
-        position: absolute;
-        top: 12px;
-        right: 12px;
-        background: rgba(15, 23, 42, 0.75);
-        backdrop-filter: blur(4px);
-        color: #38bdf8;
-        border: 1px solid rgba(56, 189, 248, 0.3);
-        font-size: 10.5px;
-        font-weight: 700;
-        padding: 4px 10px;
-        border-radius: 20px;
-      }
-
-      .card-body-custom {
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-      }
-
-      .cat-tag {
-        font-size: 11px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        color: #4338ca;
-        margin-bottom: 6px;
-      }
-
-      .card-title-custom {
-        font-size: 16px;
-        font-weight: 700;
-        color: #0f172a;
-        margin-bottom: 12px;
-        line-height: 1.4;
-      }
-
-      .features-list {
-        list-style: none;
-        padding: 0;
-        margin: 0 0 16px 0;
-        font-size: 12.5px;
-        color: #64748b;
-      }
-
-      .features-list li {
-        margin-bottom: 6px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-
-      .features-list li::before {
-        content: '•';
-        color: #6366f1;
-        font-weight: bold;
-      }
-
-      .date-box {
-        background: #f8fafc;
-        border: 1px solid #e2e8f0;
-        padding: 8px 12px;
-        border-radius: 8px;
-        font-size: 12px;
-        font-weight: 600;
-        color: #334155;
-        margin-top: auto;
-        margin-bottom: 16px;
-      }
-
-      /* TOMBOL DAFTAR FULL WIDTH */
-      .btn-primary-full {
-        width: 100%;
-        background: #4338ca;
-        color: #ffffff;
-        border: none;
-        padding: 12px;
-        border-radius: 8px;
-        font-weight: 700;
-        font-size: 13px;
-        cursor: pointer;
-        transition: background 0.2s;
-        text-align: center;
-      }
-
-      .btn-primary-full:hover {
-        background: #3730a3;
-      }
-
-      @media (max-width: 768px) {
-        .bootcamp-hero-card {
-          padding: 28px 20px;
         }
-      }
+
+
+        /* =====================================================
+           LOGO
+        ===================================================== */
+
+        .navbar .logo {
+
+            text-decoration:
+                none;
+
+        }
+
+
+        .navbar .logo .logo-accent {
+
+            color:
+                #4338ca !important;
+
+        }
+
+
+        /* =====================================================
+           HERO BOOTCAMP
+        ===================================================== */
+
+        .bootcamp-hero-card {
+
+            position:
+                relative;
+
+            min-height:
+                330px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            overflow:
+                hidden;
+
+            border-radius:
+                20px;
+
+            margin-top:
+                20px;
+
+            margin-bottom:
+                32px;
+
+            padding:
+                52px;
+
+            color:
+                #ffffff;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    rgba(15,23,42,.94),
+                    rgba(49,46,129,.90),
+                    rgba(79,70,229,.72)
+                ),
+
+                url(
+                    'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1400&q=85'
+                )
+
+                center/cover
+                no-repeat;
+
+            box-shadow:
+                0 20px 40px
+                rgba(67,56,202,.18);
+
+            isolation:
+                isolate;
+
+        }
+
+
+        .bootcamp-hero-card::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                280px;
+
+            height:
+                280px;
+
+            right:
+                -90px;
+
+            bottom:
+                -110px;
+
+            border-radius:
+                50%;
+
+            background:
+                rgba(165,180,252,.18);
+
+            filter:
+                blur(5px);
+
+            animation:
+                heroFloat
+                6s
+                ease-in-out
+                infinite;
+
+            z-index:
+                -1;
+
+        }
+
+
+        .bootcamp-hero-card::after {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                180px;
+
+            height:
+                180px;
+
+            right:
+                120px;
+
+            top:
+                -90px;
+
+            border-radius:
+                50%;
+
+            background:
+                rgba(255,255,255,.08);
+
+            animation:
+                heroFloatReverse
+                8s
+                ease-in-out
+                infinite;
+
+            z-index:
+                -1;
+
+        }
+
+
+        @keyframes heroFloat {
+
+            0%,
+            100% {
+
+                transform:
+                    translateY(0);
+
+            }
+
+            50% {
+
+                transform:
+                    translateY(-20px);
+
+            }
+
+        }
+
+
+        @keyframes heroFloatReverse {
+
+            0%,
+            100% {
+
+                transform:
+                    translate(0,0);
+
+            }
+
+            50% {
+
+                transform:
+                    translate(-15px,20px);
+
+            }
+
+        }
+
+
+        .hero-content-inner {
+
+            position:
+                relative;
+
+            z-index:
+                2;
+
+            max-width:
+                720px;
+
+            animation:
+                heroContentIn
+                .8s
+                ease
+                both;
+
+        }
+
+
+        @keyframes heroContentIn {
+
+            from {
+
+                opacity:
+                    0;
+
+                transform:
+                    translateY(22px);
+
+            }
+
+            to {
+
+                opacity:
+                    1;
+
+                transform:
+                    translateY(0);
+
+            }
+
+        }
+
+
+        .hero-badge-tag {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            padding:
+                7px 14px;
+
+            border:
+                1px solid
+                rgba(255,255,255,.18);
+
+            border-radius:
+                999px;
+
+            background:
+                rgba(255,255,255,.10);
+
+            backdrop-filter:
+                blur(8px);
+
+            color:
+                #e0e7ff;
+
+            font-size:
+                11px;
+
+            font-weight:
+                600;
+
+            margin-bottom:
+                16px;
+
+            animation:
+                badgePulse
+                3s
+                ease-in-out
+                infinite;
+
+        }
+
+
+        @keyframes badgePulse {
+
+            0%,
+            100% {
+
+                box-shadow:
+                    0 0 0
+                    rgba(165,180,252,0);
+
+            }
+
+            50% {
+
+                box-shadow:
+                    0 0 0 7px
+                    rgba(165,180,252,.05);
+
+            }
+
+        }
+
+
+        .hero-content-inner h1 {
+
+            margin:
+                0 0 14px;
+
+            color:
+                #ffffff;
+
+            font-size:
+                34px;
+
+            line-height:
+                1.25;
+
+            font-weight:
+                800;
+
+            letter-spacing:
+                -1px;
+
+        }
+
+
+        .hero-description {
+
+            margin:
+                0;
+
+            max-width:
+                650px;
+
+            color:
+                #e0e7ff;
+
+            font-size:
+                14px;
+
+            line-height:
+                1.7;
+
+        }
+
+
+        /* =====================================================
+           HERO STATS
+        ===================================================== */
+
+        .hero-stats-group {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                0;
+
+            margin-top:
+                30px;
+
+            padding-top:
+                20px;
+
+            border-top:
+                1px solid
+                rgba(255,255,255,.13);
+
+        }
+
+
+        .hero-stat-item {
+
+            position:
+                relative;
+
+            padding:
+                0 28px;
+
+        }
+
+
+        .hero-stat-item:first-child {
+
+            padding-left:
+                0;
+
+        }
+
+
+        .hero-stat-item:not(:last-child)::after {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            right:
+                0;
+
+            top:
+                2px;
+
+            width:
+                1px;
+
+            height:
+                36px;
+
+            background:
+                rgba(255,255,255,.12);
+
+        }
+
+
+        .hero-stat-item strong {
+
+            display:
+                block;
+
+            color:
+                #c7d2fe;
+
+            font-size:
+                18px;
+
+            font-weight:
+                800;
+
+            margin-bottom:
+                2px;
+
+        }
+
+
+        .hero-stat-item span {
+
+            color:
+                #a5b4fc;
+
+            font-size:
+                10px;
+
+        }
+
+
+        /* =====================================================
+           SECTION TITLE
+        ===================================================== */
+
+        .bootcamp-section-title {
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            gap:
+                16px;
+
+            margin-bottom:
+                16px;
+
+        }
+
+
+        .bootcamp-section-title h3 {
+
+            margin:
+                0;
+
+            color:
+                #0f172a;
+
+            font-size:
+                18px;
+
+            font-weight:
+                700;
+
+        }
+
+
+        .bootcamp-count {
+
+            padding:
+                5px 11px;
+
+            border-radius:
+                999px;
+
+            background:
+                #e0e7ff;
+
+            color:
+                #4338ca;
+
+            font-size:
+                12px;
+
+            font-weight:
+                700;
+
+        }
+
+
+        /* =====================================================
+           SEARCH
+        ===================================================== */
+
+        .search-container-custom {
+
+            position:
+                relative;
+
+            margin-bottom:
+                20px;
+
+        }
+
+
+        .search-input-custom {
+
+            width:
+                100%;
+
+            min-height:
+                48px;
+
+            padding:
+                0 20px 0 48px;
+
+            border:
+                1px solid
+                #e2e8f0;
+
+            border-radius:
+                12px;
+
+            background:
+                #ffffff;
+
+            color:
+                #334155;
+
+            font-family:
+                inherit;
+
+            font-size:
+                13px;
+
+            outline:
+                none;
+
+            box-shadow:
+                0 2px 4px
+                rgba(15,23,42,.02);
+
+            transition:
+                border-color .2s ease,
+                box-shadow .2s ease;
+
+            box-sizing:
+                border-box;
+
+        }
+
+
+        .search-input-custom:focus {
+
+            border-color:
+                #4338ca;
+
+            box-shadow:
+                0 0 0 3px
+                rgba(67,56,202,.10);
+
+        }
+
+
+        .search-icon-custom {
+
+            position:
+                absolute;
+
+            left:
+                16px;
+
+            top:
+                50%;
+
+            transform:
+                translateY(-50%);
+
+            color:
+                #94a3b8;
+
+            pointer-events:
+                none;
+
+        }
+
+
+        /* =====================================================
+           FILTER
+        ===================================================== */
+
+        .pills-wrapper {
+
+            display:
+                flex;
+
+            gap:
+                8px;
+
+            overflow-x:
+                auto;
+
+            padding-bottom:
+                8px;
+
+        }
+
+
+        .pill-btn {
+
+            flex-shrink:
+                0;
+
+            background:
+                #ffffff;
+
+            border:
+                1px solid
+                #e2e8f0;
+
+            color:
+                #475569;
+
+            padding:
+                8px 18px;
+
+            border-radius:
+                30px;
+
+            font-family:
+                inherit;
+
+            font-size:
+                12px;
+
+            font-weight:
+                600;
+
+            cursor:
+                pointer;
+
+            white-space:
+                nowrap;
+
+            transition:
+                all .2s ease;
+
+        }
+
+
+        .pill-btn:hover {
+
+            background:
+                #f1f5f9;
+
+            border-color:
+                #c7d2fe;
+
+            color:
+                #4338ca;
+
+        }
+
+
+        .pill-btn.active {
+
+            background:
+                #4338ca;
+
+            color:
+                #ffffff;
+
+            border-color:
+                #4338ca;
+
+            box-shadow:
+                0 4px 12px
+                rgba(67,56,202,.20);
+
+        }
+
+
+        /* =====================================================
+           BOOTCAMP GRID
+        ===================================================== */
+
+        #bootcampGrid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(
+                    auto-fill,
+                    minmax(320px,1fr)
+                );
+
+            gap:
+                24px;
+
+            align-items:
+                stretch;
+
+        }
+
+
+        /* =====================================================
+           BOOTCAMP CARD
+        ===================================================== */
+
+        .bootcamp-card-modern {
+
+            background:
+                #ffffff;
+
+            border:
+                1px solid
+                #e2e8f0;
+
+            border-radius:
+                14px;
+
+            overflow:
+                hidden;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            min-height:
+                0;
+
+            box-shadow:
+                none;
+
+            opacity:
+                0;
+
+            transform:
+                translateY(18px);
+
+            animation:
+                bootcampCardReveal
+                .45s
+                ease
+                forwards;
+
+            transition:
+                transform .2s ease,
+                box-shadow .2s ease,
+                border-color .2s ease;
+
+        }
+
+
+        @keyframes bootcampCardReveal {
+
+            to {
+
+                opacity:
+                    1;
+
+                transform:
+                    translateY(0);
+
+            }
+
+        }
+
+
+        .bootcamp-card-modern:hover {
+
+            transform:
+                translateY(-2px);
+
+            border-color:
+                #dbeafe;
+
+            box-shadow:
+                0 8px 24px
+                rgba(15,23,42,.07);
+
+        }
+
+
+        /* =====================================================
+           CARD IMAGE
+        ===================================================== */
+
+        .bootcamp-card-modern .card-img-wrapper {
+
+            position:
+                relative;
+
+            width:
+                100%;
+
+            height:
+                155px;
+
+            overflow:
+                hidden;
+
+            background:
+                #eff6ff;
+
+            flex-shrink:
+                0;
+
+        }
+
+
+        .bootcamp-card-modern
+        .card-img-wrapper img {
+
+            width:
+                100%;
+
+            height:
+                100%;
+
+            object-fit:
+                cover;
+
+            display:
+                block;
+
+            transition:
+                transform .3s ease;
+
+        }
+
+
+        .bootcamp-card-modern:hover
+        .card-img-wrapper img {
+
+            transform:
+                scale(1.025);
+
+        }
+
+
+        /* =====================================================
+           STATUS
+        ===================================================== */
+
+        .bootcamp-card-modern .badge-status {
+
+            position:
+                absolute;
+
+            top:
+                10px;
+
+            right:
+                10px;
+
+            z-index:
+                3;
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            padding:
+                6px 9px;
+
+            border:
+                1px solid
+                rgba(255,255,255,.75);
+
+            border-radius:
+                999px;
+
+            background:
+                rgba(255,255,255,.95);
+
+            color:
+                #2563eb;
+
+            font-size:
+                9px;
+
+            font-weight:
+                700;
+
+            line-height:
+                1;
+
+            box-shadow:
+                0 2px 8px
+                rgba(15,23,42,.08);
+
+        }
+
+
+        .bootcamp-card-modern
+        .badge-status.full {
+
+            background:
+                #fef2f2;
+
+            border-color:
+                #fee2e2;
+
+            color:
+                #dc2626;
+
+        }
+
+
+        .bootcamp-card-modern
+        .badge-status.soon {
+
+            background:
+                #fffbeb;
+
+            border-color:
+                #fef3c7;
+
+            color:
+                #d97706;
+
+        }
+
+
+        .bootcamp-card-modern
+        .badge-status.done {
+
+            background:
+                #f1f5f9;
+
+            border-color:
+                #e2e8f0;
+
+            color:
+                #64748b;
+
+        }
+
+
+        /* =====================================================
+           PROMO BADGE PADA GAMBAR
+        ===================================================== */
+
+        .bootcamp-card-modern
+        .promo-badge-toggle {
+
+            position:
+                absolute;
+
+            top:
+                10px;
+
+            left:
+                10px;
+
+            z-index:
+                3;
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            padding:
+                6px 8px;
+
+            border:
+                none;
+
+            border-radius:
+                999px;
+
+            background:
+                #dc2626;
+
+            color:
+                #ffffff;
+
+            font-size:
+                9px;
+
+            font-weight:
+                800;
+
+            line-height:
+                1;
+
+            box-shadow:
+                0 2px 8px
+                rgba(220,38,38,.16);
+
+        }
+
+
+        /* =====================================================
+           CARD BODY
+        ===================================================== */
+
+        .bootcamp-card-modern .card-body-custom {
+
+            padding:
+                15px;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            flex:
+                1;
+
+        }
+
+
+        /* =====================================================
+           CATEGORY
+        ===================================================== */
+
+        .bootcamp-card-modern .cat-tag {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            align-self:
+                flex-start;
+
+            background:
+                #eff6ff;
+
+            color:
+                #2563eb;
+
+            font-size:
+                10px;
+
+            font-weight:
+                700;
+
+            padding:
+                5px 8px;
+
+            border-radius:
+                6px;
+
+            margin-bottom:
+                8px;
+
+        }
+
+
+        /* =====================================================
+           TITLE
+        ===================================================== */
+
+        .bootcamp-card-modern .card-title-custom {
+
+            margin:
+                0 0 7px;
+
+            color:
+                #0f172a;
+
+            font-size:
+                14px;
+
+            font-weight:
+                700;
+
+            line-height:
+                1.45;
+
+            transition:
+                color .2s ease;
+
+        }
+
+
+        .bootcamp-card-modern:hover
+        .card-title-custom {
+
+            color:
+                #2563eb;
+
+        }
+
+
+        /* =====================================================
+           DESCRIPTION
+        ===================================================== */
+
+        .bootcamp-card-modern
+        .course-description-user {
+
+            margin:
+                0 0 12px;
+
+            color:
+                #64748b;
+
+            font-size:
+                11px;
+
+            line-height:
+                1.55;
+
+            display:
+                -webkit-box;
+
+            -webkit-line-clamp:
+                2;
+
+            -webkit-box-orient:
+                vertical;
+
+            overflow:
+                hidden;
+
+            min-height:
+                34px;
+
+        }
+
+
+        /* =====================================================
+           META
+           MENTOR | PESERTA | DURASI
+        ===================================================== */
+
+        .bootcamp-card-modern .course-meta {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(
+                    3,
+                    minmax(0,1fr)
+                );
+
+            gap:
+                7px;
+
+            margin:
+                0 0 10px;
+
+        }
+
+
+        .bootcamp-card-modern
+        .course-meta span {
+
+            min-width:
+                0;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            text-align:
+                center;
+
+            padding:
+                8px 6px;
+
+            border-radius:
+                8px;
+
+            background:
+                #f1f5f9;
+
+            color:
+                #475569;
+
+            font-size:
+                9px;
+
+            font-weight:
+                600;
+
+            line-height:
+                1.25;
+
+            overflow:
+                hidden;
+
+            white-space:
+                nowrap;
+
+            text-overflow:
+                ellipsis;
+
+        }
+
+
+        /* =====================================================
+           BENEFITS
+        ===================================================== */
+
+        .bootcamp-card-modern
+        .course-benefits {
+
+            display:
+                flex;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                6px;
+
+            margin:
+                0 0 12px;
+
+            min-height:
+                28px;
+
+        }
+
+
+        .bootcamp-card-modern
+        .benefit-chip {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            max-width:
+                100%;
+
+            padding:
+                5px 8px;
+
+            background:
+                #eff6ff;
+
+            color:
+                #2563eb;
+
+            border:
+                1px solid
+                #dbeafe;
+
+            border-radius:
+                999px;
+
+            font-size:
+                9px;
+
+            font-weight:
+                700;
+
+            line-height:
+                1.3;
+
+            white-space:
+                nowrap;
+
+            overflow:
+                hidden;
+
+            text-overflow:
+                ellipsis;
+
+        }
+
+
+        /* =====================================================
+           DATE
+           DISEMBUNYIKAN AGAR SAMA DENGAN E-LEARNING
+        ===================================================== */
+
+        .bootcamp-card-modern
+        .date-box {
+
+            display:
+                none;
+
+        }
+
+
+        /* =====================================================
+           FOOTER CARD
+        ===================================================== */
+
+        .bootcamp-card-modern
+        .card-footer-user {
+
+            border-top:
+                1px solid
+                #f1f5f9;
+
+            padding-top:
+                13px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            gap:
+                10px;
+
+            margin-top:
+                auto;
+
+        }
+
+
+        /* =====================================================
+           PRICE BOX
+        ===================================================== */
+
+        .bootcamp-card-modern
+        .price-user {
+
+            min-width:
+                0;
+
+            flex:
+                1;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            justify-content:
+                center;
+
+        }
+
+
+        /* =====================================================
+           LABEL HARGA
+        ===================================================== */
+
+        .bootcamp-card-modern
+        .price-user-label {
+
+            display:
+                block;
+
+            margin-bottom:
+                3px;
+
+            color:
+                #94a3b8;
+
+            font-size:
+                9px;
+
+            font-weight:
+                600;
+
+            line-height:
+                1.2;
+
+        }
+
+
+        /* =====================================================
+           HARGA NORMAL
+        ===================================================== */
+
+        .bootcamp-card-modern
+        .course-price-normal {
+
+            display:
+                block;
+
+            color:
+                #2563eb;
+
+            font-size:
+                13px;
+
+            font-weight:
+                800;
+
+            line-height:
+                1.25;
+
+            white-space:
+                nowrap;
+
+        }
+
+
+        /* =====================================================
+           PROMO PRICE
+        ===================================================== */
+
+        .bootcamp-card-modern
+        .course-price-promo {
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            gap:
+                2px;
+
+        }
+
+
+        /* HARGA LAMA */
+
+        .bootcamp-card-modern
+        .course-price-old {
+
+            display:
+                block;
+
+            color:
+                #94a3b8;
+
+            font-size:
+                9px;
+
+            font-weight:
+                600;
+
+            line-height:
+                1.2;
+
+            text-decoration:
+                line-through;
+
+        }
+
+
+        /* BARIS HARGA PROMO */
+
+        .bootcamp-card-modern
+        .course-price-new-row {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                6px;
+
+            flex-wrap:
+                wrap;
+
+        }
+
+
+        /* HARGA PROMO */
+
+        .bootcamp-card-modern
+        .course-price-new {
+
+            display:
+                inline-block;
+
+            color:
+                #2563eb;
+
+            font-size:
+                13px;
+
+            font-weight:
+                800;
+
+            line-height:
+                1.25;
+
+            white-space:
+                nowrap;
+
+        }
+
+
+        /* =====================================================
+           DISCOUNT
+        ===================================================== */
+
+        .bootcamp-card-modern
+        .course-discount {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            padding:
+                4px 6px;
+
+            border:
+                1px solid
+                #fee2e2;
+
+            border-radius:
+                999px;
+
+            background:
+                #fef2f2;
+
+            color:
+                #dc2626;
+
+            font-size:
+                8px;
+
+            font-weight:
+                800;
+
+            line-height:
+                1;
+
+            white-space:
+                nowrap;
+
+        }
+
+
+        /* =====================================================
+           BUTTON
+           SAMA SEPERTI E-LEARNING
+        ===================================================== */
+
+        .bootcamp-card-modern
+        .btn-primary-full {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            height:
+                31px;
+
+            padding:
+                0 10px;
+
+            border:
+                1px solid
+                #dbeafe;
+
+            background:
+                #eff6ff;
+
+            color:
+                #2563eb !important;
+
+            border-radius:
+                8px;
+
+            font-family:
+                'Plus Jakarta Sans',
+                sans-serif;
+
+            font-size:
+                10px;
+
+            font-weight:
+                700;
+
+            cursor:
+                pointer;
+
+            white-space:
+                nowrap;
+
+            box-sizing:
+                border-box;
+
+            flex-shrink:
+                0;
+
+            transition:
+                background .2s ease,
+                color .2s ease,
+                transform .2s ease;
+
+        }
+
+
+        .bootcamp-card-modern
+        .btn-primary-full:hover {
+
+            background:
+                #dbeafe;
+
+            color:
+                #1d4ed8 !important;
+
+            transform:
+                translateY(-1px);
+
+            box-shadow:
+                none;
+
+        }
+
+
+        .bootcamp-card-modern
+        .btn-primary-full:disabled {
+
+            background:
+                #e2e8f0;
+
+            border-color:
+                #cbd5e1;
+
+            color:
+                #94a3b8 !important;
+
+            cursor:
+                not-allowed;
+
+            transform:
+                none;
+
+            box-shadow:
+                none;
+
+        }
+
+
+        /* =====================================================
+           EMPTY DATA
+        ===================================================== */
+
+        .user-course-empty {
+
+            grid-column:
+                1 / -1;
+
+            padding:
+                60px 20px;
+
+            text-align:
+                center;
+
+            background:
+                #ffffff;
+
+            border:
+                1px solid
+                #e2e8f0;
+
+            border-radius:
+                16px;
+
+            color:
+                #64748b;
+
+            font-size:
+                13px;
+
+        }
+
+
+        .user-course-empty strong {
+
+            display:
+                block;
+
+            margin-bottom:
+                6px;
+
+            color:
+                #0f172a;
+
+            font-size:
+                15px;
+
+        }
+
+
+        /* =====================================================
+           MODAL
+        ===================================================== */
+
+        .modal {
+
+            position:
+                fixed;
+
+            inset:
+                0;
+
+            background:
+                rgba(15,23,42,.40);
+
+            backdrop-filter:
+                blur(5px);
+
+            -webkit-backdrop-filter:
+                blur(5px);
+
+            display:
+                none;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            z-index:
+                3000;
+
+            padding:
+                20px;
+
+            opacity:
+                0;
+
+        }
+
+
+        .modal.show {
+
+            display:
+                flex;
+
+            animation:
+                modalOverlayIn
+                .25s
+                ease
+                forwards;
+
+        }
+
+
+        @keyframes modalOverlayIn {
+
+            from {
+
+                opacity:
+                    0;
+
+            }
+
+            to {
+
+                opacity:
+                    1;
+
+            }
+
+        }
+
+
+        .modal-box {
+
+            width:
+                min(470px,100%);
+
+            background:
+                #ffffff;
+
+            border:
+                1px solid
+                #e2e8f0;
+
+            border-radius:
+                16px;
+
+            padding:
+                30px;
+
+            position:
+                relative;
+
+            text-align:
+                center;
+
+            box-shadow:
+                0 25px 70px
+                rgba(15,23,42,.20);
+
+            opacity:
+                0;
+
+            transform:
+                translateY(20px)
+                scale(.96);
+
+        }
+
+
+        .modal.show .modal-box {
+
+            animation:
+                modalBoxIn
+                .35s
+                cubic-bezier(
+                    .16,
+                    1,
+                    .3,
+                    1
+                )
+                .05s
+                forwards;
+
+        }
+
+
+        @keyframes modalBoxIn {
+
+            0% {
+
+                opacity:
+                    0;
+
+                transform:
+                    translateY(20px)
+                    scale(.96);
+
+            }
+
+            70% {
+
+                opacity:
+                    1;
+
+                transform:
+                    translateY(-3px)
+                    scale(1.01);
+
+            }
+
+            100% {
+
+                opacity:
+                    1;
+
+                transform:
+                    translateY(0)
+                    scale(1);
+
+            }
+
+        }
+
+
+        .modal-box h2 {
+
+            margin:
+                8px 0 9px;
+
+            color:
+                #0f172a;
+
+            font-size:
+                20px;
+
+            font-weight:
+                700;
+
+        }
+
+
+        .modal-box p {
+
+            margin:
+                0 0 20px;
+
+            color:
+                #64748b;
+
+            font-size:
+                13px;
+
+            line-height:
+                1.6;
+
+        }
+
+
+        .modal-close {
+
+            position:
+                absolute;
+
+            top:
+                12px;
+
+            right:
+                12px;
+
+            width:
+                34px;
+
+            height:
+                34px;
+
+            border:
+                none;
+
+            border-radius:
+                8px;
+
+            background:
+                #f8fafc;
+
+            color:
+                #64748b;
+
+            font-size:
+                20px;
+
+            cursor:
+                pointer;
+
+            transition:
+                background .2s ease,
+                color .2s ease,
+                transform .2s ease;
+
+        }
+
+
+        .modal-close:hover {
+
+            background:
+                #eef2ff;
+
+            color:
+                #4338ca;
+
+            transform:
+                rotate(90deg);
+
+        }
+
+
+        .modal-action {
+
+            width:
+                100%;
+
+            min-height:
+                41px;
+
+            border:
+                none;
+
+            border-radius:
+                8px;
+
+            background:
+                #4338ca;
+
+            color:
+                #ffffff;
+
+            font-family:
+                inherit;
+
+            font-size:
+                11px;
+
+            font-weight:
+                700;
+
+            cursor:
+                pointer;
+
+            transition:
+                background .2s ease,
+                transform .2s ease,
+                box-shadow .2s ease;
+
+        }
+
+
+        .modal-action:hover {
+
+            background:
+                #3730a3 !important;
+
+            transform:
+                translateY(-2px);
+
+            box-shadow:
+                0 7px 16px
+                rgba(67,56,202,.20);
+
+        }
+
+
+        /* =====================================================
+           PROFILE MODAL
+        ===================================================== */
+
+        #modal .profile-info {
+
+            text-align:
+                left;
+
+            margin-top:
+                18px;
+
+            margin-bottom:
+                20px;
+
+        }
+
+
+        #modal .profile-info-item {
+
+            background:
+                #f8fafc;
+
+            border:
+                1px solid
+                #e2e8f0;
+
+            border-radius:
+                10px;
+
+            padding:
+                13px 14px;
+
+            margin-bottom:
+                10px;
+
+        }
+
+
+        #modal .profile-info-label {
+
+            display:
+                block;
+
+            margin-bottom:
+                4px;
+
+            color:
+                #94a3b8;
+
+            font-size:
+                9px;
+
+            font-weight:
+                700;
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                .4px;
+
+        }
+
+
+        #modal .profile-info-value {
+
+            color:
+                #0f172a;
+
+            font-size:
+                13px;
+
+            font-weight:
+                700;
+
+            word-break:
+                break-word;
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 900px) {
+
+            #bootcampGrid {
+
+                grid-template-columns:
+                    repeat(
+                        2,
+                        minmax(0,1fr)
+                    );
+
+            }
+
+        }
+
+
+        @media (max-width: 768px) {
+
+            .bootcamp-hero-card {
+
+                min-height:
+                    0;
+
+                padding:
+                    32px 22px;
+
+                align-items:
+                    flex-start;
+
+            }
+
+
+            .hero-content-inner h1 {
+
+                font-size:
+                    26px;
+
+            }
+
+
+            .hero-description {
+
+                font-size:
+                    12px;
+
+            }
+
+
+            .hero-stats-group {
+
+                flex-wrap:
+                    wrap;
+
+                gap:
+                    16px;
+
+            }
+
+
+            .hero-stat-item {
+
+                padding:
+                    0 18px;
+
+            }
+
+
+            .hero-stat-item:first-child {
+
+                padding-left:
+                    0;
+
+            }
+
+
+            .hero-stat-item:not(:last-child)::after {
+
+                display:
+                    none;
+
+            }
+
+
+            .bootcamp-section-title {
+
+                align-items:
+                    flex-start;
+
+                flex-direction:
+                    column;
+
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            #bootcampGrid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .bootcamp-card-modern
+            .course-meta {
+
+                grid-template-columns:
+                    repeat(
+                        3,
+                        minmax(0,1fr)
+                    );
+
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .modal {
+
+                padding:
+                    16px;
+
+            }
+
+
+            .modal-box {
+
+                width:
+                    calc(100% - 10px);
+
+                padding:
+                    24px;
+
+                border-radius:
+                    16px;
+
+            }
+
+        }
+
+
+        @media (max-width: 480px) {
+
+            .bootcamp-hero-card {
+
+                padding:
+                    28px 18px;
+
+            }
+
+
+            .hero-content-inner h1 {
+
+                font-size:
+                    24px;
+
+            }
+
+
+            .card-img-wrapper {
+
+                height:
+                    190px;
+
+            }
+
+
+            .bootcamp-card-modern
+            .card-footer-user {
+
+                align-items:
+                    stretch;
+
+                flex-direction:
+                    column;
+
+            }
+
+
+            .bootcamp-card-modern
+            .price-user {
+
+                width:
+                    100%;
+
+            }
+
+
+            .bootcamp-card-modern
+            .btn-primary-full {
+
+                width:
+                    100%;
+
+            }
+
+        }
+
+
+        /* =====================================================
+           REDUCED MOTION
+        ===================================================== */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+
+                animation-duration:
+                    .01ms !important;
+
+                animation-iteration-count:
+                    1 !important;
+
+                transition-duration:
+                    .01ms !important;
+
+            }
+
+        }
+
     </style>
-  </head>
 
-  <body>
+</head>
+
+
+<body>
+
+
     <div class="page-wrapper">
-      <!-- NAVBAR -->
-      <header class="navbar">
-        <div class="navbar-container">
-          <a href="index.html" class="logo"> <span class="logo-accent" style="color: #4338ca">BELAJAR</span>YUK </a>
 
-          <div class="nav-actions" id="navActions">
-            <a href="../proses/masuk.php" class="btn-login">Masuk</a>
-            <a href="../proses/daftar.php" class="btn-register" style="background: #4338ca">Daftar Gratis</a>
-            <button class="hamburger" id="hamburgerBtn" onclick="toggleSidebar()" aria-label="Menu Navigasi">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-          </div>
-        </div>
-      </header>
 
-      <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+        <!-- =================================================
+             NAVBAR
+        ================================================== -->
 
-      <!-- SIDEBAR -->
-      <aside class="sidebar" id="sidebar">
-        <div class="sidebar-head">
-          <span class="sidebar-tag">NAVIGASI</span>
-          <h3>Menu Utama</h3>
-        </div>
-        <nav class="sidebar-nav">
-          <a href="index.html"><span>Beranda</span></a>
-          <a href="elearning.html"><span>E-Learning</span></a>
-          <a href="langganan.html"><span>Langganan</span></a>
-          <a href="komunitas.html"><span>Grup Komunitas</span></a>
-          <a href="bootcamp.html" class="active"><span>Bootcamp</span></a>
-        </nav>
-      </aside>
+        <header class="navbar">
 
-      <!-- MAIN KONTEN -->
-      <main class="main-content" style="max-width: 1200px; margin: 0 auto; padding: 20px">
-        <!-- HERO BANNER FULL BACKGROUND GAMBAR -->
-        <section style="margin-bottom: 32px">
-          <div class="bootcamp-hero-card">
-            <div class="hero-content-inner">
-              <div class="hero-badge-tag">Intensive Bootcamp & Career Accelerator</div>
-              <h1 style="font-size: 32px; font-weight: 800; line-height: 1.3; margin-bottom: 12px; color: #ffffff">Akselerasi Karir Digitalmu Bersama Senior Industry Expert.</h1>
-              <p style="font-size: 15px; color: #e0e7ff; line-height: 1.6; margin: 0">Belajar interaktif intensif 12–16 minggu, bedah kasus riil industri, bimbingan portofolio 1-on-1, dan penyaluran kerja terarah.</p>
+            <div class="navbar-container">
 
-              <div class="hero-stats-group">
-                <div class="hero-stat-item">
-                  <strong>92%</strong>
-                  <span>Hired Rate</span>
+
+                <!-- LOGO -->
+
+                <a
+                    href="index.html"
+                    class="logo"
+                >
+
+                    <span
+                        class="logo-accent"
+                        style="color:#4338ca"
+                    >
+
+                        BELAJAR
+
+                    </span>YUK
+
+                </a>
+
+
+                <!-- NAV RIGHT -->
+
+                <div
+                    class="nav-actions"
+                    id="navActions"
+                >
+
+
+                    <a
+                        href="../proses/masuk.php"
+                        class="btn-login"
+                    >
+
+                        Masuk
+
+                    </a>
+
+
+                    <a
+                        href="../proses/daftar.php"
+                        class="btn-register"
+                        style="background:#4338ca"
+                    >
+
+                        Daftar Gratis
+
+                    </a>
+
+
+                    <button
+                        class="hamburger"
+                        id="hamburgerBtn"
+                        type="button"
+                        onclick="toggleSidebar()"
+                        aria-label="Menu Navigasi"
+                    >
+
+                        <span></span>
+
+                        <span></span>
+
+                        <span></span>
+
+                    </button>
+
+
                 </div>
-                <div class="hero-stat-item">
-                  <strong>4+ Real</strong>
-                  <span>Project Portofolio</span>
-                </div>
-                <div class="hero-stat-item">
-                  <strong>1-on-1</strong>
-                  <span>Career Coaching</span>
-                </div>
-              </div>
+
             </div>
-          </div>
-        </section>
 
-        <!-- FILTER & SEARCH SECTION -->
-        <section style="margin-bottom: 28px">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px">
-            <h3 style="font-size: 18px; font-weight: 700; color: #0f172a; margin: 0">Pilih Spesialisasi Bootcamp</h3>
-            <span style="font-size: 12px; color: #4338ca; font-weight: 700; background: #e0e7ff; padding: 4px 12px; border-radius: 20px">Batch Terbaru Dibuka</span>
-          </div>
+        </header>
 
-          <div class="search-container-custom">
-            <svg class="search-icon-custom" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="11" cy="11" r="8"></circle>
-              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            </svg>
-            <input type="text" class="search-input-custom" placeholder="Cari program bootcamp atau keahlian..." />
-          </div>
 
-          <div class="pills-wrapper">
-            <button class="pill-btn active">Semua Batch</button>
-            <button class="pill-btn">Front-End</button>
-            <button class="pill-btn">Back-End</button>
-            <button class="pill-btn">UI/UX Design</button>
-            <button class="pill-btn">Data Science</button>
-            <button class="pill-btn">Mobile Dev</button>
-          </div>
-        </section>
+        <!-- =================================================
+             OVERLAY
+        ================================================== -->
 
-        <!-- COURSES GRID -->
-        <section>
-          <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px">
-            <!-- CARD 1 -->
-            <article class="bootcamp-card-modern">
-              <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=500&q=80" alt="Front-End" />
-                <span class="badge-status">Sisa 4 Kursi</span>
-              </div>
-              <div class="card-body-custom">
-                <span class="cat-tag">Web & React</span>
-                <h4 class="card-title-custom">Front-End Web Engineering (React & Tailwind)</h4>
-                <ul class="features-list">
-                  <li>Membangun SPA Kompleks dengan React.js</li>
-                  <li>Integrasi REST API & State Management</li>
-                  <li>Review Portofolio & Mock Interview</li>
-                </ul>
-                <div class="date-box">🗓️ Mulai: 15 Oktober 2026</div>
-                <button class="btn-primary-full" onclick="openModal('Pendaftaran Front-End')">Daftar Batch</button>
-              </div>
-            </article>
+        <div
+            class="overlay"
+            id="overlay"
+            onclick="toggleSidebar()"
+        >
+        </div>
 
-            <!-- CARD 2 -->
-            <article class="bootcamp-card-modern">
-              <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=500&q=80" alt="Backend" />
-                <span class="badge-status">Sisa 2 Kursi</span>
-              </div>
-              <div class="card-body-custom">
-                <span class="cat-tag">Backend & Database</span>
-                <h4 class="card-title-custom">Laravel & Node.js API Engineering</h4>
-                <ul class="features-list">
-                  <li>Desain Basis Data Relasional & NoSQL</li>
-                  <li>RESTful API & Microservices</li>
-                  <li>Deployment Server AWS / DigitalOcean</li>
-                </ul>
-                <div class="date-box">🗓️ Mulai: 01 November 2026</div>
-                <button class="btn-primary-full" onclick="openModal('Pendaftaran Backend')">Daftar Batch</button>
-              </div>
-            </article>
 
-            <!-- CARD 3 -->
-            <article class="bootcamp-card-modern">
-              <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=500&q=80" alt="UI/UX" />
-                <span class="badge-status" style="color: #f43f5e; border-color: rgba(244, 63, 94, 0.3)">Hampir Penuh</span>
-              </div>
-              <div class="card-body-custom">
-                <span class="cat-tag">UI/UX & Figma</span>
-                <h4 class="card-title-custom">UI/UX & Digital Product Design</h4>
-                <ul class="features-list">
-                  <li>User Research & Prototyping</li>
-                  <li>Design System di Figma</li>
-                  <li>Usability Testing bersama Real User</li>
-                </ul>
-                <div class="date-box">🗓️ Mulai: 10 November 2026</div>
-                <button class="btn-primary-full" onclick="openModal('Pendaftaran UI/UX')">Daftar Batch</button>
-              </div>
-            </article>
+        <!-- =================================================
+             SIDEBAR
+        ================================================== -->
 
-            <!-- CARD 4 -->
-            <article class="bootcamp-card-modern">
-              <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&q=80" alt="Data Science" />
-                <span class="badge-status">Dibuka</span>
-              </div>
-              <div class="card-body-custom">
-                <span class="cat-tag">Python & AI</span>
-                <h4 class="card-title-custom">Data Mining, Science & Machine Learning</h4>
-                <ul class="features-list">
-                  <li>Pengolahan Data dengan Pandas & NumPy</li>
-                  <li>Model Klasifikasi & Clustering</li>
-                  <li>Deploy Model Machine Learning ke Web</li>
-                </ul>
-                <div class="date-box">🗓️ Mulai: 20 November 2026</div>
-                <button class="btn-primary-full" onclick="openModal('Pendaftaran Data Science')">Daftar Batch</button>
-              </div>
-            </article>
+        <aside
+            class="sidebar"
+            id="sidebar"
+        >
 
-            <!-- CARD 5 -->
-            <article class="bootcamp-card-modern">
-              <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?auto=format&fit=crop&w=500&q=80" alt="Flutter" />
-                <span class="badge-status">Dibuka</span>
-              </div>
-              <div class="card-body-custom">
-                <span class="cat-tag">Mobile & Flutter</span>
-                <h4 class="card-title-custom">Flutter Cross-Platform Expert</h4>
-                <ul class="features-list">
-                  <li>Pemrograman Dart & Widget Layouting</li>
-                  <li>State Management (BLoC / Provider)</li>
-                  <li>Publikasi Aplikasi ke App Store/Play Store</li>
-                </ul>
-                <div class="date-box">🗓️ Mulai: 01 Desember 2026</div>
-                <button class="btn-primary-full" onclick="openModal('Pendaftaran Flutter')">Daftar Batch</button>
-              </div>
-            </article>
 
-            <!-- CARD 6 -->
-            <article class="bootcamp-card-modern">
-              <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=500&q=80" alt="Cyber Security" />
-                <span class="badge-status">Dibuka</span>
-              </div>
-              <div class="card-body-custom">
-                <span class="cat-tag">Security & Hacking</span>
-                <h4 class="card-title-custom">Cyber Security & Penetration Testing</h4>
-                <ul class="features-list">
-                  <li>Analisis Kerentanan Sistem & Web App</li>
-                  <li>Network Security & Defensive Hacking</li>
-                  <li>Simulasi Penetration Testing Riil</li>
-                </ul>
-                <div class="date-box">🗓️ Mulai: 15 Desember 2026</div>
-                <button class="btn-primary-full" onclick="openModal('Pendaftaran Cyber Security')">Daftar Batch</button>
-              </div>
-            </article>
-          </div>
-        </section>
-      </main>
+            <div class="sidebar-head">
+
+                <span class="sidebar-tag">
+
+                    NAVIGASI
+
+                </span>
+
+
+                <h3>
+
+                    Menu Utama
+
+                </h3>
+
+            </div>
+
+
+            <nav class="sidebar-nav">
+
+
+                <a href="index.html">
+
+                    <span>
+                        Beranda
+                    </span>
+
+                </a>
+
+
+                <a href="elearning.html">
+
+                    <span>
+                        E-Learning
+                    </span>
+
+                </a>
+
+
+                <a href="komunitas.html">
+
+                    <span>
+                        Grup Komunitas
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="bootcamp.html"
+                    class="active"
+                >
+
+                    <span>
+                        Bootcamp
+                    </span>
+
+                </a>
+
+
+                <a href="riwayat.html">
+
+                    <span>
+                        Riwayat
+                    </span>
+
+                </a>
+
+
+                <a href="kelas.html">
+
+                    <span>
+                        Kelas Saya
+                    </span>
+
+                </a>
+
+
+            </nav>
+
+        </aside>
+
+
+        <!-- =================================================
+             MAIN
+        ================================================== -->
+
+        <main
+            class="main-content"
+            style="
+                max-width:1200px;
+                margin:0 auto;
+                padding:20px;
+            "
+        >
+
+
+            <!-- =================================================
+                 HERO
+            ================================================== -->
+
+            <section>
+
+
+                <div
+                    class="bootcamp-hero-card"
+                >
+
+
+                    <div
+                        class="hero-content-inner"
+                    >
+
+
+                        <div
+                            class="hero-badge-tag"
+                        >
+
+                            Intensive Bootcamp
+                            & Career Accelerator
+
+                        </div>
+
+
+                        <h1>
+
+                            Akselerasi Karir
+                            Digitalmu Bersama
+                            Industry Expert.
+
+                        </h1>
+
+
+                        <p
+                            class="hero-description"
+                        >
+
+                            Belajar intensif,
+                            mengerjakan project,
+                            mendapatkan bimbingan mentor,
+                            dan membangun portofolio
+                            untuk meningkatkan skill
+                            digitalmu.
+
+                        </p>
+
+
+                        <div
+                            class="hero-stats-group"
+                        >
+
+
+                            <div
+                                class="hero-stat-item"
+                            >
+
+                                <strong>
+                                    Intensif
+                                </strong>
+
+                                <span>
+                                    Pembelajaran
+                                </span>
+
+                            </div>
+
+
+                            <div
+                                class="hero-stat-item"
+                            >
+
+                                <strong>
+                                    Real Project
+                                </strong>
+
+                                <span>
+                                    Portofolio
+                                </span>
+
+                            </div>
+
+
+                            <div
+                                class="hero-stat-item"
+                            >
+
+                                <strong>
+                                    Mentor
+                                </strong>
+
+                                <span>
+                                    Bimbingan
+                                </span>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 SEARCH + FILTER
+            ================================================== -->
+
+            <section
+                style="
+                    margin-bottom:28px;
+                "
+            >
+
+
+                <div
+                    class="bootcamp-section-title"
+                >
+
+
+                    <h3>
+
+                        Pilih Spesialisasi Bootcamp
+
+                    </h3>
+
+
+                    <span
+                        class="bootcamp-count"
+                        id="bootcampCount"
+                    >
+
+                        Memuat...
+
+                    </span>
+
+
+                </div>
+
+
+                <!-- SEARCH -->
+
+                <div
+                    class="search-container-custom"
+                >
+
+
+                    <svg
+                        class="search-icon-custom"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+
+                        <circle
+                            cx="11"
+                            cy="11"
+                            r="8"
+                        >
+                        </circle>
+
+
+                        <line
+                            x1="21"
+                            y1="21"
+                            x2="16.65"
+                            y2="16.65"
+                        >
+                        </line>
+
+
+                    </svg>
+
+
+                    <input
+                        type="text"
+                        id="searchBootcampUser"
+                        class="search-input-custom"
+                        placeholder="Cari program bootcamp atau keahlian..."
+                        autocomplete="off"
+                    >
+
+
+                </div>
+
+
+                <!-- FILTER -->
+
+                <div
+                    class="pills-wrapper"
+                    id="bootcampFilters"
+                >
+
+
+                    <button
+                        type="button"
+                        class="pill-btn active"
+                        data-filter="Semua Batch"
+                    >
+
+                        Semua Batch
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="pill-btn"
+                        data-filter="Front-End"
+                    >
+
+                        Front-End
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="pill-btn"
+                        data-filter="Back-End"
+                    >
+
+                        Back-End
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="pill-btn"
+                        data-filter="UI/UX Design"
+                    >
+
+                        UI/UX Design
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="pill-btn"
+                        data-filter="Data & AI"
+                    >
+
+                        Data & AI
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="pill-btn"
+                        data-filter="Mobile Dev"
+                    >
+
+                        Mobile Dev
+
+                    </button>
+
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 GRID
+            ================================================== -->
+
+            <section>
+
+
+                <div
+                    id="bootcampGrid"
+                >
+
+
+                    <div
+                        class="user-course-empty"
+                    >
+
+
+                        <strong>
+
+                            Memuat data bootcamp...
+
+                        </strong>
+
+
+                        Silakan tunggu sebentar.
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+
     </div>
 
-    <!-- MODAL -->
-    <div class="modal" id="modal">
-      <div class="modal-box">
-        <button class="modal-close" onclick="closeModal()">×</button>
-        <h2 id="modalTitle">Pendaftaran Bootcamp</h2>
-        <p>Silakan isi informasi akun atau masuk terlebih dahulu untuk mengamankan kursi di Batch ini.</p>
-        <button class="modal-action" style="background: #4338ca" onclick="closeModal()">Lanjutkan</button>
-      </div>
+
+    <!-- =================================================
+         MODAL PENDAFTARAN BOOTCAMP
+    ================================================== -->
+
+    <div
+        class="modal"
+        id="bootcampRegisterModal"
+    >
+
+
+        <div
+            class="modal-box"
+        >
+
+
+            <button
+                class="modal-close"
+                type="button"
+                onclick="closeBootcampRegisterModal()"
+                aria-label="Tutup Pendaftaran"
+            >
+
+                ×
+
+            </button>
+
+
+            <h2
+                id="registerModalTitle"
+            >
+
+                Pendaftaran Bootcamp
+
+            </h2>
+
+
+            <p>
+
+                Untuk melanjutkan pendaftaran,
+                silakan masuk ke akun atau
+                daftar terlebih dahulu.
+
+            </p>
+
+
+            <button
+                class="modal-action"
+                type="button"
+                style="background:#4338ca"
+                onclick="continueBootcampRegistration()"
+            >
+
+                Masuk / Daftar
+
+            </button>
+
+
+        </div>
+
     </div>
 
-    <script src="../js/script.js"></script>
-  </body>
+
+    <!-- =================================================
+         MODAL PROFIL
+    ================================================== -->
+
+    <div
+        class="modal"
+        id="modal"
+    >
+
+
+        <div
+            class="modal-box"
+        >
+
+
+            <button
+                class="modal-close"
+                type="button"
+                onclick="closeModal()"
+                aria-label="Tutup Profil"
+            >
+
+                ×
+
+            </button>
+
+
+            <h2
+                id="modalTitle"
+            >
+
+                Profil Saya
+
+            </h2>
+
+
+            <p>
+
+                Loading data profil...
+
+            </p>
+
+
+            <button
+                class="modal-action"
+                type="button"
+                style="
+                    background:#ef4444;
+                    margin-top:10px;
+                "
+                onclick="logoutUser()"
+            >
+
+                Keluar Akun
+
+            </button>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         SCRIPT
+    ================================================== -->
+
+    <script
+        src="../js/script.js"
+    ></script>
+
+
+    <script
+        src="../js/theme.js"
+    ></script>
+
+
+    <script
+        src="../js/bootcamp_user.js"
+    ></script>
+
+
+</body>
+
 </html>

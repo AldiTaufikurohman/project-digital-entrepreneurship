@@ -106,16 +106,25 @@ function openProfile() {
 }
 
 function logoutUser() {
+
   localStorage.removeItem('belajaryuk_login');
   localStorage.removeItem('belajaryuk_nama');
   localStorage.removeItem('belajaryuk_email');
 
-  // Mengarahkan kembali ke halaman utama sesuai lokasi folder
-  if (window.location.pathname.includes('/pages/') || window.location.pathname.includes('/proses/')) {
-    window.location.href = '../index.html';
-  } else {
-    window.location.href = '../index.html';
-  }
+  // Hapus session PHP
+  fetch('../proses/logout.php', {
+    method: 'GET',
+    credentials: 'include',
+    cache: 'no-store'
+  })
+    .then(function () {
+      window.location.href = '../pages/index.html';
+    })
+    .catch(function (error) {
+      console.error('ERROR LOGOUT:', error);
+      window.location.href = '../pages/index.html';
+    });
+
 }
 
 /* ==================================================

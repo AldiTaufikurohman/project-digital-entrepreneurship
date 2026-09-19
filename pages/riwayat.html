@@ -1,0 +1,1865 @@
+<!doctype html>
+
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Riwayat Transaksi - BELAJARYUK
+    </title>
+
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet"
+        href="../css/style.css">
+
+
+    <!-- =====================================================
+         MIDTRANS SNAP
+    ====================================================== -->
+
+    <script
+        type="text/javascript"
+        src="https://app.sandbox.midtrans.com/snap/snap.js"
+        data-client-key="Mid-client-rNRn8bYJC1ZpblR5">
+    </script>
+
+
+    <style>
+
+        /* =====================================================
+           MAIN
+        ===================================================== */
+
+        .history-main {
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+            padding:
+                35px 20px 60px;
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        /* =====================================================
+           BACKGROUND LIGHT
+        ===================================================== */
+
+        .history-main::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 260px;
+
+            height: 260px;
+
+            left: -140px;
+
+            top: 40px;
+
+            background:
+                rgba(
+                    99,
+                    102,
+                    241,
+                    0.10
+                );
+
+            filter:
+                blur(80px);
+
+            border-radius:
+                50%;
+
+            pointer-events:
+                none;
+
+            animation:
+                floatingLight
+                10s
+                ease-in-out
+                infinite;
+
+        }
+
+
+        .history-main::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 240px;
+
+            height: 240px;
+
+            right: -130px;
+
+            bottom: 50px;
+
+            background:
+                rgba(
+                    168,
+                    85,
+                    247,
+                    0.08
+                );
+
+            filter:
+                blur(80px);
+
+            border-radius:
+                50%;
+
+            pointer-events:
+                none;
+
+            animation:
+                floatingLight
+                12s
+                ease-in-out
+                1s
+                infinite;
+
+        }
+
+
+        @keyframes floatingLight {
+
+            0% {
+
+                transform:
+                    translate(
+                        0,
+                        0
+                    );
+
+            }
+
+            50% {
+
+                transform:
+                    translate(
+                        22px,
+                        25px
+                    );
+
+            }
+
+            100% {
+
+                transform:
+                    translate(
+                        0,
+                        0
+                    );
+
+            }
+
+        }
+
+
+        .history-main > * {
+
+            position:
+                relative;
+
+            z-index:
+                1;
+
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        .history-header {
+
+            margin-bottom:
+                25px;
+
+            animation:
+                headerIn
+                0.65s
+                ease
+                both;
+
+        }
+
+
+        .history-header .tag {
+
+            display:
+                inline-block;
+
+            font-size:
+                10px;
+
+            font-weight:
+                800;
+
+            letter-spacing:
+                1px;
+
+            color:
+                #4338ca;
+
+            background:
+                #e0e7ff;
+
+            padding:
+                6px 10px;
+
+            border-radius:
+                6px;
+
+            margin-bottom:
+                10px;
+
+            animation:
+                fadeUp
+                0.5s
+                ease
+                both;
+
+        }
+
+
+        .history-header h1 {
+
+            margin:
+                0 0 8px;
+
+            font-size:
+                30px;
+
+            line-height:
+                1.25;
+
+            color:
+                #0f172a;
+
+            animation:
+                fadeUp
+                0.55s
+                ease
+                0.06s
+                both;
+
+        }
+
+
+        .history-header p {
+
+            margin:
+                0;
+
+            color:
+                #64748b;
+
+            font-size:
+                13px;
+
+            line-height:
+                1.6;
+
+            animation:
+                fadeUp
+                0.55s
+                ease
+                0.12s
+                both;
+
+        }
+
+
+        /* =====================================================
+           CATATAN
+        ===================================================== */
+
+        .history-note {
+
+            display:
+                inline-block;
+
+            margin-top:
+                10px;
+
+            padding:
+                8px 11px;
+
+            background:
+                #f8fafc;
+
+            border:
+                1px solid
+                #e2e8f0;
+
+            border-radius:
+                6px;
+
+            color:
+                #64748b;
+
+            font-size:
+                10px;
+
+            line-height:
+                1.5;
+
+            animation:
+                fadeUp
+                0.55s
+                ease
+                0.18s
+                both;
+
+        }
+
+
+        @keyframes headerIn {
+
+            from {
+
+                opacity:
+                    0;
+
+                transform:
+                    translateY(
+                        18px
+                    );
+
+            }
+
+            to {
+
+                opacity:
+                    1;
+
+                transform:
+                    translateY(
+                        0
+                    );
+
+            }
+
+        }
+
+
+        @keyframes fadeUp {
+
+            from {
+
+                opacity:
+                    0;
+
+                transform:
+                    translateY(
+                        10px
+                    );
+
+            }
+
+            to {
+
+                opacity:
+                    1;
+
+                transform:
+                    translateY(
+                        0
+                    );
+
+            }
+
+        }
+
+
+        /* =====================================================
+           CARD
+        ===================================================== */
+
+        .history-card {
+
+            background:
+                #ffffff;
+
+            border:
+                1px solid
+                #e2e8f0;
+
+            border-radius:
+                10px;
+
+            overflow:
+                hidden;
+
+            box-shadow:
+                0 8px 25px
+                rgba(
+                    15,
+                    23,
+                    42,
+                    .05
+                );
+
+            animation:
+                cardIn
+                0.7s
+                ease
+                0.12s
+                both;
+
+            transition:
+                box-shadow
+                .25s
+                ease;
+
+        }
+
+
+        .history-card:hover {
+
+            box-shadow:
+                0 12px 32px
+                rgba(
+                    15,
+                    23,
+                    42,
+                    .07
+                );
+
+        }
+
+
+        @keyframes cardIn {
+
+            from {
+
+                opacity:
+                    0;
+
+                transform:
+                    translateY(
+                        18px
+                    );
+
+            }
+
+            to {
+
+                opacity:
+                    1;
+
+                transform:
+                    translateY(
+                        0
+                    );
+
+            }
+
+        }
+
+
+        /* =====================================================
+           TOP CARD
+        ===================================================== */
+
+        .history-top {
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            gap:
+                15px;
+
+            padding:
+                18px 20px;
+
+            border-bottom:
+                1px solid
+                #e2e8f0;
+
+        }
+
+
+        .history-top strong {
+
+            font-size:
+                15px;
+
+            color:
+                #0f172a;
+
+        }
+
+
+        #transactionCount {
+
+            font-size:
+                11px;
+
+            color:
+                #64748b;
+
+        }
+
+
+        /* =====================================================
+           TABLE WRAPPER
+        ===================================================== */
+
+        .table-wrapper {
+
+            width:
+                100%;
+
+            overflow-x:
+                auto;
+
+        }
+
+
+        /* =====================================================
+           TABLE
+        ===================================================== */
+
+        .history-table {
+
+            width:
+                100%;
+
+            border-collapse:
+                collapse;
+
+            min-width:
+                900px;
+
+        }
+
+
+        .history-table th {
+
+            text-align:
+                left;
+
+            padding:
+                14px 16px;
+
+            background:
+                #f8fafc;
+
+            color:
+                #64748b;
+
+            font-size:
+                10px;
+
+            font-weight:
+                800;
+
+            white-space:
+                nowrap;
+
+            border-bottom:
+                1px solid
+                #e2e8f0;
+
+        }
+
+
+        .history-table td {
+
+            padding:
+                15px 16px;
+
+            border-bottom:
+                1px solid
+                #f1f5f9;
+
+            font-size:
+                11px;
+
+            color:
+                #334155;
+
+            vertical-align:
+                middle;
+
+        }
+
+
+        .history-table tbody tr {
+
+            animation:
+                rowIn
+                .45s
+                ease
+                both;
+
+            transition:
+                background-color
+                .2s
+                ease;
+
+        }
+
+
+        .history-table tbody tr:nth-child(1) {
+
+            animation-delay:
+                .04s;
+
+        }
+
+
+        .history-table tbody tr:nth-child(2) {
+
+            animation-delay:
+                .08s;
+
+        }
+
+
+        .history-table tbody tr:nth-child(3) {
+
+            animation-delay:
+                .12s;
+
+        }
+
+
+        .history-table tbody tr:nth-child(4) {
+
+            animation-delay:
+                .16s;
+
+        }
+
+
+        .history-table tbody tr:nth-child(5) {
+
+            animation-delay:
+                .20s;
+
+        }
+
+
+        .history-table tbody tr:nth-child(6) {
+
+            animation-delay:
+                .24s;
+
+        }
+
+
+        .history-table tbody tr:nth-child(7) {
+
+            animation-delay:
+                .28s;
+
+        }
+
+
+        .history-table tbody tr:nth-child(8) {
+
+            animation-delay:
+                .32s;
+
+        }
+
+
+        .history-table tbody tr:nth-child(9) {
+
+            animation-delay:
+                .36s;
+
+        }
+
+
+        .history-table tbody tr:nth-child(10) {
+
+            animation-delay:
+                .40s;
+
+        }
+
+
+        @keyframes rowIn {
+
+            from {
+
+                opacity:
+                    0;
+
+                transform:
+                    translateY(
+                        7px
+                    );
+
+            }
+
+            to {
+
+                opacity:
+                    1;
+
+                transform:
+                    translateY(
+                        0
+                    );
+
+            }
+
+        }
+
+
+        .history-table tbody tr:hover {
+
+            background:
+                #fafbff;
+
+        }
+
+
+        .history-table tbody tr:last-child td {
+
+            border-bottom:
+                none;
+
+        }
+
+
+        /* =====================================================
+           PRODUCT
+        ===================================================== */
+
+        .product-name {
+
+            max-width:
+                230px;
+
+            font-size:
+                12px;
+
+            font-weight:
+                700;
+
+            color:
+                #0f172a;
+
+            line-height:
+                1.5;
+
+            transition:
+                color
+                .2s
+                ease;
+
+        }
+
+
+        .history-table tbody tr:hover
+        .product-name {
+
+            color:
+                #4338ca;
+
+        }
+
+
+        .product-type {
+
+            margin-top:
+                3px;
+
+            color:
+                #64748b;
+
+            font-size:
+                9px;
+
+        }
+
+
+        /* =====================================================
+           PRICE
+        ===================================================== */
+
+        .price {
+
+            color:
+                #2563eb;
+
+            font-weight:
+                800;
+
+            white-space:
+                nowrap;
+
+        }
+
+
+        /* =====================================================
+           ORDER CODE
+        ===================================================== */
+
+        .order-code {
+
+            display:
+                inline-block;
+
+            color:
+                #4338ca;
+
+            font-size:
+                9px;
+
+            font-weight:
+                800;
+
+            max-width:
+                180px;
+
+            word-break:
+                break-all;
+
+            padding:
+                5px 7px;
+
+            background:
+                #f8fafc;
+
+            border:
+                1px solid
+                #e2e8f0;
+
+            border-radius:
+                6px;
+
+        }
+
+
+        /* =====================================================
+           STATUS
+        ===================================================== */
+
+        .status-badge {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            padding:
+                5px 9px;
+
+            border-radius:
+                6px;
+
+            font-size:
+                8px;
+
+            font-weight:
+                800;
+
+            white-space:
+                nowrap;
+
+        }
+
+
+        .status-success {
+
+            background:
+                #dcfce7;
+
+            color:
+                #15803d;
+
+        }
+
+
+        .status-pending {
+
+            background:
+                #fef3c7;
+
+            color:
+                #b45309;
+
+        }
+
+
+        .status-failed {
+
+            background:
+                #fee2e2;
+
+            color:
+                #dc2626;
+
+        }
+
+
+        /* =====================================================
+           TOMBOL
+        ===================================================== */
+
+        .btn-print {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            min-width:
+                120px;
+
+            height:
+                36px;
+
+            padding:
+                0 13px;
+
+            border:
+                1px solid
+                #4338ca;
+
+            border-radius:
+                7px;
+
+            background:
+                #4338ca;
+
+            color:
+                #ffffff;
+
+            text-decoration:
+                none;
+
+            font-size:
+                11px;
+
+            font-weight:
+                700;
+
+            cursor:
+                pointer;
+
+            white-space:
+                nowrap;
+
+            transition:
+                background
+                .2s
+                ease,
+                border-color
+                .2s
+                ease,
+                box-shadow
+                .2s
+                ease,
+                transform
+                .2s
+                ease;
+
+        }
+
+
+        .btn-print:hover {
+
+            background:
+                #3730a3;
+
+            border-color:
+                #3730a3;
+
+            transform:
+                translateY(
+                    -1px
+                );
+
+            box-shadow:
+                0 5px 12px
+                rgba(
+                    67,
+                    56,
+                    202,
+                    .14
+                );
+
+        }
+
+
+        .btn-print:active {
+
+            transform:
+                translateY(
+                    0
+                );
+
+            box-shadow:
+                none;
+
+        }
+
+
+        .btn-print:disabled {
+
+            opacity:
+                .6;
+
+            cursor:
+                wait;
+
+            transform:
+                none;
+
+            box-shadow:
+                none;
+
+        }
+
+
+        /* =====================================================
+           PAYMENT ACTION
+        ===================================================== */
+
+        .payment-action {
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            align-items:
+                flex-start;
+
+            gap:
+                4px;
+
+        }
+
+
+        .payment-countdown {
+
+            font-size:
+                10px;
+
+            line-height:
+                1;
+
+            font-weight:
+                700;
+
+            color:
+                #b45309;
+
+            letter-spacing:
+                .3px;
+
+        }
+
+
+        .expired-text {
+
+            font-size:
+                10px;
+
+            font-weight:
+                700;
+
+            color:
+                #dc2626;
+
+        }
+
+
+        .no-print {
+
+            color:
+                #94a3b8;
+
+            font-size:
+                10px;
+
+        }
+
+
+        /* =====================================================
+           EMPTY
+        ===================================================== */
+
+        .empty-history {
+
+            padding:
+                45px 20px;
+
+            text-align:
+                center;
+
+            color:
+                #64748b;
+
+            font-size:
+                13px;
+
+            animation:
+                emptyIn
+                .55s
+                ease
+                both;
+
+        }
+
+
+        .empty-history strong {
+
+            display:
+                block;
+
+            color:
+                #0f172a;
+
+            margin-bottom:
+                6px;
+
+        }
+
+
+        @keyframes emptyIn {
+
+            from {
+
+                opacity:
+                    0;
+
+                transform:
+                    translateY(
+                        8px
+                    );
+
+            }
+
+            to {
+
+                opacity:
+                    1;
+
+                transform:
+                    translateY(
+                        0
+                    );
+
+            }
+
+        }
+
+
+        /* =====================================================
+           ERROR
+        ===================================================== */
+
+        .error-history {
+
+            padding:
+                30px 20px;
+
+            text-align:
+                center;
+
+            color:
+                #dc2626;
+
+            font-size:
+                13px;
+
+            animation:
+                errorIn
+                .45s
+                ease
+                both;
+
+        }
+
+
+        @keyframes errorIn {
+
+            from {
+
+                opacity:
+                    0;
+
+            }
+
+            to {
+
+                opacity:
+                    1;
+
+            }
+
+        }
+
+
+        /* =====================================================
+           LOADING
+        ===================================================== */
+
+        .loading-dots::after {
+
+            content:
+                "";
+
+            animation:
+                loadingDots
+                1.3s
+                steps(4, end)
+                infinite;
+
+        }
+
+
+        @keyframes loadingDots {
+
+            0% {
+
+                content:
+                    "";
+
+            }
+
+            25% {
+
+                content:
+                    ".";
+
+            }
+
+            50% {
+
+                content:
+                    "..";
+
+            }
+
+            75% {
+
+                content:
+                    "...";
+
+            }
+
+            100% {
+
+                content:
+                    "";
+
+            }
+
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (
+            max-width: 768px
+        ) {
+
+            .history-main {
+
+                padding:
+                    25px 14px 40px;
+
+            }
+
+
+            .history-header {
+
+                margin-bottom:
+                    20px;
+
+            }
+
+
+            .history-header h1 {
+
+                font-size:
+                    24px;
+
+            }
+
+
+            .history-header p {
+
+                font-size:
+                    12px;
+
+            }
+
+
+            .history-note {
+
+                font-size:
+                    9px;
+
+                padding:
+                    7px 9px;
+
+            }
+
+
+            .history-card {
+
+                border-radius:
+                    9px;
+
+            }
+
+
+            .history-top {
+
+                padding:
+                    15px;
+
+            }
+
+
+            .history-table th {
+
+                padding:
+                    12px;
+
+            }
+
+
+            .history-table td {
+
+                padding:
+                    13px 12px;
+
+            }
+
+
+            .btn-print {
+
+                min-width:
+                    105px;
+
+                height:
+                    35px;
+
+                padding:
+                    0 11px;
+
+                font-size:
+                    10px;
+
+            }
+
+        }
+
+
+        /* =====================================================
+           REDUCED MOTION
+        ===================================================== */
+
+        @media (
+            prefers-reduced-motion: reduce
+        ) {
+
+            *,
+            *::before,
+            *::after {
+
+                animation-duration:
+                    .01ms !important;
+
+                animation-iteration-count:
+                    1 !important;
+
+                transition-duration:
+                    .01ms !important;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div class="page-wrapper">
+
+
+        <!-- =====================================================
+             NAVBAR
+        ====================================================== -->
+
+        <header class="navbar">
+
+            <div class="navbar-container">
+
+
+                <a
+                    href="index.html"
+                    class="logo">
+
+                    <span class="logo-accent">
+                        BELAJAR
+                    </span>YUK
+
+                </a>
+
+
+                <div
+                    class="nav-actions"
+                    id="navActions">
+
+
+                    <a
+                        href="../proses/masuk.php"
+                        class="btn-login">
+
+                        Masuk
+
+                    </a>
+
+
+                    <a
+                        href="../proses/daftar.php"
+                        class="btn-register"
+                        style="
+                            background:#4338ca
+                        ">
+
+                        Daftar Gratis
+
+                    </a>
+
+
+                    <button
+                        class="hamburger"
+                        id="hamburgerBtn"
+                        onclick="toggleSidebar()"
+                        type="button"
+                        aria-label="Menu Navigasi">
+
+                        <span></span>
+
+                        <span></span>
+
+                        <span></span>
+
+                    </button>
+
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =====================================================
+             OVERLAY
+        ====================================================== -->
+
+        <div
+            class="overlay"
+            id="overlay"
+            onclick="toggleSidebar()">
+        </div>
+
+
+        <!-- =====================================================
+             SIDEBAR
+        ====================================================== -->
+
+        <aside
+            class="sidebar"
+            id="sidebar">
+
+
+            <div
+                class="sidebar-head">
+
+
+                <span class="sidebar-tag">
+                    NAVIGASI
+                </span>
+
+
+                <h3>
+                    Menu Utama
+                </h3>
+
+
+            </div>
+
+
+            <nav
+                class="sidebar-nav">
+
+
+                <a href="index.html">
+
+                    <span>
+                        Beranda
+                    </span>
+
+                </a>
+
+
+                <a href="elearning.html">
+
+                    <span>
+                        E-Learning
+                    </span>
+
+                </a>
+
+
+                <a href="komunitas.html">
+
+                    <span>
+                        Grup Komunitas
+                    </span>
+
+                </a>
+
+
+                <a href="bootcamp.html">
+
+                    <span>
+                        Bootcamp
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="riwayat.html"
+                    class="active">
+
+                    <span>
+                        Riwayat
+                    </span>
+
+                </a>
+
+
+                <a href="kelas.html">
+
+                    <span>
+                        Kelas Saya
+                    </span>
+
+                </a>
+
+
+            </nav>
+
+
+        </aside>
+
+
+        <!-- =====================================================
+             MAIN
+        ====================================================== -->
+
+        <main class="history-main">
+
+
+            <section
+                class="history-header">
+
+
+                <span class="tag">
+
+                    TRANSACTION HISTORY
+
+                </span>
+
+
+                <h1>
+
+                    Riwayat Transaksi
+
+                </h1>
+
+
+                <p>
+
+                    Semua transaksi E-Learning dan
+                    Bootcamp kamu tersimpan di sini.
+
+                </p>
+
+
+                <div
+                    class="history-note">
+
+                    Pembayaran yang kadaluarsa akan
+                    otomatis hilang setelah 1 hari.
+
+                </div>
+
+
+            </section>
+
+
+            <section
+                class="history-card">
+
+
+                <div
+                    class="history-top">
+
+
+                    <strong>
+
+                        Daftar Transaksi
+
+                    </strong>
+
+
+                    <span
+                        id="transactionCount">
+
+                        Memuat transaksi...
+
+                    </span>
+
+
+                </div>
+
+
+                <div
+                    class="table-wrapper">
+
+
+                    <table
+                        class="history-table">
+
+
+                        <thead>
+
+
+                            <tr>
+
+
+                                <th>
+                                    No
+                                </th>
+
+
+                                <th>
+                                    Produk
+                                </th>
+
+
+                                <th>
+                                    Tanggal
+                                </th>
+
+
+                                <th>
+                                    Total
+                                </th>
+
+
+                                <th>
+                                    Kode Transaksi
+                                </th>
+
+
+                                <th>
+                                    Status
+                                </th>
+
+
+                                <th>
+                                    Aksi
+                                </th>
+
+
+                            </tr>
+
+
+                        </thead>
+
+
+                        <tbody
+                            id="transactionTable">
+
+
+                            <tr>
+
+
+                                <td
+                                    colspan="7"
+                                    class="empty-history">
+
+
+                                    <strong
+                                        class="loading-dots">
+
+                                        Memuat transaksi
+
+                                    </strong>
+
+
+                                    Sedang mengambil data
+                                    transaksi kamu...
+
+
+                                </td>
+
+
+                            </tr>
+
+
+                        </tbody>
+
+
+                    </table>
+
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+
+        <!-- =====================================================
+             MODAL PROFIL
+        ====================================================== -->
+
+        <div
+            class="modal"
+            id="modal">
+
+
+            <div
+                class="modal-box">
+
+
+                <button
+                    class="modal-close"
+                    type="button"
+                    onclick="closeModal()">
+
+                    ×
+
+                </button>
+
+
+                <h2 id="modalTitle">
+
+                    Profil Saya
+
+                </h2>
+
+
+                <p>
+
+                    Loading data profil...
+
+                </p>
+
+
+                <button
+                    class="modal-action"
+                    type="button"
+                    style="
+                        background:#ef4444;
+                        margin-top:10px;
+                    "
+                    onclick="logoutUser()">
+
+                    Keluar Akun
+
+                </button>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- =====================================================
+         GLOBAL JS
+    ====================================================== -->
+
+    <script
+        src="../js/script.js">
+    </script>
+
+
+    <script
+        src="../js/theme.js">
+    </script>
+
+
+    <script
+        src="../js/riwayat.js">
+    </script>
+
+
+</body>
+
+</html>

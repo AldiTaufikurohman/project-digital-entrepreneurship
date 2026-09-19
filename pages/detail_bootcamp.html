@@ -7,7 +7,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Detail Pelatihan - BELAJARYUK</title>
+    <title>
+        Detail Bootcamp - BELAJARYUK
+    </title>
 
 
     <!-- =====================================================
@@ -21,6 +23,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
 
+    <script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js"
+        data-client-key="Mid-client-rNRn8bYJC1ZpblR5"></script>
 
     <!-- =====================================================
          USER CSS
@@ -28,9 +32,288 @@
 
     <link rel="stylesheet" href="../css/style.css">
 
-    <script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js"
-        data-client-key="Mid-client-rNRn8bYJC1ZpblR5">
-        </script>
+
+    <!-- =====================================================
+         KHUSUS DETAIL BOOTCAMP
+    ====================================================== -->
+
+    <style>
+        /* =====================================================
+           HERO
+        ====================================================== */
+
+        #courseName {
+
+            font-size: 28px !important;
+            line-height: 1.25 !important;
+            margin: 0 0 10px 0 !important;
+            font-weight: 700 !important;
+
+        }
+
+
+        #courseDescription {
+
+            font-size: 13px !important;
+            line-height: 1.6 !important;
+            margin: 0 !important;
+            max-width: 700px !important;
+
+        }
+
+
+        #courseCategory,
+        #courseSubcategory {
+
+            font-size: 10px !important;
+            padding: 5px 10px !important;
+            border-radius: 999px !important;
+
+        }
+
+
+        /* =====================================================
+           PROGRAM CONTENT
+        ====================================================== */
+
+        .program-content h3 {
+
+            font-size: 17px !important;
+            line-height: 1.4 !important;
+            margin-bottom: 12px !important;
+
+        }
+
+
+        #aboutCourse {
+
+            font-size: 13px !important;
+            line-height: 1.7 !important;
+            margin-bottom: 24px !important;
+
+        }
+
+
+        .sub-title {
+
+            font-size: 11px !important;
+            font-weight: 700 !important;
+
+        }
+
+
+        /* =====================================================
+           BENEFIT
+        ====================================================== */
+
+        .benefit-card {
+
+            font-size: 12px !important;
+            line-height: 1.4 !important;
+
+        }
+
+
+        .benefit-card span {
+
+            font-size: 12px !important;
+
+        }
+
+
+        /* =====================================================
+           RINGKASAN
+        ====================================================== */
+
+        .mentor-card {
+
+            font-size: 12.5px !important;
+
+        }
+
+
+        .mentor-card>div {
+
+            font-size: 12.5px !important;
+
+        }
+
+
+        #courseMentor,
+        #courseQuota,
+        #courseDuration,
+        #courseSchedule,
+        #courseVariation {
+
+            font-size: 12.5px !important;
+            line-height: 1.4 !important;
+
+        }
+
+
+        /* =====================================================
+           HARGA
+        ====================================================== */
+
+        #coursePrice {
+
+            font-size: 14px !important;
+            line-height: 1.3 !important;
+
+        }
+
+
+        /* =====================================================
+           BUTTON
+        ====================================================== */
+
+        #registerButton {
+
+            font-size: 13px !important;
+            padding: 10px 16px !important;
+
+        }
+
+
+        /* =====================================================
+           LINK KEMBALI
+        ====================================================== */
+
+        .mentor-card a {
+
+            font-size: 12px !important;
+
+        }
+
+
+        /* =====================================================
+           LOADING
+        ====================================================== */
+
+        #loadingDetail {
+
+            font-size: 13px !important;
+
+        }
+
+
+        /* =====================================================
+           ERROR
+        ====================================================== */
+
+        #errorDetail h2 {
+
+            font-size: 22px !important;
+
+        }
+
+
+        #errorDetail p {
+
+            font-size: 13px !important;
+
+        }
+
+
+        /* =====================================================
+           MODAL
+        ====================================================== */
+
+        #modalTitle {
+
+            font-size: 20px !important;
+
+        }
+
+
+        .modal-box p {
+
+            font-size: 13px !important;
+
+        }
+
+
+        .modal-action {
+
+            font-size: 13px !important;
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ====================================================== */
+
+        @media (max-width: 768px) {
+
+            #courseName {
+
+                font-size: 23px !important;
+
+            }
+
+
+            #courseDescription {
+
+                font-size: 12px !important;
+
+            }
+
+
+            .program-content h3 {
+
+                font-size: 16px !important;
+
+            }
+
+
+            #aboutCourse {
+
+                font-size: 12.5px !important;
+
+            }
+
+
+            .benefit-card {
+
+                font-size: 11.5px !important;
+
+            }
+
+
+            .mentor-card {
+
+                font-size: 12px !important;
+
+            }
+
+
+            #courseMentor,
+            #courseQuota,
+            #courseDuration,
+            #courseSchedule,
+            #courseVariation {
+
+                font-size: 12px !important;
+
+            }
+
+
+            #coursePrice {
+
+                font-size: 13px !important;
+
+            }
+
+
+            #registerButton {
+
+                font-size: 12.5px !important;
+
+            }
+
+        }
+    </style>
 
 </head>
 
@@ -55,7 +338,9 @@
                 <a href="index.html" class="logo">
 
                     <span class="logo-accent">
+
                         BELAJAR
+
                     </span>YUK
 
                 </a>
@@ -69,14 +354,18 @@
                     <!-- LOGIN -->
 
                     <a href="../proses/masuk.php" class="btn-login">
+
                         Masuk
+
                     </a>
 
 
                     <!-- REGISTER -->
 
                     <a href="../proses/daftar.php" class="btn-register" style="background:#4338ca">
+
                         Daftar Gratis
+
                     </a>
 
 
@@ -86,10 +375,13 @@
                         type="button">
 
                         <span></span>
+
                         <span></span>
+
                         <span></span>
 
                     </button>
+
 
                 </div>
 
@@ -115,11 +407,16 @@
             <div class="sidebar-head">
 
                 <span class="sidebar-tag">
+
                     NAVIGASI
+
                 </span>
 
+
                 <h3>
+
                     Menu Utama
+
                 </h3>
 
             </div>
@@ -131,54 +428,78 @@
                 <!-- BERANDA -->
 
                 <a href="index.html">
+
                     <span>
+
                         Beranda
+
                     </span>
+
                 </a>
 
 
                 <!-- E-LEARNING -->
 
                 <a href="elearning.html">
+
                     <span>
+
                         E-Learning
+
                     </span>
+
                 </a>
 
 
                 <!-- KOMUNITAS -->
 
                 <a href="komunitas.html">
+
                     <span>
+
                         Grup Komunitas
+
                     </span>
+
                 </a>
 
 
                 <!-- BOOTCAMP -->
 
                 <a href="bootcamp.html">
+
                     <span>
+
                         Bootcamp
+
                     </span>
+
                 </a>
 
 
                 <!-- RIWAYAT -->
 
                 <a href="riwayat.html">
+
                     <span>
+
                         Riwayat
+
                     </span>
+
                 </a>
 
 
                 <!-- KELAS -->
 
                 <a href="kelas.html">
+
                     <span>
+
                         Kelas Saya
+
                     </span>
+
                 </a>
 
 
@@ -188,7 +509,7 @@
 
 
         <!-- =====================================================
-             LOADING DETAIL
+             LOADING
         ====================================================== -->
 
         <div id="loadingDetail" style="
@@ -197,7 +518,7 @@
                 color:#64748b;
             ">
 
-            Memuat detail course...
+            Memuat detail bootcamp...
 
         </div>
 
@@ -222,12 +543,12 @@
                     <div class="hero-slide">
 
 
-                        <!-- COURSE IMAGE -->
+                        <!-- IMAGE -->
 
-                        <img id="courseImage" src="" alt="Course" class="hero-img">
+                        <img id="courseImage" src="" alt="Bootcamp" class="hero-img">
 
 
-                        <!-- HERO OVERLAY -->
+                        <!-- OVERLAY -->
 
                         <div class="hero-overlay">
 
@@ -246,7 +567,9 @@
                                         background:#2563eb;
                                         color:#ffffff;
                                     ">
-                                    E-LEARNING
+
+                                    BOOTCAMP
+
                                 </span>
 
 
@@ -255,26 +578,29 @@
                                         color:#0f172a;
                                         font-weight:700;
                                     ">
-                                    COURSE
+
+                                    PROGRAM
+
                                 </span>
+
 
                             </div>
 
 
-                            <!-- COURSE NAME -->
+                            <!-- NAMA -->
 
                             <h1 id="courseName">
 
-                                Memuat Course...
+                                Memuat Bootcamp...
 
                             </h1>
 
 
-                            <!-- COURSE DESCRIPTION -->
+                            <!-- DESKRIPSI -->
 
                             <p id="courseDescription">
 
-                                Memuat deskripsi course...
+                                Memuat deskripsi bootcamp...
 
                             </p>
 
@@ -308,6 +634,8 @@
                     <div class="program-content">
 
 
+                        <!-- ABOUT -->
+
                         <h3 style="
                                 color:#2563eb;
                                 font-size:18px;
@@ -317,8 +645,6 @@
 
                         </h3>
 
-
-                        <!-- ABOUT COURSE -->
 
                         <p id="aboutCourse" style="
                                 margin-bottom:24px;
@@ -341,7 +667,7 @@
                         </span>
 
 
-                        <!-- BENEFIT DINAMIS -->
+                        <!-- BENEFIT -->
 
                         <div id="benefitGrid" class="benefit-grid" style="
                                 grid-template-columns:
@@ -371,7 +697,7 @@
                             ">
 
 
-                            <!-- RINGKASAN TITLE -->
+                            <!-- RINGKASAN -->
 
                             <div style="
                                     text-align:center;
@@ -390,52 +716,128 @@
 
 
                             <!-- =================================
-                                 DURASI
+                                 MENTOR
                             ================================== -->
 
                             <div style="
                                     display:flex;
                                     justify-content:space-between;
+                                    gap:15px;
                                     margin-bottom:12px;
                                     font-size:13px;
                                     color:#64748b;
                                 ">
 
                                 <span>
-                                    Durasi
+
+                                    Mentor
+
                                 </span>
 
 
-                                <strong id="courseDuration" style="
+                                <strong id="courseMentor" style="
                                         color:#0f172a;
+                                        text-align:right;
                                     ">
+
                                     -
+
                                 </strong>
 
                             </div>
 
 
                             <!-- =================================
-                                 JADWAL
+                                 KUOTA
                             ================================== -->
 
                             <div style="
                                     display:flex;
                                     justify-content:space-between;
+                                    gap:15px;
                                     margin-bottom:12px;
                                     font-size:13px;
                                     color:#64748b;
                                 ">
 
                                 <span>
-                                    Jadwal
+
+                                    Kuota
+
+                                </span>
+
+
+                                <strong id="courseQuota" style="
+                                        color:#0f172a;
+                                        text-align:right;
+                                    ">
+
+                                    -
+
+                                </strong>
+
+                            </div>
+
+
+                            <!-- =================================
+                                 DURASI
+                            ================================== -->
+
+                            <div style="
+                                    display:flex;
+                                    justify-content:space-between;
+                                    gap:15px;
+                                    margin-bottom:12px;
+                                    font-size:13px;
+                                    color:#64748b;
+                                ">
+
+                                <span>
+
+                                    Durasi
+
+                                </span>
+
+
+                                <strong id="courseDuration" style="
+                                        color:#0f172a;
+                                        text-align:right;
+                                    ">
+
+                                    -
+
+                                </strong>
+
+                            </div>
+
+
+                            <!-- =================================
+                                 PERIODE
+                            ================================== -->
+
+                            <div style="
+                                    display:flex;
+                                    justify-content:space-between;
+                                    gap:15px;
+                                    margin-bottom:12px;
+                                    font-size:13px;
+                                    color:#64748b;
+                                ">
+
+                                <span>
+
+                                    Periode
+
                                 </span>
 
 
                                 <strong id="courseSchedule" style="
                                         color:#0f172a;
+                                        text-align:right;
                                     ">
+
                                     -
+
                                 </strong>
 
                             </div>
@@ -448,21 +850,27 @@
                             <div style="
                                     display:flex;
                                     justify-content:space-between;
+                                    gap:15px;
                                     margin-bottom:20px;
                                     font-size:13px;
                                     color:#64748b;
                                 ">
 
                                 <span>
+
                                     Kategori
+
                                 </span>
 
 
                                 <strong id="courseVariation" style="
                                         color:#2563eb;
                                         font-size:13px;
+                                        text-align:right;
                                     ">
+
                                     -
+
                                 </strong>
 
                             </div>
@@ -491,8 +899,6 @@
                                 </span>
 
 
-                                <!-- HARGA DARI DATABASE -->
-
                                 <div id="coursePrice" style="
                                         color:#2563eb;
                                         font-size:15px;
@@ -508,28 +914,26 @@
 
 
                             <!-- =================================
-                                 BUTTON DAFTAR
+                                 BUTTON
                             ================================== -->
 
-                           <button
-                                    class="btn-register"
-                                    id="registerButton"
-                                    type="button"
-                                    style="
-                                        width:100%;
-                                        border-radius:20px;
-                                        margin-bottom:12px;
-                                    "
-                                >
-                                    Daftar Sekarang
-                                </button>
+                            <button class="btn-register" id="registerButton" type="button" style="
+                                    width:100%;
+                                    border-radius:20px;
+                                    margin-bottom:12px;
+                                    background:#4338ca;
+                                ">
+
+                                Daftar Sekarang
+
+                            </button>
 
 
                             <!-- =================================
                                  BACK
                             ================================== -->
 
-                            <a href="elearning.html" style="
+                            <a href="bootcamp.html" style="
                                     display:block;
                                     text-align:center;
                                     font-size:12.5px;
@@ -570,7 +974,7 @@
                     margin-bottom:10px;
                 ">
 
-                Course Tidak Ditemukan
+                Bootcamp Tidak Ditemukan
 
             </h2>
 
@@ -580,17 +984,18 @@
                     margin-bottom:20px;
                 ">
 
-                Course yang kamu pilih tidak tersedia.
+                Bootcamp yang kamu pilih
+                tidak tersedia.
 
             </p>
 
 
-            <a href="elearning.html" class="btn-register" style="
+            <a href="bootcamp.html" class="btn-register" style="
                     display:inline-block;
                     text-decoration:none;
                 ">
 
-                Kembali ke E-Learning
+                Kembali ke Bootcamp
 
             </a>
 
@@ -603,7 +1008,7 @@
 
     <!-- =====================================================
          MODAL PROFIL
-         WAJIB ADA UNTUK script.js
+         DIPAKAI OLEH script.js
     ====================================================== -->
 
     <div class="modal" id="modal">
@@ -612,8 +1017,6 @@
         <div class="modal-box">
 
 
-            <!-- CLOSE -->
-
             <button class="modal-close" type="button" onclick="closeModal()" aria-label="Tutup Profil">
 
                 ×
@@ -621,16 +1024,12 @@
             </button>
 
 
-            <!-- TITLE -->
-
             <h2 id="modalTitle">
 
-                👤 Profil Saya
+                Profil Saya
 
             </h2>
 
-
-            <!-- CONTENT -->
 
             <p>
 
@@ -638,8 +1037,6 @@
 
             </p>
 
-
-            <!-- LOGOUT -->
 
             <button class="modal-action" type="button" style="
                     background:#ef4444;
@@ -657,19 +1054,16 @@
 
 
     <!-- =====================================================
-         SCRIPT UTAMA
+         SCRIPT
     ====================================================== -->
 
     <script src="../js/script.js"></script>
 
 
-    <!-- =====================================================
-         DETAIL COURSE
-    ====================================================== -->
-
-    <script src="../js/detail.js"></script>
+    <script src="../js/theme.js"></script>
 
 
+    <script src="../js/detail_bootcamp.js"></script>
 
 
 </body>

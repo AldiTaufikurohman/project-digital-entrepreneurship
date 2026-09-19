@@ -1,211 +1,1577 @@
 <!doctype html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Komunitas & Jejaring Profesional — Belajaryuk</title>
 
-    <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="../css/style.css" />
-  </head>
+  <title>Komunitas — Belajaryuk</title>
 
-  <body>
-    <div class="page-wrapper">
-      <!-- NAVBAR -->
-      <header class="navbar">
-        <div class="navbar-container">
-          <a href="index.html" class="logo"> <span class="logo-accent">BELAJAR</span>YUK </a>
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-          <div class="nav-actions" id="navActions">
-            <a href="../proses/masuk.php" class="btn-login">Masuk</a>
-            <a href="../proses/daftar.php" class="btn-register" style="background: #4338ca">Daftar Gratis</a>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
 
-            <button class="hamburger" id="hamburgerBtn" onclick="toggleSidebar()" aria-label="Menu Navigasi">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-          </div>
+  <!-- CSS UTAMA -->
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <style>
+    body {
+      background-color: #f8fafc;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #0f172a;
+    }
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* =========================
+       PROFILE
+    ========================= */
+
+    .profile-button {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      background: #ffffff;
+
+      border: 1px solid #e2e8f0;
+
+      padding: 6px 12px 6px 7px;
+
+      border-radius: 10px;
+
+      color: #0f172a;
+
+      font-size: 13px;
+      font-weight: 700;
+
+      text-decoration: none;
+
+      cursor: pointer;
+
+      transition: all 0.2s ease;
+    }
+
+    .profile-button:hover {
+      border-color: #4338ca;
+      color: #4338ca;
+      transform: translateY(-1px);
+    }
+
+    .profile-icon {
+      width: 32px;
+      height: 32px;
+
+      border-radius: 50%;
+
+      background: #e0e7ff;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 14px;
+      font-weight: 800;
+
+      color: #4338ca;
+    }
+
+    .profile-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .profile-label {
+      font-size: 10px;
+      color: #94a3b8;
+      font-weight: 600;
+    }
+
+    .profile-name {
+      font-size: 13px;
+      color: #0f172a;
+      font-weight: 700;
+
+      max-width: 120px;
+
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* =========================
+       LOGOUT
+    ========================= */
+
+    .btn-logout {
+      border: none;
+
+      background: #fee2e2;
+      color: #dc2626;
+
+      padding: 9px 13px;
+
+      border-radius: 9px;
+
+      font-size: 12px;
+      font-weight: 700;
+
+      cursor: pointer;
+
+      transition: all 0.2s;
+    }
+
+    .btn-logout:hover {
+      background: #fecaca;
+      transform: translateY(-1px);
+    }
+
+    /* =========================
+       COMMUNITY HERO
+    ========================= */
+
+    .community-hero {
+      background:
+        linear-gradient(135deg,
+          rgba(67, 56, 202, 0.95),
+          rgba(79, 70, 229, 0.88));
+
+      border-radius: 24px;
+
+      padding: 56px;
+
+      color: #ffffff;
+
+      margin-bottom: 48px;
+
+      position: relative;
+      overflow: hidden;
+
+      box-shadow:
+        0 20px 30px -10px rgba(67, 56, 202, 0.25);
+    }
+
+    .community-hero::before {
+      content: "";
+
+      position: absolute;
+
+      width: 300px;
+      height: 300px;
+
+      border-radius: 50%;
+
+      background: rgba(255, 255, 255, 0.08);
+
+      right: -100px;
+      top: -120px;
+    }
+
+    .community-hero::after {
+      content: "";
+
+      position: absolute;
+
+      width: 200px;
+      height: 200px;
+
+      border-radius: 50%;
+
+      background: rgba(255, 255, 255, 0.06);
+
+      left: -80px;
+      bottom: -100px;
+    }
+
+    .community-hero-content {
+      position: relative;
+      z-index: 2;
+
+      max-width: 700px;
+    }
+
+    .community-badge {
+      display: inline-block;
+
+      padding: 7px 15px;
+
+      border-radius: 30px;
+
+      background: rgba(255, 255, 255, 0.15);
+
+      border: 1px solid rgba(255, 255, 255, 0.25);
+
+      font-size: 12px;
+      font-weight: 700;
+
+      margin-bottom: 18px;
+    }
+
+    .community-hero h1 {
+      font-size: 38px;
+      line-height: 1.25;
+
+      margin-bottom: 16px;
+
+      font-weight: 800;
+
+      color: #ffffff;
+    }
+
+    .community-hero p {
+      font-size: 15px;
+
+      line-height: 1.7;
+
+      color: #e0e7ff;
+
+      margin-bottom: 26px;
+    }
+
+    .community-hero-button {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      padding: 12px 24px;
+
+      border-radius: 10px;
+
+      background: #ffffff;
+
+      color: #4338ca;
+
+      font-size: 14px;
+      font-weight: 700;
+
+      text-decoration: none;
+
+      transition: all 0.2s ease;
+    }
+
+    .community-hero-button:hover {
+      transform: translateY(-2px);
+
+      box-shadow:
+        0 8px 20px rgba(15, 23, 42, 0.18);
+    }
+
+    /* =========================
+       SECTION HEADER
+    ========================= */
+
+    .sec-head {
+      text-align: center;
+
+      max-width: 650px;
+
+      margin: 0 auto 36px;
+    }
+
+    .sec-subtitle {
+      display: block;
+
+      font-size: 12px;
+
+      font-weight: 800;
+
+      color: #4338ca;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1px;
+
+      margin-bottom: 8px;
+    }
+
+    .sec-title {
+      font-size: 28px;
+
+      font-weight: 800;
+
+      color: #0f172a;
+
+      line-height: 1.3;
+
+      margin-bottom: 12px;
+    }
+
+    .sec-description {
+      font-size: 14px;
+
+      color: #64748b;
+
+      line-height: 1.6;
+    }
+
+    /* =========================
+       COMMUNITY GRID
+    ========================= */
+
+    .community-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+      gap: 24px;
+
+      margin-bottom: 60px;
+    }
+
+    /* =========================
+       COMMUNITY CARD
+    ========================= */
+
+    .community-card {
+      background: #ffffff;
+
+      border: 1px solid #e2e8f0;
+
+      border-radius: 18px;
+
+      padding: 26px;
+
+      position: relative;
+
+      overflow: hidden;
+
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+    }
+
+    .community-card::before {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      top: 0;
+
+      width: 100%;
+      height: 4px;
+
+      background: linear-gradient(90deg,
+          #4338ca,
+          #6366f1);
+
+      transform: scaleX(0);
+
+      transform-origin: left;
+
+      transition: transform 0.3s ease;
+    }
+
+    .community-card:hover {
+      transform: translateY(-8px);
+
+      border-color: #c7d2fe;
+
+      box-shadow:
+        0 18px 35px rgba(15, 23, 42, 0.10);
+    }
+
+    .community-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    /* =========================
+       COMMUNITY CARD HEADER
+    ========================= */
+
+    .community-card-head {
+      display: flex;
+
+      align-items: center;
+
+      gap: 14px;
+
+      margin-bottom: 18px;
+    }
+
+    .community-icon {
+      width: 52px;
+      height: 52px;
+
+      border-radius: 14px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      background: #eef2ff;
+
+      color: #4338ca;
+
+      font-size: 14px;
+
+      font-weight: 800;
+
+      transition: all 0.3s ease;
+    }
+
+    .community-card:hover .community-icon {
+      transform: scale(1.08);
+      background: #e0e7ff;
+    }
+
+    .community-card h3 {
+      font-size: 17px;
+
+      font-weight: 800;
+
+      margin-bottom: 4px;
+
+      color: #0f172a;
+    }
+
+    .community-platform {
+      font-size: 12px;
+
+      color: #64748b;
+
+      font-weight: 600;
+    }
+
+    .community-card p {
+      font-size: 13px;
+
+      color: #64748b;
+
+      line-height: 1.6;
+
+      margin-bottom: 20px;
+    }
+
+    /* =========================
+       COMMUNITY INFO
+    ========================= */
+
+    .community-info {
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 10px;
+
+      margin-bottom: 20px;
+    }
+
+    .community-members {
+      font-size: 12px;
+
+      color: #475569;
+
+      font-weight: 600;
+    }
+
+    .community-status {
+      font-size: 11px;
+
+      font-weight: 700;
+
+      padding: 5px 9px;
+
+      border-radius: 20px;
+
+      background: #dcfce7;
+
+      color: #15803d;
+    }
+
+    /* =========================
+       COMMUNITY BUTTON
+    ========================= */
+
+    .community-button {
+      width: 100%;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      padding: 11px 16px;
+
+      border-radius: 10px;
+
+      color: #ffffff;
+
+      text-decoration: none;
+
+      font-size: 13px;
+
+      font-weight: 700;
+
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .community-button:hover {
+      transform: translateY(-2px);
+
+      box-shadow:
+        0 8px 18px rgba(15, 23, 42, 0.15);
+    }
+
+    .community-button.whatsapp {
+      background: linear-gradient(135deg,
+          #16a34a,
+          #22c55e);
+    }
+
+    .community-button.telegram {
+      background: linear-gradient(135deg,
+          #0284c7,
+          #38bdf8);
+    }
+
+    /* =========================
+       COMMUNITY ACCESS
+    ========================= */
+
+    .community-buttons {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 10px;
+    }
+
+    .community-buttons .community-button {
+      width: 100%;
+
+      box-sizing: border-box;
+    }
+
+    .community-lock {
+      width: 100%;
+
+      box-sizing: border-box;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      padding: 11px 16px;
+
+      border-radius: 10px;
+
+      background: #f1f5f9;
+
+      color: #64748b;
+
+      font-size: 12px;
+
+      font-weight: 700;
+
+      text-align: center;
+
+      cursor: not-allowed;
+    }
+
+    .community-open {
+      display: none;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .community-footer {
+      background: #ffffff;
+
+      border: 1px solid #e2e8f0;
+
+      border-radius: 20px;
+
+      padding: 40px;
+
+      margin-top: 40px;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 768px) {
+
+      .community-hero {
+        padding: 34px 24px;
+
+        min-height: 360px;
+      }
+
+      .community-hero h1 {
+        font-size: 28px;
+      }
+
+      .profile-text {
+        display: none;
+      }
+
+      .profile-button {
+        padding: 5px;
+      }
+
+      .profile-icon {
+        width: 34px;
+        height: 34px;
+      }
+
+      .btn-logout {
+        padding: 8px 10px;
+      }
+
+      .community-footer {
+        padding: 28px 22px;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      .community-buttons {
+        grid-template-columns: 1fr;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page-wrapper">
+
+    <!-- =========================
+         NAVBAR
+    ========================= -->
+
+    <header class="navbar">
+
+      <div class="navbar-container">
+
+        <!-- LOGO -->
+
+        <a href="index.html" class="logo">
+
+          <span class="logo-accent" style="color: #4338ca">
+            BELAJAR
+          </span>YUK
+
+        </a>
+
+        <!-- NAV ACTIONS -->
+
+        <div class="nav-actions" id="navActions">
+
+          <!--
+            SAMA SEPERTI INDEX.HTML
+
+            script.js akan mengatur
+            tampilan login/profile.
+          -->
+
+          <a href="../proses/masuk.php" class="btn-login">
+            Masuk
+          </a>
+
+          <a href="../proses/daftar.php" class="btn-register" style="background: #4338ca">
+            Daftar Gratis
+          </a>
+
+          <!-- HAMBURGER -->
+
+          <button class="hamburger" id="hamburgerBtn" onclick="toggleSidebar()" aria-label="Menu Navigasi"
+            type="button">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+          </button>
+
         </div>
-      </header>
 
-      <!-- OVERLAY -->
-      <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
-
-      <!-- SIDEBAR -->
-      <aside class="sidebar" id="sidebar">
-        <div class="sidebar-head">
-          <span class="sidebar-tag">NAVIGASI</span>
-          <h3>Menu Utama</h3>
-        </div>
-
-        <nav class="sidebar-nav">
-          <a href="index.html">
-            <span>Beranda</span>
-          </a>
-          <a href="elearning.html">
-            <span>E-Learning</span>
-          </a>
-          <a href="langganan.html">
-            <span>Langganan & Promo</span>
-          </a>
-          <a href="komunitas.html" class="active">
-            <span>Grup Komunitas</span>
-          </a>
-          <a href="bootcamp.html">
-            <span>Bootcamp</span>
-          </a>
-        </nav>
-      </aside>
-
-      <!-- MAIN KONTEN KOMUNITAS FORMAL (GUEST MODE) -->
-      <main class="main-content">
-        <!-- HERO BANNER FORMAL -->
-        <section style="background: #0f172a; color: #ffffff; border-radius: 20px; padding: 48px 36px; margin: 20px auto; max-width: 1100px; border: 1px solid #1e293b; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12)">
-          <div style="max-width: 720px">
-            <span style="background: #1e293b; color: #38bdf8; font-size: 12px; font-weight: 700; padding: 6px 14px; border-radius: 6px; border: 1px solid #334155; letter-spacing: 0.5px">PROGAM JEJARING & KOMUNITAS</span>
-            <h1 style="font-size: 32px; font-weight: 800; margin-top: 16px; line-height: 1.3; letter-spacing: -0.5px">Ekosistem Belajar Kolaboratif & Network Profesional</h1>
-            <p style="color: #94a3b8; font-size: 15px; margin-top: 12px; line-height: 1.6">
-              Wadah resmi bagi para profesional, mahasiswa, dan praktisi teknologi untuk berdiskusi, berbagi proyek, serta membangun relasi industri secara terstruktur.
-            </p>
-          </div>
-
-          <!-- FORMAL ALERT BANNER FOR GUEST -->
-          <div
-            style="margin-top: 32px; background: rgba(255, 255, 255, 0.05); border-left: 4px solid #2563eb; padding: 20px; border-radius: 8px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px"
-          >
-            <div>
-              <h4 style="font-size: 15px; color: #f8fafc; font-weight: 700">Akses Komunitas Memerlukan Akun Belajaryuk</h4>
-              <p style="color: #cbd5e1; font-size: 13.5px; margin-top: 4px">Silakan masuk ke akun Anda atau daftarkan diri untuk bergabung ke dalam channel diskusi dan forum pembinaan.</p>
-            </div>
-            <div style="display: flex; gap: 12px">
-              <button onclick="openModal('Masuk ke Akun')" style="background: #2563eb; color: #fff; border: none; padding: 10px 20px; border-radius: 8px; font-weight: 600; font-size: 14px; cursor: pointer">Masuk Akun</button>
-              <button onclick="openModal('Daftar Akun Gratis')" style="background: transparent; color: #fff; border: 1px solid #475569; padding: 10px 20px; border-radius: 8px; font-weight: 600; font-size: 14px; cursor: pointer">
-                Daftar Akun Baru
-              </button>
-            </div>
-          </div>
-        </section>
-
-        <!-- SECTION 1: MANFAAT KOMUNITAS / PROGRAM PEMBINAAN -->
-        <section style="max-width: 1100px; margin: 48px auto 20px; padding: 0 20px">
-          <div style="text-align: center; margin-bottom: 36px">
-            <span style="color: #2563eb; font-weight: 700; font-size: 12px; letter-spacing: 1px; text-transform: uppercase">PROGRAM PENGEMBANGAN</span>
-            <h2 style="font-size: 26px; color: #0f172a; margin-top: 6px; font-weight: 800">Manfaat Bergabung di Komunitas</h2>
-          </div>
-
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px">
-            <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px">
-              <div style="width: 40px; height: 40px; background: #eff6ff; color: #2563eb; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 18px; margin-bottom: 16px">01</div>
-              <h3 style="font-size: 18px; color: #0f172a; font-weight: 700">Diskusi & Bimbingan Terstruktur</h3>
-              <p style="color: #64748b; font-size: 14px; margin-top: 8px; line-height: 1.5">Dapatkan bantuan penyelesaian kendala teknis dan ulasan tugas langsung dari mentor dan pengajar berpengalaman.</p>
-            </div>
-
-            <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px">
-              <div style="width: 40px; height: 40px; background: #eff6ff; color: #2563eb; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 18px; margin-bottom: 16px">02</div>
-              <h3 style="font-size: 18px; color: #0f172a; font-weight: 700">Jejaring Profesional & Karir</h3>
-              <p style="color: #64748b; font-size: 14px; margin-top: 8px; line-height: 1.5">Perluas relasi antar praktisi, dapatkan rujukan informasi lowongan kerja eksklusif, serta peluang kemitraan proyek.</p>
-            </div>
-
-            <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px">
-              <div style="width: 40px; height: 40px; background: #eff6ff; color: #2563eb; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 18px; margin-bottom: 16px">03</div>
-              <h3 style="font-size: 18px; color: #0f172a; font-weight: 700">Sesi Sharing & Live Mentoring</h3>
-              <p style="color: #64748b; font-size: 14px; margin-top: 8px; line-height: 1.5">Agenda rutin bedah portofolio, persiapan wawancara kerja, dan webinar perkembangan teknologi terkini.</p>
-            </div>
-          </div>
-        </section>
-
-        <!-- SECTION 2: DIREKTORI GRUP PEMINATAN (LOCKED VIEW) -->
-        <section style="max-width: 1100px; margin: 48px auto; padding: 0 20px">
-          <div style="margin-bottom: 24px">
-            <span style="color: #2563eb; font-weight: 700; font-size: 12px; letter-spacing: 1px; text-transform: uppercase">DIREKTORI CHANNEL</span>
-            <h2 style="font-size: 24px; color: #0f172a; margin-top: 4px; font-weight: 800">Grup Diskusi Spesialisasi</h2>
-            <p style="color: #64748b; font-size: 14px; margin-top: 4px">Grup belajar resmi yang terbagi berdasarkan bidang keahlian.</p>
-          </div>
-
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px">
-            <!-- GRUP 1 -->
-            <div style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between">
-              <div>
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px">
-                  <span style="font-size: 12px; color: #475569; font-weight: 700">Divisi Development</span>
-                  <span style="background: #f1f5f9; color: #475569; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px">🔒 Terkunci</span>
-                </div>
-                <h3 style="font-size: 18px; color: #0f172a; font-weight: 700">UI/UX & Front-End Engineering</h3>
-                <p style="color: #64748b; font-size: 13.5px; margin-top: 6px">Fokus pembahasan seputar UI Design System, React, Tailwind CSS, dan pengujian performa antarmuka.</p>
-              </div>
-              <button onclick="openModal('Masuk ke Akun')" style="margin-top: 20px; border-radius: 8px; padding: 10px; background: #f8fafc; border: 1px solid #cbd5e1; color: #1e293b; font-weight: 600; font-size: 13.5px; cursor: pointer">
-                Masuk untuk Bergabung
-              </button>
-            </div>
-
-            <!-- GRUP 2 -->
-            <div style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between">
-              <div>
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px">
-                  <span style="font-size: 12px; color: #475569; font-weight: 700">Divisi Architecture</span>
-                  <span style="background: #f1f5f9; color: #475569; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px">🔒 Terkunci</span>
-                </div>
-                <h3 style="font-size: 18px; color: #0f172a; font-weight: 700">Back-End & Database Architecture</h3>
-                <p style="color: #64748b; font-size: 13.5px; margin-top: 6px">Pembahasan arsitektur microservices, Laravel API, manajemen basis data, dan optimalisasi sistem.</p>
-              </div>
-              <button onclick="openModal('Masuk ke Akun')" style="margin-top: 20px; border-radius: 8px; padding: 10px; background: #f8fafc; border: 1px solid #cbd5e1; color: #1e293b; font-weight: 600; font-size: 13.5px; cursor: pointer">
-                Masuk untuk Bergabung
-              </button>
-            </div>
-
-            <!-- GRUP 3 -->
-            <div style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between">
-              <div>
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px">
-                  <span style="font-size: 12px; color: #475569; font-weight: 700">Divisi Data Science</span>
-                  <span style="background: #f1f5f9; color: #475569; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px">🔒 Terkunci</span>
-                </div>
-                <h3 style="font-size: 18px; color: #0f172a; font-weight: 700">Data Analytics & AI Implementation</h3>
-                <p style="color: #64748b; font-size: 13.5px; margin-top: 6px">Eksplorasi pemrograman Python, pemrosesan data, Machine Learning, dan penerapan solusi berbasis AI.</p>
-              </div>
-              <button onclick="openModal('Masuk ke Akun')" style="margin-top: 20px; border-radius: 8px; padding: 10px; background: #f8fafc; border: 1px solid #cbd5e1; color: #1e293b; font-weight: 600; font-size: 13.5px; cursor: pointer">
-                Masuk untuk Bergabung
-              </button>
-            </div>
-          </div>
-        </section>
-
-        <!-- SECTION 3: CALL TO ACTION REGISTRASI -->
-        <section style="max-width: 1100px; margin: 60px auto 30px; padding: 0 20px">
-          <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 16px; padding: 40px 24px; text-align: center">
-            <h2 style="font-size: 22px; color: #0f172a; font-weight: 800">Siap Mengembangkan Karir Bersama Komunitas?</h2>
-            <p style="color: #64748b; font-size: 14.5px; margin-top: 8px; max-width: 600px; margin-left: auto; margin-right: auto">
-              Bergabunglah dengan ribuan siswa dan alumni yang aktif bertukar pengetahuan dan berkolaborasi setiap hari.
-            </p>
-
-            <div style="margin-top: 24px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap">
-              <button onclick="openModal('Daftar Akun Gratis')" style="background: #2563eb; color: #ffffff; border: none; padding: 12px 28px; border-radius: 8px; font-weight: 700; font-size: 14px; cursor: pointer">Daftar Sekarang</button>
-              <button onclick="openModal('Masuk ke Akun')" style="background: #ffffff; color: #1e293b; border: 1px solid #cbd5e1; padding: 12px 28px; border-radius: 8px; font-weight: 700; font-size: 14px; cursor: pointer">
-                Masuk ke Akun
-              </button>
-            </div>
-          </div>
-        </section>
-      </main>
-    </div>
-
-    <!-- MODAL -->
-    <div class="modal" id="modal">
-      <div class="modal-box">
-        <button class="modal-close" onclick="closeModal()">×</button>
-        <h2 id="modalTitle">Akses Terbatas</h2>
-        <p>Silakan masuk atau daftarkan akun baru untuk mengakses seluruh fitur komunitas.</p>
-        <button class="modal-action" onclick="closeModal()">Mengerti</button>
       </div>
+
+    </header>
+
+
+    <!-- =========================
+         OVERLAY
+    ========================= -->
+
+    <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+
+    <!-- =========================
+         SIDEBAR
+    ========================= -->
+
+    <aside class="sidebar" id="sidebar">
+
+      <div class="sidebar-head">
+
+        <span class="sidebar-tag">
+          NAVIGASI
+        </span>
+
+        <h3>
+          Menu Utama
+        </h3>
+
+      </div>
+
+
+      <nav class="sidebar-nav">
+
+        <a href="index.html">
+
+          <span>
+            Beranda
+          </span>
+
+        </a>
+
+
+        <a href="elearning.html">
+
+          <span>
+            E-Learning
+          </span>
+
+        </a>
+
+
+        <a href="komunitas.html" class="active">
+
+          <span>
+            Grup Komunitas
+          </span>
+
+        </a>
+
+
+        <a href="bootcamp.html">
+
+          <span>
+            Bootcamp
+          </span>
+
+        </a>
+
+
+        <a href="riwayat.html">
+
+          <span>
+            Riwayat
+          </span>
+
+        </a>
+
+
+        <a href="kelas.html">
+
+          <span>
+            Kelas Saya
+          </span>
+
+        </a>
+
+      </nav>
+
+    </aside>
+
+
+    <!-- =========================
+         KONTEN
+    ========================= -->
+
+    <main class="main-content" style="
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      ">
+
+      <!-- =========================
+           HERO
+      ========================= -->
+
+      <section class="community-hero">
+
+        <div class="community-hero-content">
+
+          <span class="community-badge">
+            GRUP KOMUNITAS BELAJARYUK
+          </span>
+
+
+          <h1>
+            Belajar Bersama,
+            Berkembang Bersama
+          </h1>
+
+
+          <p>
+            Bergabung dengan komunitas Belajaryuk
+            untuk berdiskusi, berbagi pengalaman,
+            bertanya tentang coding, desain,
+            data, dan berbagai skill digital lainnya.
+          </p>
+
+
+          <a href="#communityList" class="community-hero-button">
+            Lihat Komunitas
+          </a>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           COMMUNITY LIST
+      ========================= -->
+
+      <section id="communityList">
+
+        <div class="sec-head">
+
+          <span class="sec-subtitle">
+            KOMUNITAS
+          </span>
+
+
+          <h2 class="sec-title">
+            Temukan Grup Sesuai Minatmu
+          </h2>
+
+
+          <p class="sec-description">
+            Pilih komunitas yang sesuai dengan
+            bidang yang sedang kamu pelajari.
+          </p>
+
+        </div>
+
+
+        <div class="community-grid">
+
+
+          <!-- =========================
+               COMMUNITY 1
+          ========================= -->
+
+          <article class="community-card">
+
+            <div class="community-card-head">
+
+              <div class="community-icon">
+                FE
+              </div>
+
+              <div>
+
+                <h3>
+                  Front-End Developer
+                </h3>
+
+                <span class="community-platform">
+                  WhatsApp & Telegram Community
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <p>
+              Tempat berdiskusi tentang HTML,
+              CSS, JavaScript, responsive design,
+              dan pengembangan website.
+            </p>
+
+
+            <div class="community-info">
+
+              <span class="community-members">
+                2.500+ Member
+              </span>
+
+              <span class="community-status">
+                Aktif
+              </span>
+
+            </div>
+
+
+            <!-- TERKUNCI -->
+
+            <div class="community-locked">
+
+              <div class="community-lock">
+                Grup Terkunci — Login untuk Bergabung
+              </div>
+
+            </div>
+
+
+            <!-- TERBUKA SETELAH LOGIN -->
+
+            <div class="community-open">
+
+              <div class="community-buttons">
+
+                <a href="LINK_WHATSAPP_FRONTEND" target="_blank" rel="noopener noreferrer"
+                  class="community-button whatsapp">
+                  WhatsApp
+                </a>
+
+                <a href="LINK_TELEGRAM_FRONTEND" target="_blank" rel="noopener noreferrer"
+                  class="community-button telegram">
+                  Telegram
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- =========================
+               COMMUNITY 2
+          ========================= -->
+
+          <article class="community-card">
+
+            <div class="community-card-head">
+
+              <div class="community-icon">
+                UX
+              </div>
+
+              <div>
+
+                <h3>
+                  UI/UX Designer
+                </h3>
+
+                <span class="community-platform">
+                  WhatsApp & Telegram Community
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <p>
+              Berbagi desain, berdiskusi tentang
+              user experience, wireframe, prototype,
+              dan portfolio UI/UX.
+            </p>
+
+
+            <div class="community-info">
+
+              <span class="community-members">
+                1.800+ Member
+              </span>
+
+              <span class="community-status">
+                Aktif
+              </span>
+
+            </div>
+
+
+            <!-- TERKUNCI -->
+
+            <div class="community-locked">
+
+              <div class="community-lock">
+                Grup Terkunci — Login untuk Bergabung
+              </div>
+
+            </div>
+
+
+            <!-- TERBUKA SETELAH LOGIN -->
+
+            <div class="community-open">
+
+              <div class="community-buttons">
+
+                <a href="LINK_WHATSAPP_UIUX" target="_blank" rel="noopener noreferrer"
+                  class="community-button whatsapp">
+                  WhatsApp
+                </a>
+
+                <a href="LINK_TELEGRAM_UIUX" target="_blank" rel="noopener noreferrer"
+                  class="community-button telegram">
+                  Telegram
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- =========================
+               COMMUNITY 3
+          ========================= -->
+
+          <article class="community-card">
+
+            <div class="community-card-head">
+
+              <div class="community-icon">
+                AI
+              </div>
+
+              <div>
+
+                <h3>
+                  Data & AI
+                </h3>
+
+                <span class="community-platform">
+                  WhatsApp & Telegram Community
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <p>
+              Diskusi mengenai data science,
+              machine learning, artificial intelligence,
+              Python, dan pengolahan data.
+            </p>
+
+
+            <div class="community-info">
+
+              <span class="community-members">
+                1.200+ Member
+              </span>
+
+              <span class="community-status">
+                Aktif
+              </span>
+
+            </div>
+
+
+            <!-- TERKUNCI -->
+
+            <div class="community-locked">
+
+              <div class="community-lock">
+                Grup Terkunci — Login untuk Bergabung
+              </div>
+
+            </div>
+
+
+            <!-- TERBUKA SETELAH LOGIN -->
+
+            <div class="community-open">
+
+              <div class="community-buttons">
+
+                <a href="LINK_WHATSAPP_DATA_AI" target="_blank" rel="noopener noreferrer"
+                  class="community-button whatsapp">
+                  WhatsApp
+                </a>
+
+                <a href="LINK_TELEGRAM_DATA_AI" target="_blank" rel="noopener noreferrer"
+                  class="community-button telegram">
+                  Telegram
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- =========================
+               COMMUNITY 4
+          ========================= -->
+
+          <article class="community-card">
+
+            <div class="community-card-head">
+
+              <div class="community-icon">
+                JS
+              </div>
+
+              <div>
+
+                <h3>
+                  JavaScript Developer
+                </h3>
+
+                <span class="community-platform">
+                  WhatsApp & Telegram Community
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <p>
+              Belajar dan bertukar pengalaman
+              mengenai JavaScript, DOM,
+              API, dan pengembangan web interaktif.
+            </p>
+
+
+            <div class="community-info">
+
+              <span class="community-members">
+                950+ Member
+              </span>
+
+              <span class="community-status">
+                Aktif
+              </span>
+
+            </div>
+
+
+            <!-- TERKUNCI -->
+
+            <div class="community-locked">
+
+              <div class="community-lock">
+                Grup Terkunci — Login untuk Bergabung
+              </div>
+
+            </div>
+
+
+            <!-- TERBUKA SETELAH LOGIN -->
+
+            <div class="community-open">
+
+              <div class="community-buttons">
+
+                <a href="LINK_WHATSAPP_JAVASCRIPT" target="_blank" rel="noopener noreferrer"
+                  class="community-button whatsapp">
+                  WhatsApp
+                </a>
+
+                <a href="LINK_TELEGRAM_JAVASCRIPT" target="_blank" rel="noopener noreferrer"
+                  class="community-button telegram">
+                  Telegram
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- =========================
+               COMMUNITY 5
+          ========================= -->
+
+          <article class="community-card">
+
+            <div class="community-card-head">
+
+              <div class="community-icon">
+                PY
+              </div>
+
+              <div>
+
+                <h3>
+                  Python Programming
+                </h3>
+
+                <span class="community-platform">
+                  WhatsApp & Telegram Community
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <p>
+              Komunitas untuk belajar Python,
+              automation, data processing,
+              dan project programming.
+            </p>
+
+
+            <div class="community-info">
+
+              <span class="community-members">
+                1.500+ Member
+              </span>
+
+              <span class="community-status">
+                Aktif
+              </span>
+
+            </div>
+
+
+            <!-- TERKUNCI -->
+
+            <div class="community-locked">
+
+              <div class="community-lock">
+                Grup Terkunci — Login untuk Bergabung
+              </div>
+
+            </div>
+
+
+            <!-- TERBUKA SETELAH LOGIN -->
+
+            <div class="community-open">
+
+              <div class="community-buttons">
+
+                <a href="LINK_WHATSAPP_PYTHON" target="_blank" rel="noopener noreferrer"
+                  class="community-button whatsapp">
+                  WhatsApp
+                </a>
+
+                <a href="LINK_TELEGRAM_PYTHON" target="_blank" rel="noopener noreferrer"
+                  class="community-button telegram">
+                  Telegram
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- =========================
+               COMMUNITY 6
+          ========================= -->
+
+          <article class="community-card">
+
+            <div class="community-card-head">
+
+              <div class="community-icon">
+                WEB
+              </div>
+
+              <div>
+
+                <h3>
+                  Web Developer
+                </h3>
+
+                <span class="community-platform">
+                  WhatsApp & Telegram Community
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <p>
+              Komunitas umum untuk membahas
+              perkembangan teknologi web,
+              project, dan pengalaman belajar.
+            </p>
+
+
+            <div class="community-info">
+
+              <span class="community-members">
+                3.000+ Member
+              </span>
+
+              <span class="community-status">
+                Aktif
+              </span>
+
+            </div>
+
+
+            <!-- TERKUNCI -->
+
+            <div class="community-locked">
+
+              <div class="community-lock">
+                Grup Terkunci — Login untuk Bergabung
+              </div>
+
+            </div>
+
+
+            <!-- TERBUKA SETELAH LOGIN -->
+
+            <div class="community-open">
+
+              <div class="community-buttons">
+
+                <a href="LINK_WHATSAPP_WEB_DEVELOPER" target="_blank" rel="noopener noreferrer"
+                  class="community-button whatsapp">
+                  WhatsApp
+                </a>
+
+                <a href="LINK_TELEGRAM_WEB_DEVELOPER" target="_blank" rel="noopener noreferrer"
+                  class="community-button telegram">
+                  Telegram
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           FOOTER
+      ========================= -->
+
+      <footer class="community-footer">
+
+        <div style="
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 30px;
+          ">
+
+          <div style="max-width: 400px">
+
+            <h2 style="
+                font-size: 22px;
+                font-weight: 800;
+                margin-bottom: 12px;
+              ">
+
+              <span style="color: #4338ca">
+                BELAJAR
+              </span>YUK
+
+            </h2>
+
+
+            <p style="
+                font-size: 14px;
+                color: #64748b;
+                line-height: 1.6;
+              ">
+              Platform pembelajaran digital
+              terpercaya untuk mengakselerasi
+              skill dan karier masa depanmu.
+            </p>
+
+          </div>
+
+
+          <div style="
+              display: flex;
+              gap: 40px;
+              flex-wrap: wrap;
+            ">
+
+            <div>
+
+              <h4 style="
+                  font-size: 14px;
+                  font-weight: 700;
+                  margin-bottom: 12px;
+                ">
+                Alamat Kantor
+              </h4>
+
+
+              <p style="
+                  font-size: 13px;
+                  color: #64748b;
+                  margin-bottom: 4px;
+                ">
+                PT. Belajar Yuk Indonesia
+              </p>
+
+
+              <p style="
+                  font-size: 13px;
+                  color: #64748b;
+                ">
+                Tebet Timur, Jakarta Selatan, 12820
+              </p>
+
+            </div>
+
+
+            <div>
+
+              <h4 style="
+                  font-size: 14px;
+                  font-weight: 700;
+                  margin-bottom: 12px;
+                ">
+                Navigasi
+              </h4>
+
+
+              <p>
+
+                <a href="elearning.html" style="
+                    font-size: 13px;
+                    color: #64748b;
+                    text-decoration: none;
+                  ">
+                  E-Learning
+                </a>
+
+              </p>
+
+
+              <p>
+
+                <a href="komunitas.html" style="
+                    font-size: 13px;
+                    color: #64748b;
+                    text-decoration: none;
+                  ">
+                  Grup Komunitas
+                </a>
+
+              </p>
+
+
+              <p>
+
+                <a href="bootcamp.html" style="
+                    font-size: 13px;
+                    color: #64748b;
+                    text-decoration: none;
+                  ">
+                  Bootcamp
+                </a>
+
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div style="
+            border-top: 1px solid #f1f5f9;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 13px;
+            color: #94a3b8;
+          ">
+
+          <p>
+            &copy; 2026 Belajaryuk.
+            All rights reserved.
+          </p>
+
+        </div>
+
+      </footer>
+
+    </main>
+
+  </div>
+
+
+  <!-- =========================
+       MODAL PROFIL
+  ========================= -->
+
+  <div class="modal" id="modal">
+
+    <div class="modal-box">
+
+      <button class="modal-close" onclick="closeModal()" type="button" aria-label="Tutup Modal">
+        ×
+      </button>
+
+
+      <h2 id="modalTitle">
+        Profil Saya
+      </h2>
+
+
+      <div id="modalContent">
+
+        <p>
+          Loading data profil...
+        </p>
+
+      </div>
+
+
+      <button class="modal-action" style="
+          background: #4338ca;
+          margin-top: 20px;
+        " onclick="closeModal()" type="button">
+        Tutup
+      </button>
+
     </div>
 
-    <!-- UTILITY SCRIPT -->
-    <script src="../js/script.js"></script>
-  </body>
+  </div>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
+
+  <script src="../js/script.js"></script>
+
+  <script src="../js/komunitas.js"></script>
+
+</body>
+
 </html>
